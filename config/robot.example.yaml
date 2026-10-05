@@ -1,0 +1,43 @@
+# Exemple de configuration robot — SO-101 leader / follower
+#
+# Ceci est un GABARIT. Les valeurs ci-dessous sont des espaces reserves,
+# pas une configuration fonctionnelle. Copier en robot.yaml et renseigner
+# apres identification reelle des ports (scripts/find_ports.sh).
+#
+# robot.yaml n'est pas commite : il est specifique a une machine.
+
+follower:
+  type: so_follower            # module LeRobot generique couvrant le SO-101
+  id: CHANGEME                 # identifiant utilise pour nommer la calibration
+  port: CHANGEME               # ex. /dev/tty.usbmodemXXXX — a relever, jamais a deviner
+  servo_voltage: 7.4           # V — architecture Standard. NE PAS mélanger avec du 12V
+  motors:                      # 6 moteurs, ids 1 a 6
+    shoulder_pan:   { id: 1, ratio: "1:345", ref: STS3215-C001 }
+    shoulder_lift:  { id: 2, ratio: "1:345", ref: STS3215-C001 }
+    elbow_flex:     { id: 3, ratio: "1:345", ref: STS3215-C001 }
+    wrist_flex:     { id: 4, ratio: "1:345", ref: STS3215-C001 }
+    wrist_roll:     { id: 5, ratio: "1:345", ref: STS3215-C001 }
+    gripper:        { id: 6, ratio: "1:345", ref: STS3215-C001 }
+
+leader:
+  type: so_leader              # module LeRobot generique couvrant le SO-101
+  id: CHANGEME
+  port: CHANGEME
+  servo_voltage: 7.4           # le leader est TOUJOURS en 7.4V sur SO-101
+  motors:
+    shoulder_pan:   { id: 1, ratio: "1:191", ref: STS3215-C044 }
+    shoulder_lift:  { id: 2, ratio: "1:345", ref: STS3215-C001 }
+    elbow_flex:     { id: 3, ratio: "1:191", ref: STS3215-C044 }
+    wrist_flex:     { id: 4, ratio: "1:147", ref: STS3215-C046 }
+    wrist_roll:     { id: 5, ratio: "1:147", ref: STS3215-C046 }
+    gripper:        { id: 6, ratio: "1:147", ref: STS3215-C046 }
+
+# NOTE — l'affectation ratio <-> articulation du leader provient d'une source
+# secondaire et n'est pas verifiee sur une page amont primaire.
+# Statut : ASSUMED. A confirmer avant montage.
+
+power:
+  supply: "5V 4A, barrel 5.5 x 2.1 mm, centre positif"
+  # Le constructeur de la carte bus servo specifie 9-12.6V en entree.
+  # Le fonctionnement en 5V est une decision HQ, assumee, a surveiller
+  # au premier essai en charge. Voir ../docs/hardware.md

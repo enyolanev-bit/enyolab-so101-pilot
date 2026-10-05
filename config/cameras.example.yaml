@@ -1,0 +1,32 @@
+# Exemple de configuration cameras — SO-101
+#
+# GABARIT. Copier en cameras.yaml et renseigner apres detection reelle
+# (scripts/test_cameras.sh). cameras.yaml n'est pas commite.
+
+cameras:
+  wrist:
+    model: "InnoMaker U20CAM-1080P"
+    form_factor: "PCB 32 x 32 mm, 4 trous M2"
+    index: CHANGEME            # index systeme — a relever, jamais a deviner
+    width: 640                 # l'amont recommande 640x480 @30fps meme si le
+    height: 480                # capteur sait faire mieux : au-dela, c'est du
+    fps: 30                    # volume de donnees sans gain pour la politique
+    focus: manual              # mise au point MANUELLE — a regler a la main
+    notes: >
+      Monture : SO-ARM101_camera_wrist_mount.stl (support hex-nut SO-101).
+      Motif de fixation mesure sur le support : 27,0 x 27,0 mm, 4 trous Ø2,0.
+      L'entraxe reel de la camera n'est pas publie par le fabricant — ASSUMED.
+
+  overhead:
+    model: "InnoMaker U20CAM-720P"
+    form_factor: "PCB 32 x 32 mm"
+    index: CHANGEME
+    width: 640
+    height: 480
+    fps: 30
+    focus: manual
+    notes: >
+      Peut etre tenu par un bras articule existant plutot que par le support
+      imprime amont. A trancher au montage.
+
+# Deux vues sont attendues pour l'entrainement. Une seule ne suffit pas.

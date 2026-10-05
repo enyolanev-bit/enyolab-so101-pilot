@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# teleop.sh — VOLONTAIREMENT BLOQUE.
+#
+# Ce script NE PILOTE PAS le robot et ne doit pas etre "repare" pour
+# faire avancer une tache. Son blocage est l'etat correct du systeme.
+set -uo pipefail
+
+echo "BLOCKED: teleoperation has not been validated yet" >&2
+echo >&2
+echo "Raisons, au 2026-10-05 (audit ENYO-14) :" >&2
+echo "  - calibration leader : NOT_FOUND" >&2
+echo "  - teleoperation physique : NOT_PROVEN" >&2
+echo "  - validite physique de la calibration follower : TO_REVALIDATE" >&2
+echo "  - version LeRobot du projet : UNDETERMINED" >&2
+echo >&2
+echo "Conditions de deblocage, toutes requises :" >&2
+echo "  1. bras leader mecaniquement complet (voir ENYO-6) ;" >&2
+echo "  2. calibration leader obtenue et conservee ;" >&2
+echo "  3. calibration follower revalidee sur le robot assemble ;" >&2
+echo "  4. version LeRobot arretee et identique sur toutes les cibles ;" >&2
+echo "  5. docs/safety.md lu, zone degagee, coupure d'alimentation a portee ;" >&2
+echo "  6. autorisation humaine explicite pour CETTE session." >&2
+echo >&2
+echo "Le deblocage est une decision humaine documentee, pas une modification" >&2
+echo "de ce fichier par un agent. Voir AGENTS.md." >&2
+exit 1

@@ -1,0 +1,52 @@
+# Environnements Python
+.venv/
+venv/
+env/
+.python-version
+
+# Caches Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Calibration specifique a une machine — JAMAIS commitee sans revue HQ
+calibration/*.json
+calibration/**/*.json
+!calibration/README.md
+
+# Donnees
+datasets/
+data/
+*.parquet
+*.mp4
+*.svo
+
+# Entrainement
+checkpoints/
+outputs/
+runs/
+wandb/
+*.ckpt
+*.safetensors
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
+# Systeme macOS
+.DS_Store
+.AppleDouble
+._*
+.Spotlight-V100
+.Trashes
+
+# Editeurs
+.vscode/
+.idea/
+*.swp
