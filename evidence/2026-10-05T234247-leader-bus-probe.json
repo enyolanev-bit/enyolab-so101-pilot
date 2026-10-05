@@ -1,0 +1,487 @@
+{
+ "started": "2026-10-05T23:42:49.503322+02:00",
+ "port": "/dev/cu.usbmodem5B7B0154401",
+ "method": "FeetechMotorsBus direct; connect(handshake=False); broadcast_ping; ping; read(normalize=False); port_handler.closePort()",
+ "tx_packets": [
+  {
+   "id": 254,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  }
+ ],
+ "write_calls": 0,
+ "blocked_calls": [],
+ "steps": [
+  {
+   "t": 1498836.863,
+   "step": "connect(handshake=False)",
+   "baudrate": 1000000,
+   "tx_after_connect": 0
+  },
+  {
+   "t": 1498837.653,
+   "step": "broadcast_ping",
+   "result": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": 777,
+    "6": 777
+   }
+  },
+  {
+   "t": 1498837.657,
+   "step": "ping 1..6",
+   "result": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": 777,
+    "6": 777
+   }
+  },
+  {
+   "t": 1498837.664,
+   "step": "reads pass 1",
+   "result": {
+    "1": {
+     "Present_Position": 213,
+     "Torque_Enable": 0,
+     "Present_Voltage": 48,
+     "Present_Temperature": 28
+    },
+    "2": {
+     "Present_Position": 3112,
+     "Torque_Enable": 0,
+     "Present_Voltage": 49,
+     "Present_Temperature": 28
+    },
+    "3": {
+     "Present_Position": 712,
+     "Torque_Enable": 0,
+     "Present_Voltage": 49,
+     "Present_Temperature": 28
+    },
+    "4": {
+     "Present_Position": 3724,
+     "Torque_Enable": 0,
+     "Present_Voltage": 49,
+     "Present_Temperature": 30
+    },
+    "5": {
+     "Present_Position": -261,
+     "Torque_Enable": 0,
+     "Present_Voltage": 49,
+     "Present_Temperature": 29
+    },
+    "6": {
+     "Present_Position": 331,
+     "Torque_Enable": 0,
+     "Present_Voltage": 49,
+     "Present_Temperature": 29
+    }
+   }
+  },
+  {
+   "t": 1498838.171,
+   "step": "reads pass 2 (stabilite)",
+   "result": {
+    "1": {
+     "Present_Position": 213,
+     "Torque_Enable": 0
+    },
+    "2": {
+     "Present_Position": 3112,
+     "Torque_Enable": 0
+    },
+    "3": {
+     "Present_Position": 712,
+     "Torque_Enable": 0
+    },
+    "4": {
+     "Present_Position": 3724,
+     "Torque_Enable": 0
+    },
+    "5": {
+     "Present_Position": -261,
+     "Torque_Enable": 0
+    },
+    "6": {
+     "Present_Position": 331,
+     "Torque_Enable": 0
+    }
+   }
+  }
+ ],
+ "result": "PASS",
+ "responding_ids_broadcast": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
+ ],
+ "model_numbers_ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "servo_reads": {
+  "1": {
+   "Present_Position": 213,
+   "Torque_Enable": 0,
+   "Present_Voltage": 48,
+   "Present_Temperature": 28
+  },
+  "2": {
+   "Present_Position": 3112,
+   "Torque_Enable": 0,
+   "Present_Voltage": 49,
+   "Present_Temperature": 28
+  },
+  "3": {
+   "Present_Position": 712,
+   "Torque_Enable": 0,
+   "Present_Voltage": 49,
+   "Present_Temperature": 28
+  },
+  "4": {
+   "Present_Position": 3724,
+   "Torque_Enable": 0,
+   "Present_Voltage": 49,
+   "Present_Temperature": 30
+  },
+  "5": {
+   "Present_Position": -261,
+   "Torque_Enable": 0,
+   "Present_Voltage": 49,
+   "Present_Temperature": 29
+  },
+  "6": {
+   "Present_Position": 331,
+   "Torque_Enable": 0,
+   "Present_Voltage": 49,
+   "Present_Temperature": 29
+  }
+ },
+ "servo_reads_pass2": {
+  "1": {
+   "Present_Position": 213,
+   "Torque_Enable": 0
+  },
+  "2": {
+   "Present_Position": 3112,
+   "Torque_Enable": 0
+  },
+  "3": {
+   "Present_Position": 712,
+   "Torque_Enable": 0
+  },
+  "4": {
+   "Present_Position": 3724,
+   "Torque_Enable": 0
+  },
+  "5": {
+   "Present_Position": -261,
+   "Torque_Enable": 0
+  },
+  "6": {
+   "Present_Position": 331,
+   "Torque_Enable": 0
+  }
+ },
+ "position_delta": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0
+ },
+ "torque_changed": false,
+ "port_closed": true,
+ "close_path": "bus.port_handler.closePort() (direct; disconnect() NOT called)",
+ "instructions_emitted": {
+  "1": "PING",
+  "2": "READ"
+ },
+ "tx_packet_count": 55,
+ "abort": null,
+ "finished": "2026-10-05T23:42:50.814655+02:00"
+}

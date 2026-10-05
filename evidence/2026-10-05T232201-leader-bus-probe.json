@@ -1,0 +1,150 @@
+{
+ "started": "2026-10-05T23:22:03.024194+02:00",
+ "port": "/dev/cu.usbmodem5B7B0154401",
+ "method": "FeetechMotorsBus direct; connect(handshake=False); broadcast_ping; ping; read(normalize=False); port_handler.closePort()",
+ "tx_packets": [
+  {
+   "id": 254,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 1,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 1,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 2,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 2,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 3,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 3,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 4,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 4,
+   "inst": 2,
+   "inst_name": "READ"
+  },
+  {
+   "id": 5,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 6,
+   "inst": 1,
+   "inst_name": "PING"
+  },
+  {
+   "id": 6,
+   "inst": 2,
+   "inst_name": "READ"
+  }
+ ],
+ "write_calls": 0,
+ "blocked_calls": [],
+ "steps": [
+  {
+   "t": 1497590.381,
+   "step": "connect(handshake=False)",
+   "baudrate": 1000000,
+   "tx_after_connect": 0
+  },
+  {
+   "t": 1497591.17,
+   "step": "broadcast_ping",
+   "result": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "6": 777
+   }
+  },
+  {
+   "t": 1497591.224,
+   "step": "ping 1..6",
+   "result": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": null,
+    "6": 777
+   }
+  }
+ ],
+ "result": "BLOCKED",
+ "responding_ids_broadcast": [
+  1,
+  2,
+  3,
+  4,
+  6
+ ],
+ "model_numbers_ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": null,
+  "6": 777
+ },
+ "port_closed": true,
+ "close_path": "bus.port_handler.closePort() (direct; disconnect() NOT called)",
+ "instructions_emitted": {
+  "1": "PING",
+  "2": "READ"
+ },
+ "tx_packet_count": 17,
+ "abort": "DISCOVERY: ids/models != expected",
+ "finished": "2026-10-05T23:22:03.870829+02:00"
+}
