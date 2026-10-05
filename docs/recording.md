@@ -16,7 +16,7 @@
 - environnement : `uv sync --locked --python 3.12` (voir `../setup/mac.md`) ;
 - FFmpeg système (`brew install ffmpeg`), exigé par TorchCodec selon le guide amont ;
 - ports leader et follower **redécouverts sur cette machine** (`scripts/find_ports.sh` + débranchement contrôlé, voir `../evidence/2026-10-05-serial-port-identification.md`) ;
-- index des caméras **redécouverts sur cette machine** puis **identité confirmée par une capture** : `scripts/test_cameras.sh` donne l'ordre AVFoundation (FFmpeg), dont la correspondance avec l'index OpenCV n'est **pas prouvée** et qui a changé d'une énumération à l'autre (`../evidence/video/2026-10-05-wrist-camera-capture.md`) ;
+- index des caméras **redécouverts sur cette machine** puis **identité confirmée par comparaison de contenu avec une capture par nom**, index OpenCV ouverts un par un (méthode : `../evidence/video/2026-10-05-wrist-camera-capture.md`) : `scripts/test_cameras.sh` donne l'ordre AVFoundation (FFmpeg), dont la correspondance avec l'index OpenCV n'est **pas prouvée** et qui a changé d'une énumération à l'autre (`../evidence/video/2026-10-05-wrist-camera-capture.md`) ;
 - calibrations `pilot001_follower` et `pilot001_leader` présentes et revalidées (voir `../calibration/README.md`) ;
 - toutes les conditions de déblocage de `scripts/teleop.sh`.
 

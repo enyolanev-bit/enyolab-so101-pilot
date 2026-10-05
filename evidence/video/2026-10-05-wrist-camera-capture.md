@@ -1,68 +1,57 @@
-# Capture caméra poignet — InnoMaker U20CAM-1080P — RÉSULTAT : BLOCKED (identité non prouvée)
+# Capture caméra poignet — InnoMaker U20CAM-1080P — identité PROVEN (session du 2026-10-05)
 
-- **Date** : 2026-10-05, ~22:33 CEST
 - **Hôte** : Mac ENYOLAB (bring-up), arm64, `.venv` du dépôt (LeRobot 0.6.1, `lerobot[core_scripts,feetech]`)
-- **Accès matériel** : caméras uniquement, aucun port série ouvert, aucune commande LeRobot exécutée. **Intention** : n'ouvrir que la caméra poignet. **Constat** : il n'est **pas prouvé** que le périphérique ouvert par OpenCV (index 1) était l'InnoMaker ; il a pu s'agir de la caméra intégrée du MacBook (voir « Identité du périphérique »).
+- **Accès matériel** : caméras uniquement. Aucun port série ouvert, aucune commande LeRobot exécutée, aucun servo.
+- **Médias bruts** : **LOCAL_ONLY** (Mac ENYOLAB, `evidence/video/`, ignorés par Git — images de la pièce). Seules ces métadonnées sont versionnées.
 
-## Identification du périphérique
+## Résultat — essai 2, 22:53-22:54 CEST (cache d'objectif retiré)
 
-Première énumération AVFoundation, ~22:30 CEST (`ffmpeg -f avfoundation -list_devices true -i ""`, sans ouverture de flux) :
-
-| Index AVFoundation | Périphérique |
+| Champ | Valeur |
 |---|---|
-| 0 | Caméra du MacBook Pro (intégrée — non retenue) |
-| **1** | **Innomaker-U20CAM-1080p-S1** (`system_profiler` : UVC VendorID 3141 / ProductID 25446) |
-| 2 | Caméra Desk View du MacBook Pro |
-| 3-5 | Capture screen 0-2 |
+| Capture par nom (`Innomaker-U20CAM-1080p-S1`, FFmpeg AVFoundation, `uyvy422` 640×480 @ 30) | **PASS** — 89 images, luminance moyenne 125 (écart-type 45) : scène réelle, éclairée |
+| **Index OpenCV de l'InnoMaker** (`CAP_AVFOUNDATION`), à 22:53 | **0** |
+| Identité | **PROVEN pour cette session** — par contenu d'image, pas par ordre d'énumération |
+| Résolution obtenue | **640×480** (demandé 640×480) |
+| FPS | demandé 30 ; rapporté par le driver OpenCV 30,00003 ; **mesuré 28,88** (144 images, 5 s, après 1 s de préchauffe) |
+| Codec MP4 | **AV1** (`libsvtav1` à l'encodage, yuv420p), décodé par `libdav1d` / TorchCodec `av1` |
+| `wrist_capture.mp4` | 29 756 octets, sha256 `d6df24aa9013cf95992140d7f36774a4a80844b4cd4324ba84c2d40c6c320ef1` |
+| `wrist_still.png` (image médiane) | 325 029 octets, sha256 `a215066e3d799cf06082835a2cdd5be941a582acaa498b03c1cafea779701853` |
+| Relecture PyAV | 144 images, 640×480 |
+| Relecture TorchCodec 0.11.1 | 144 images, `av1`, 640×480, première image `[3, 480, 640]` |
 
-**Index OpenCV de l'InnoMaker : UNKNOWN.** L'ordre AVFoundation **n'est pas stable** :
+### Méthode d'identification
 
-| Énumération (`ffmpeg -list_devices`) | `[0]` | `[1]` |
-|---|---|---|
-| ~22:30 CEST (avant capture) | Caméra du MacBook Pro | Innomaker-U20CAM-1080p-S1 |
-| ~22:36 CEST (`scripts/test_cameras.sh`, après capture) | Innomaker-U20CAM-1080p-S1 | Caméra du MacBook Pro |
+1. Capture **par nom** de périphérique, 3 s, image de référence.
+2. Ouverture des index OpenCV **un par un** (jamais deux caméras ouvertes ensemble), 1,5 s chacun, une image chacun. Corrélation de Pearson avec la référence, en niveaux de gris redimensionnés à 160×120 (`cv2.resize`, interpolation par défaut `INTER_LINEAR`) :
 
-## Identité du périphérique — contre-vérifications
+| Index OpenCV | Résolution | Luminance | Corrélation avec la capture par nom |
+|---|---|---|---|
+| **0** | 640×480 | 125,3 | **0,999** |
+| 1 | 640×480 | 128,3 | 0,119 (caméra du MacBook) |
+| 2 | — | — | n'existe pas (OpenCV : « out device of bound (0-1) ») |
 
-| Capture | Résultat |
+3. Capture de preuve 5 s sur l'index 0.
+4. Contre-vérification **après** la capture : nouvelle capture par nom. Corrélation `wrist_still.png` ↔ nom-avant **0,999**, ↔ nom-après **0,839**, ↔ index 1 **0,119**. Le recul à 0,839 accompagne une baisse de luminance de la capture d'après (≈ 125 → 119) : la scène ou l'exposition a changé entre les deux captures. Ce n'est pas un signe d'identité faible : 0,839 reste très au-dessus de 0,119. L'image médiane du MP4 donne aussi 0,839 avec la capture par nom d'après. Le contrôle visuel montre la même scène sur l'image par nom et sur l'image de preuve. L'image est à l'envers : la caméra est probablement montée retournée, à vérifier au montage.
+
+### Instabilité des index — constat
+
+| Heure (CEST) | Ordre FFmpeg `-list_devices` : `[0]` / `[1]` |
 |---|---|
-| OpenCV `VideoCapture(1, CAP_AVFOUNDATION)`, 5 s (ci-dessous) | 149 images, pièce sombre mais visible (luminance moyenne ≈ 4,7/255 ; plafonnier et LED rouge discernables) |
-| FFmpeg **par nom** `Innomaker-U20CAM-1080p-S1`, 1 image, 2 essais (~22:34 CEST) | image noire (négociation de format de pixel) |
-| FFmpeg **par nom**, 3 s, `uyvy422` 640×480 @ 29,58 fps (~22:37 CEST) | 89 images, **luminance 0,0** sur la première, la médiane et la dernière : **entièrement noir** |
+| ~22:30 | MacBook / InnoMaker |
+| ~22:36 | InnoMaker / MacBook |
+| 22:53:20 | InnoMaker / MacBook |
+| 22:53 (juste après les tests OpenCV) | MacBook / InnoMaker |
 
-Lecture : l'InnoMaker adressée **par son nom** ne renvoie que du noir, alors que la capture OpenCV « index 1 » montre une scène. Deux hypothèses restent ouvertes, aucune n'est tranchée :
-1. la capture OpenCV index 1 venait de la **caméra intégrée du MacBook** (ordre des index différent entre OpenCV et FFmpeg, ou changé entre-temps) ;
-2. l'InnoMaker est obturée (cache d'objectif, objectif contre une surface, obscurité totale) et l'index 1 était bien elle, avec une différence d'exposition entre OpenCV et FFmpeg.
+L'ordre FFmpeg change d'une énumération à l'autre. Sa correspondance avec l'index OpenCV **n'est pas prouvée** : à 22:53:20 les deux concordaient (InnoMaker en `[0]` / OpenCV 0), puis FFmpeg a inversé l'ordre juste après les tests OpenCV. **L'index OpenCV est donc à reconfirmer par contenu d'image à chaque session**, sur le Mac ENYOLAB comme sur le Mac de Boris. La stabilité de l'index OpenCV lui-même dans le temps n'a pas été mesurée.
 
-Voyant vert de la caméra du MacBook pendant la capture OpenCV : **non observé (UNKNOWN)**.
+## Historique — essai 1, 22:33-22:37 CEST : BLOCKED
 
-**Confirmation humaine requise avant tout usage** : vérifier l'objectif de l'InnoMaker, éclairer la scène, puis refaire une capture **par nom** et une capture OpenCV en observant le voyant vert du MacBook (allumé = caméra intégrée ouverte).
-
-Les index sont propres à chaque machine et, constat ici, **instables sur une même machine** : à redécouvrir à chaque session, sur le Mac de Boris comme ici.
-
-## Capture
-
-Script : OpenCV `VideoCapture(1, CAP_AVFOUNDATION)`, 1 s de préchauffe (comme `warmup_s=1` de LeRobot), 5 s d'acquisition, encodage PyAV `libsvtav1` (codec RGB par défaut de LeRobot 0.6.1), relecture PyAV + TorchCodec.
-
-| Mesure | Valeur |
-|---|---|
-| Demandé | 640×480 @ 30 fps, 5 s |
-| Rapporté par le driver OpenCV | 640×480 @ 30 fps |
-| Obtenu | **640×480** |
-| Images capturées | **149** |
-| FPS mesuré | **29,74** |
-| Codec MP4 | **AV1** (`libsvtav1` à l'encodage, `libdav1d` / TorchCodec `av1` au décodage), yuv420p |
-| `wrist_capture.mp4` | 10 705 octets, sha256 `ecc19ff032f3e0be42bf02af6512d080c7396c2e4aefa9a39307ebaded15e3e1` |
-| `wrist_still.png` (image du milieu) | 151 032 octets, sha256 `c3f2469f6a70888289be0eedcf6d4d0c619ac0ded3ebee8a22a22e4e94866ad8` |
-| Relecture PyAV | 149 images décodées, 640×480 |
-| Relecture TorchCodec 0.11.1 | 149 images, `av1`, 640×480, première image `[3, 480, 640]` |
-
-**Chaîne capture → encodage AV1 → relecture PyAV/TorchCodec : fonctionnelle** (sur le périphérique effectivement ouvert).
-**WRIST_CAPTURE = BLOCKED** : l'identité du périphérique capturé (InnoMaker poignet) n'est pas prouvée.
+- Cause **ASSUMED** (déclaration de l'opérateur, sans artefact) : le cache était encore sur l'objectif de l'InnoMaker. C'est cohérent avec la luminance 0,0 des captures par nom.
+- La capture OpenCV « index 1 » de cet essai (149 images, 29,74 fps, pièce sombre ; fichiers renommés `*_2026-10-05T2233_unidentified.*`, sha256 MP4 `ecc19ff0…`) venait **vraisemblablement de la caméra intégrée du MacBook**. C'est ASSUMED fort : à l'essai 2, l'index 1 est la caméra du MacBook. La caméra intégrée a donc probablement été ouverte involontairement lors de l'essai 1.
 
 ## Limites
 
-- **Scène très sombre** (luminance moyenne ≈ 4,7 / 255) : qualité d'image pour un dataset **non évaluée** ; le faible poids du MP4 vient de cette scène presque uniforme.
-- Mise au point manuelle non réglée.
-- Médias bruts (`wrist_still.png`, `wrist_capture.mp4`) : **LOCAL_ONLY** (Mac ENYOLAB, `evidence/video/`), conservés **en local uniquement** (ignorés par Git : images de la pièce). Seules ces métadonnées sont versionnées.
-- Avertissement macOS au chargement : classes Objective-C `AVFFrameReceiver` / `AVFAudioReceiver` définies en double (`libavdevice` embarqué par `av` et par `cv2`, plus FFmpeg Homebrew). Sans effet observé sur cette capture ; impact sur une session longue **non évalué**.
+- Identité prouvée **pour la session du 2026-10-05 seulement**.
+- Mise au point manuelle non réglée ; orientation de montage (image à l'envers) à vérifier.
+- 28,88 fps mesurés avec une seule caméra, sans bus servo : la tenue à 30 fps en enregistrement réel n'est pas évaluée.
+- Avertissement macOS au chargement (classes Objective-C dupliquées entre `av`, `cv2` et FFmpeg Homebrew) : sans effet observé, impact sur une session longue non évalué.

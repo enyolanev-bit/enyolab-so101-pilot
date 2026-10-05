@@ -34,20 +34,19 @@ Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé s
 - **policy physique** ;
 - **rollout physique**.
 
-### PROVEN — logiciel seulement
+### PROVEN — logiciel, et identification matérielle sans mouvement (Mac ENYOLAB)
 
 - LeRobot **0.6.1** (`lerobot[core_scripts,feetech]`, décision HQ, ENYO-14) installé dans l'environnement dédié du dépôt (`.venv`, Python 3.12, `uv.lock`) sur le **Mac ENYOLAB** (hôte de bring-up). Validation **logicielle** uniquement : version, imports SO-101, Feetech, PyAV, TorchCodec, OpenCV, modules dataset et `lerobot-record`, présence des commandes. Aucun port série ouvert, aucune commande LeRobot exécutée. Non installé sur le Mac de Boris. Artefacts : `evidence/2026-10-05-lerobot-0.6.1-software-validation.md`, `evidence/2026-10-05-record-stack-validation.md`.
-- Chaîne vidéo capture OpenCV → encodage AV1 → relecture PyAV/TorchCodec : fonctionnelle sur le Mac ENYOLAB (640×480, 29,74 fps mesurés), **sur un périphérique non identifié** — pas forcément l'InnoMaker, peut-être la caméra intégrée. Artefact : `evidence/video/2026-10-05-wrist-camera-capture.md`.
+- Caméra **poignet** InnoMaker U20CAM-1080P (Mac ENYOLAB, session du 2026-10-05) : identité **prouvée par contenu d'image** (corrélation 0,999 avec la capture par nom) à l'index OpenCV 0 ; capture 640×480, 28,88 fps mesurés, encodage AV1, relecture PyAV et TorchCodec OK. Ordre AVFoundation instable ; stabilité de l'index OpenCV **non mesurée** : reconfirmer par contenu d'image à chaque session. Artefact : `evidence/video/2026-10-05-wrist-camera-capture.md`.
 - Ports série sur le Mac ENYOLAB, hub actuel : leader / follower identifiés par débranchement contrôlé (geste opérateur, énumération par l'agent). Artefact : `evidence/2026-10-05-serial-port-identification.md`.
 
 ### PROVEN — amont (documentation), conformité physique non relevée
 
 - Réduction par articulation, leader et follower : doc officielle LeRobot `v0.6.1`. Références Cxxx **déduites** via la nomenclature SO-ARM100. Voir [`docs/hardware.md`](docs/hardware.md).
 
-### NOT_CONNECTED / BLOCKED
+### NOT_CONNECTED
 
-- caméra **dessus** (U20CAM-720P) : NOT_CONNECTED — la cible du pilote reste poignet + dessus.
-- caméra **poignet** (InnoMaker U20CAM-1080P) : détectée, mais **capture BLOCKED**. Adressée par son nom, elle ne renvoie que du noir ; l'ordre des index AVFoundation change d'une énumération à l'autre ; rien ne prouve que la capture réussie venait d'elle. Artefact : `evidence/video/2026-10-05-wrist-camera-capture.md`.
+- caméra **dessus** (U20CAM-720P) — la cible du pilote reste poignet + dessus.
 
 ### UNKNOWN
 

@@ -8,7 +8,8 @@ cameras:
     model: "InnoMaker U20CAM-1080P"
     form_factor: "PCB 32 x 32 mm, 4 trous M2"
     index: CHANGEME            # index OpenCV — a relever sur CETTE machine ; l'index AVFoundation de
-                               # scripts/test_cameras.sh n'est qu'un candidat : confirmer par capture
+                               # scripts/test_cameras.sh n'est qu'un candidat : confirmer par comparaison
+                               # de contenu avec une capture par nom (voir evidence/video/)
     width: 640                 # l'amont recommande 640x480 @30fps meme si le
     height: 480                # capteur sait faire mieux : au-dela, c'est du
     fps: 30                    # volume de donnees sans gain pour la politique
