@@ -13,11 +13,12 @@
 follower:
   type: so101_follower         # type CLI LeRobot 0.6.1 (--robot.type) ; calibration sous robots/so_follower/
   id: CHANGEME                 # identifiant utilise pour nommer la calibration
-  port: CHANGEME               # ex. /dev/tty.usbmodemXXXX — a relever, jamais a deviner
+  port: CHANGEME               # ex. /dev/cu.usbmodemXXXX (macOS) — a relever, jamais a deviner
   servo_variant: "STS3215 7.4V (gamme Standard)"  # NE PAS melanger avec la gamme 12V (Pro)
   bus_supply_voltage: 5        # V — architecture Standard, voir power ci-dessous
-  # Affectation follower : reprise de la version initiale, source non citee
-  # dans ce depot — ASSUMED.
+  # Affectation follower : 6 x 1/345 — PROVEN amont (docs/source/so101.mdx @ LeRobot v0.6.1 (commit 7e241bd6), l.35-44).
+  # Valeurs ATTENDUES (amont), pas mesurees sur le bras.
+  physical_check: CHANGEME_AFTER_HARDWARE_VERIFICATION   # marquage servos releve -> evidence/
   motors:                      # 6 moteurs, ids 1 a 6
     shoulder_pan:   { id: 1, ratio: "1:345", ref: STS3215-C001 }
     shoulder_lift:  { id: 2, ratio: "1:345", ref: STS3215-C001 }
@@ -32,18 +33,20 @@ leader:
   port: CHANGEME
   servo_variant: "STS3215 7.4V (gamme Standard)"
   bus_supply_voltage: 5        # V — architecture Standard
-  # Affectation reduction <-> articulation du leader : NON VERIFIEE (UNKNOWN).
-  # Ne pas remplacer ces valeurs sans source amont primaire ou constat
-  # physique (marquage du servo releve a l'articulation), consigne dans evidence/.
-  # Pour le leader, seul le total de la PAIRE est prouve : 7 x C001 (1:345), 2 x C044 (1:191),
-  # 3 x C046 (1:147), sur 12 servos leader + follower. Voir ../docs/hardware.md
+  # Affectation reduction <-> articulation du leader : PROVEN amont
+  # (docs/source/so101.mdx @ LeRobot v0.6.1 (commit 7e241bd6), l.35-44). Reference Cxxx deduite de la reduction via la nomenclature
+  # (C001 = 1:345, C044 = 1:191, C046 = 1:147 ; total paire 7 / 2 / 3, coherent).
+  # Conformite physique du leader assemble (marquage du servo releve a chaque
+  # articulation) : NON relevee — a consigner dans evidence/ avant teleoperation.
+  # Valeurs ATTENDUES (amont), pas mesurees sur le bras.
+  physical_check: CHANGEME_AFTER_HARDWARE_VERIFICATION   # marquage servos releve -> evidence/
   motors:
-    shoulder_pan:   { id: 1, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
-    shoulder_lift:  { id: 2, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
-    elbow_flex:     { id: 3, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
-    wrist_flex:     { id: 4, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
-    wrist_roll:     { id: 5, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
-    gripper:        { id: 6, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
+    shoulder_pan:   { id: 1, ratio: "1:191", ref: STS3215-C044 }
+    shoulder_lift:  { id: 2, ratio: "1:345", ref: STS3215-C001 }
+    elbow_flex:     { id: 3, ratio: "1:191", ref: STS3215-C044 }
+    wrist_flex:     { id: 4, ratio: "1:147", ref: STS3215-C046 }
+    wrist_roll:     { id: 5, ratio: "1:147", ref: STS3215-C046 }
+    gripper:        { id: 6, ratio: "1:147", ref: STS3215-C046 }
 
 power:
   supply: "5V 4A, barrel 5.5 x 2.1 mm, centre positif"

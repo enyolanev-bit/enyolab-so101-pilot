@@ -1,0 +1,18 @@
+[project]
+name = "enyolab-so101-pilot"
+version = "0.1.0"
+description = "Environnement dedie ENYOLAB SO-101 (Pilote #001) — LeRobot epingle"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # Version decidee par HQ (ENYO-14). Extra feetech = bus servo STS3215,
+    # requis par le guide officiel SO-101 (docs/source/so101.mdx @ v0.6.1).
+    "lerobot[feetech]==0.6.1",
+]
+
+[tool.uv]
+# Depot de configuration, pas un paquet Python : uv sync installe seulement
+# les dependances.
+package = false
+# Version de uv ayant genere uv.lock (0.12.13) ; recreer avec :
+#   uv sync --locked --python 3.12
+required-version = ">=0.12.13"

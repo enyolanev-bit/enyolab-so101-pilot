@@ -31,12 +31,19 @@ Le `<nom>` est celui passe a `--robot.id` / `--teleop.id`. Les repertoires
 les **types** a passer en CLI sont `--robot.type=so101_follower` et
 `--teleop.type=so101_leader` (identiques en LeRobot 0.5.1 et 0.6.1).
 
-Ce cache est **local a l'hote qui execute LeRobot**. Pour le Pilote #001 (Mac
-direct), les calibrations utilisees doivent donc exister sur le **Mac de
-Boris**. Une calibration est liee au **bras physique** (et a la version LeRobot
-qui l'a produite), pas a l'hote. Qui la produit, sur quelle machine, en
-presence de qui, et si un transfert du meme bras vers le Mac de Boris est
-admis : **UNKNOWN — a decider par HQ**.
+Les ids du Pilote #001 sont fixes par HQ et vivent dans le `config/robot.yaml`
+local (non versionne). Fichiers attendus : `robots/so_follower/<id follower>.json`
+et `teleoperators/so_leader/<id leader>.json`. Aucun des deux n'existe encore.
+L'artefact existant `follower_nevil.json` n'est **pas** la calibration du Pilote
+#001 ; produire celle-ci (nouvelle calibration ou copie approuvee) est une
+decision humaine / HQ (AGENTS.md regle 4).
+
+Ce cache est **local a l'hote qui execute LeRobot**. Hote de bring-up (decision
+HQ) : **Mac ENYOLAB** ; hote de deploiement : **Mac de Boris**, ou les
+calibrations utilisees devront exister. Une calibration est liee au **bras
+physique** (et a la version LeRobot qui l'a produite), pas a l'hote. Qui la
+produit, en presence de qui, et si un transfert du meme bras vers le Mac de
+Boris est admis : **UNKNOWN — a decider par HQ**.
 
 ## Etat constate — audit ENYO-14, 2026-10-05
 

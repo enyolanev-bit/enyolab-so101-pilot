@@ -33,9 +33,17 @@ done
 
 echo
 echo "=== LEROBOT ==="
-if command -v python3 >/dev/null 2>&1 && python3 -c "import lerobot" >/dev/null 2>&1; then
+# Interpreteur inspecte : le .venv du depot s'il existe, sinon python3 du PATH.
+REPO_ROOT=$(cd "$(dirname "$0")/.." && pwd)
+if [ -x "$REPO_ROOT/.venv/bin/python" ]; then
+  PY="$REPO_ROOT/.venv/bin/python"; PY_LABEL=".venv du depot"
+else
+  PY="python3"; PY_LABEL="python3 du PATH (pas de .venv dans le depot)"
+fi
+printf "  interpreteur  : %s\n" "$PY_LABEL"
+if command -v "$PY" >/dev/null 2>&1 && "$PY" -c "import lerobot" >/dev/null 2>&1; then
   printf "  present       : OUI\n"
-  LR_VERSION=$(python3 -c 'import lerobot;print(getattr(lerobot,"__version__","inconnue"))' 2>/dev/null)
+  LR_VERSION=$("$PY" -c 'import lerobot;print(getattr(lerobot,"__version__","inconnue"))' 2>/dev/null)
   printf "  version       : %s\n" "$LR_VERSION"
   if [ "$LR_VERSION" = "unknown" ] || [ "$LR_VERSION" = "inconnue" ] || [ -z "$LR_VERSION" ]; then
     echo "  attendu       : 0.6.1 (decision HQ) — version indeterminee dans cet environnement"
@@ -44,9 +52,9 @@ if command -v python3 >/dev/null 2>&1 && python3 -c "import lerobot" >/dev/null 
   else
     echo "  attendu       : 0.6.1 (decision HQ) — ECART : cet environnement n'est pas sur la version retenue"
   fi
-  printf "  chemin        : %s\n" "$(python3 -c 'import lerobot,os;print(os.path.dirname(lerobot.__file__))' 2>/dev/null)"
+  printf "  chemin        : %s\n" "$("$PY" -c 'import lerobot,os;print(os.path.dirname(lerobot.__file__))' 2>/dev/null)"
   echo "  --- support SO-101 (modules generiques so_follower / so_leader) ---"
-  python3 - <<'PY' 2>/dev/null
+  "$PY" - <<'PY' 2>/dev/null
 import lerobot, os
 b = os.path.dirname(lerobot.__file__)
 for d in ("robots", "teleoperators"):
@@ -57,8 +65,8 @@ for d in ("robots", "teleoperators"):
 PY
 else
   echo "  present       : NON"
-  echo "  note          : version retenue 0.6.1 (decision HQ), pas encore installee."
-  echo "                  Voir setup/mac.md — LEROBOT_VERSION_STATUS = PLANNED"
+  echo "  note          : version retenue 0.6.1 — environnement du depot : .venv"
+  echo "                  (uv sync --locked --python 3.12). Voir setup/mac.md"
 fi
 
 echo

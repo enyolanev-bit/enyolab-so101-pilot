@@ -29,10 +29,25 @@ Ces quantites portent sur **les deux bras ensemble**, pas sur un bras.
 | **Total** | | **12** = 6 leader + 6 follower |
 
 Repartition 7 / 2 / 3 issue de la nomenclature upstream, au niveau de la paire.
-**Quelle articulation du leader recoit quelle reduction n'est pas verifiee** sur
-une source primaire ni sur le bras : `UNKNOWN`. L'affectation du follower
-(6 x C001) est reprise de la version initiale sans source citee ici : `ASSUMED`. Voir
-`../config/robot.example.yaml`.
+Affectation par articulation — **PROVEN amont** (`docs/source/so101.mdx` du tag LeRobot `v0.6.1` (commit `7e241bd6`), l.35-44 ; lu le 2026-10-05 via `raw.githubusercontent.com`, sha256 du fichier `e75acfb7…`) :
+
+| Articulation | Leader | Follower |
+|---|---|---|
+| 1 shoulder_pan | 1:191 (C044) | 1:345 (C001) |
+| 2 shoulder_lift | 1:345 (C001) | 1:345 (C001) |
+| 3 elbow_flex | 1:191 (C044) | 1:345 (C001) |
+| 4 wrist_flex | 1:147 (C046) | 1:345 (C001) |
+| 5 wrist_roll | 1:147 (C046) | 1:345 (C001) |
+| 6 gripper | 1:147 (C046) | 1:345 (C001) |
+
+La doc amont donne la reduction ; la reference Cxxx en est **deduite** via la
+correspondance reference ↔ reduction de la nomenclature SO-ARM100
+(`README.md` l.76-78 et l.87, commit `fda892cb`) : C001 = 1/345, C044 = 1/191,
+C046 = 1/147 ; lot leader = 1 x C001 + 2 x C044 + 3 x C046. Total paire 7 / 2 / 3,
+coherent. **Conformite physique des
+bras assembles a ce tableau : non relevee** — relever le marquage de chaque
+servo a son articulation et le consigner dans `evidence/` avant teleoperation.
+Voir `../config/robot.example.yaml`.
 
 > Les trois references partagent le meme boitier et le meme connecteur. **Elles
 > ne sont pas interchangeables** : la reduction determine couple et vitesse de

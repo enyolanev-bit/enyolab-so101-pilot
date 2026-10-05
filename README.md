@@ -34,13 +34,18 @@ Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé s
 - **policy physique** ;
 - **rollout physique**.
 
-### PLANNED
+### PROVEN — logiciel seulement
 
-- LeRobot **0.6.1** (décision HQ, ENYO-14), dans un nouvel environnement dédié ENYOLAB SO-101 — non créé, non installé, non validé. Voir [`setup/mac.md`](setup/mac.md). Types CLI : `so101_follower` / `so101_leader`.
+- LeRobot **0.6.1** (décision HQ, ENYO-14) installé dans l'environnement dédié du dépôt (`.venv`, Python 3.12, `uv.lock`) sur le **Mac ENYOLAB** (hôte de bring-up). Validation **logicielle** uniquement : version, imports SO-101 et Feetech, présence des commandes. Aucune exécution matérielle. Non installé sur le Mac de Boris. Artefact : `evidence/2026-10-05-lerobot-0.6.1-software-validation.md`.
+- Ports série sur le Mac ENYOLAB, hub actuel : leader / follower identifiés par débranchement contrôlé (geste opérateur, énumération par l'agent). Artefact : `evidence/2026-10-05-serial-port-identification.md`.
+
+### PROVEN — amont (documentation), conformité physique non relevée
+
+- Réduction par articulation, leader et follower : doc officielle LeRobot `v0.6.1`. Références Cxxx **déduites** via la nomenclature SO-ARM100. Voir [`docs/hardware.md`](docs/hardware.md).
 
 ### UNKNOWN
 
-- affectation réduction ↔ articulation du **leader** — voir [`docs/hardware.md`](docs/hardware.md) ;
+- conformité physique des bras assemblés à l'affectation amont (marquage des servos non relevé) — voir [`docs/hardware.md`](docs/hardware.md) ;
 - architecture Raspberry Pi (productisation future, hors Pilote #001) — voir [`docs/architecture.md`](docs/architecture.md) ;
 - état physique réel du bras leader, dont la pièce `Trigger_SO101` est en cours de réimpression (ENYO-6).
 
@@ -93,7 +98,7 @@ Lire [`docs/safety.md`](docs/safety.md). Sans exception.
 | [`docs/hardware.md`](docs/hardware.md) | bras, servos, carte, alimentation, caméras, pièces imprimées — avec le niveau de preuve par ligne |
 | [`docs/safety.md`](docs/safety.md) | à lire avant toute mise sous tension |
 | [`docs/recovery.md`](docs/recovery.md) | que faire quand quelque chose ne va pas |
-| [`setup/mac.md`](setup/mac.md) | hôte du Pilote #001 ; `LEROBOT_VERSION = 0.6.1` (`PLANNED`) |
+| [`setup/mac.md`](setup/mac.md) | hôte du Pilote #001 ; `LEROBOT_VERSION = 0.6.1` — installé (Mac ENYOLAB, logiciel seulement) |
 | [`setup/raspberry-pi.md`](setup/raspberry-pi.md) | productisation future, `PLANNED` — rien n'a été installé ni mesuré |
 | [`setup/jetson.md`](setup/jetson.md) | infrastructure ENYOLAB, non prêtée à Boris ; le pilote n'en dépend pas |
 | [`config/robot.example.yaml`](config/robot.example.yaml) | gabarit, valeurs `CHANGEME` |
