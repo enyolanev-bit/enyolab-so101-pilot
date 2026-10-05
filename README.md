@@ -36,12 +36,18 @@ Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé s
 
 ### PROVEN — logiciel seulement
 
-- LeRobot **0.6.1** (décision HQ, ENYO-14) installé dans l'environnement dédié du dépôt (`.venv`, Python 3.12, `uv.lock`) sur le **Mac ENYOLAB** (hôte de bring-up). Validation **logicielle** uniquement : version, imports SO-101 et Feetech, présence des commandes. Aucune exécution matérielle. Non installé sur le Mac de Boris. Artefact : `evidence/2026-10-05-lerobot-0.6.1-software-validation.md`.
+- LeRobot **0.6.1** (`lerobot[core_scripts,feetech]`, décision HQ, ENYO-14) installé dans l'environnement dédié du dépôt (`.venv`, Python 3.12, `uv.lock`) sur le **Mac ENYOLAB** (hôte de bring-up). Validation **logicielle** uniquement : version, imports SO-101, Feetech, PyAV, TorchCodec, OpenCV, modules dataset et `lerobot-record`, présence des commandes. Aucun port série ouvert, aucune commande LeRobot exécutée. Non installé sur le Mac de Boris. Artefacts : `evidence/2026-10-05-lerobot-0.6.1-software-validation.md`, `evidence/2026-10-05-record-stack-validation.md`.
+- Chaîne vidéo capture OpenCV → encodage AV1 → relecture PyAV/TorchCodec : fonctionnelle sur le Mac ENYOLAB (640×480, 29,74 fps mesurés), **sur un périphérique non identifié** — pas forcément l'InnoMaker, peut-être la caméra intégrée. Artefact : `evidence/video/2026-10-05-wrist-camera-capture.md`.
 - Ports série sur le Mac ENYOLAB, hub actuel : leader / follower identifiés par débranchement contrôlé (geste opérateur, énumération par l'agent). Artefact : `evidence/2026-10-05-serial-port-identification.md`.
 
 ### PROVEN — amont (documentation), conformité physique non relevée
 
 - Réduction par articulation, leader et follower : doc officielle LeRobot `v0.6.1`. Références Cxxx **déduites** via la nomenclature SO-ARM100. Voir [`docs/hardware.md`](docs/hardware.md).
+
+### NOT_CONNECTED / BLOCKED
+
+- caméra **dessus** (U20CAM-720P) : NOT_CONNECTED — la cible du pilote reste poignet + dessus.
+- caméra **poignet** (InnoMaker U20CAM-1080P) : détectée, mais **capture BLOCKED**. Adressée par son nom, elle ne renvoie que du noir ; l'ordre des index AVFoundation change d'une énumération à l'autre ; rien ne prouve que la capture réussie venait d'elle. Artefact : `evidence/video/2026-10-05-wrist-camera-capture.md`.
 
 ### UNKNOWN
 
@@ -55,17 +61,25 @@ Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé s
 
 ## Expérience cible
 
-### Disponible aujourd'hui — lecture seule, sans risque
+Cible : Boris travaille **uniquement depuis son Mac**, sans Jetson, sans Raspberry Pi, sans les dépôts historiques ENYOLAB et sans recherche manuelle de dépendances.
+
+### Disponible aujourd'hui — installation + scripts en lecture seule
+
+Prérequis machine : Mac **Apple Silicon (arm64)** avec [Homebrew](https://brew.sh). Voir [`setup/mac.md`](setup/mac.md).
 
 ```bash
+brew install uv ffmpeg           # uv >= 0.12.13 ; FFmpeg systeme requis par TorchCodec
 git clone <url>
 cd enyolab-so101-pilot
-./scripts/check_system.sh     # OS, CPU, Python, LeRobot, périphériques USB
-./scripts/find_ports.sh       # liste les ports série candidats, sans les ouvrir
-./scripts/test_cameras.sh     # liste les caméras détectées, sans capture
+uv sync --locked --python 3.12   # environnement .venv épinglé : LeRobot 0.6.1, figé par uv.lock
+./scripts/check_system.sh        # OS, CPU, Python, LeRobot du .venv, FFmpeg, périphériques USB
+./scripts/find_ports.sh          # liste les ports série candidats, sans les ouvrir
+./scripts/test_cameras.sh        # liste les caméras et leurs index AVFoundation, sans capture
 ```
 
-Ces trois scripts n'ouvrent aucun port, n'envoient aucune commande et ne font bouger aucun moteur.
+Les trois scripts n'ouvrent aucun port, n'envoient aucune commande et ne font bouger aucun moteur. **Attention** : `uv sync` rend aussi disponibles les commandes LeRobot (`lerobot-calibrate`, `lerobot-teleoperate`, `lerobot-record`…), qui, elles, **ne sont pas bloquées** et agissent sur le robot. Ne les lancer qu'avec un GO HQ explicite. Après installation, consigner dans `evidence/` la version de LeRobot et le hash de `uv.lock` (critère de sortie de [`setup/mac.md`](setup/mac.md)).
+
+> **Ports série et index caméra sont propres à chaque Mac.** Ceux relevés sur le Mac ENYOLAB ne valent pas pour le Mac de Boris : les redécouvrir sur place (débranchement contrôlé pour distinguer leader et follower), puis les écrire dans `config/robot.yaml` et `config/cameras.yaml` (non versionnés).
 
 ### Bloqué aujourd'hui — à débloquer après validation
 
@@ -74,7 +88,7 @@ Ces trois scripts n'ouvrent aucun port, n'envoient aucune commande et ne font bo
 ./scripts/record_demo.sh --task drawing  # BLOCKED
 ```
 
-Ces deux scripts **se terminent immédiatement avec un code de sortie non nul**. C'est voulu : ils resteront bloqués tant que la téléopération et l'enregistrement n'auront pas été validés avec artefacts à l'appui.
+Ces deux scripts **se terminent immédiatement avec un code de sortie non nul**. La commande d'enregistrement visée est rédigée, non exécutée, dans [`docs/recording.md`](docs/recording.md). C'est voulu : ils resteront bloqués tant que la téléopération et l'enregistrement n'auront pas été validés avec artefacts à l'appui.
 
 ---
 
@@ -98,6 +112,7 @@ Lire [`docs/safety.md`](docs/safety.md). Sans exception.
 | [`docs/hardware.md`](docs/hardware.md) | bras, servos, carte, alimentation, caméras, pièces imprimées — avec le niveau de preuve par ligne |
 | [`docs/safety.md`](docs/safety.md) | à lire avant toute mise sous tension |
 | [`docs/recovery.md`](docs/recovery.md) | que faire quand quelque chose ne va pas |
+| [`docs/recording.md`](docs/recording.md) | brouillon de la commande `lerobot-record` (non exécutée) |
 | [`setup/mac.md`](setup/mac.md) | hôte du Pilote #001 ; `LEROBOT_VERSION = 0.6.1` — installé (Mac ENYOLAB, logiciel seulement) |
 | [`setup/raspberry-pi.md`](setup/raspberry-pi.md) | productisation future, `PLANNED` — rien n'a été installé ni mesuré |
 | [`setup/jetson.md`](setup/jetson.md) | infrastructure ENYOLAB, non prêtée à Boris ; le pilote n'en dépend pas |
@@ -105,7 +120,7 @@ Lire [`docs/safety.md`](docs/safety.md). Sans exception.
 | [`config/cameras.example.yaml`](config/cameras.example.yaml) | gabarit, valeurs `CHANGEME` |
 | [`calibration/README.md`](calibration/README.md) | rôle des fichiers de calibration, état constaté, règles |
 | [`tasks/`](tasks/README.md) | dessin / pliage / libre — expérience visée, **NOT_PROVEN** |
-| `evidence/` | vide — destiné aux artefacts de preuve (logs, mesures, photos) |
+| `evidence/` | artefacts de preuve versionnés (métadonnées, logs) ; médias bruts conservés en local, ignorés par Git |
 
 Aucun fichier de calibration n'est versionné ici. `.gitignore` ignore `calibration/*.json` : c'est volontaire.
 

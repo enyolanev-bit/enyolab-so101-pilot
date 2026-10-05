@@ -22,6 +22,17 @@ config/**/*.yaml
 config/**/*.yml
 !config/*.example.yaml
 
+# Medias bruts de preuve (images de la piece) : locaux, seules les metadonnees sont suivies
+evidence/**/*.png
+evidence/**/*.jpg
+evidence/**/*.jpeg
+evidence/**/*.heic
+evidence/**/*.gif
+evidence/**/*.mov
+evidence/**/*.mkv
+evidence/**/*.webm
+evidence/**/*.avi
+
 # Donnees
 datasets/
 data/

@@ -58,7 +58,8 @@ reprise sans diagnostic repete exactement le meme forcage.
 
 1. **Ne pas** recopier une calibration d'un autre bras : le fichier aura l'air
    valide et sera faux. Transfert d'une calibration du meme bras vers un autre
-   hote : non autorise tant que HQ n'a pas decide, voir `../calibration/README.md`.
+   hote : autorise par HQ (2026-10-05), original conserve et SHA256 verifie, voir
+   `../calibration/README.md`.
 2. Sauvegarder horodate ce qui existe encore, avant toute nouvelle calibration.
 3. Recalibrer sur le robot assemble.
 4. Comparer l'ancien et le nouveau fichier. Un ecart important sur `range_min` /

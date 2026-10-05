@@ -108,6 +108,12 @@ Ne jamais brancher un bloc 12 V sur un bras Standard.
   C'est un choix de ce projet, pas une regle generale de l'apprentissage par
   imitation.
 - La webcam integree du portable n'est **pas** une des vues retenues.
+- Une seule camera (poignet) suffit pour la mise en route et la validation de la
+  teleoperation ; la vue de dessus reste requise pour le Pilote #001.
+- Etat au 2026-10-05 : poignet detectee mais capture **BLOCKED** (identite du
+  peripherique capture non prouvee, images noires par nom, index instable :
+  `../evidence/video/2026-10-05-wrist-camera-capture.md`) ; dessus
+  **NOT_CONNECTED**.
 
 > Le support imprime correspondant est un **FORM_FACTOR_MATCH_ONLY** : l'entraxe
 > du support et celui du module concordent sur les cotes relevees, mais aucune

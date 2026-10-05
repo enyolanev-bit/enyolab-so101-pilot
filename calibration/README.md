@@ -42,8 +42,10 @@ Ce cache est **local a l'hote qui execute LeRobot**. Hote de bring-up (decision
 HQ) : **Mac ENYOLAB** ; hote de deploiement : **Mac de Boris**, ou les
 calibrations utilisees devront exister. Une calibration est liee au **bras
 physique** (et a la version LeRobot qui l'a produite), pas a l'hote. Qui la
-produit, en presence de qui, et si un transfert du meme bras vers le Mac de
-Boris est admis : **UNKNOWN — a decider par HQ**.
+produit et en presence de qui : **UNKNOWN — a decider par HQ**. Le transfert
+d'une calibration du **meme** bras vers un autre hote est **autorise par HQ
+(2026-10-05)**, original conserve, empreinte verifiee — voir la copie stagee
+ci-dessous.
 
 ## Etat constate — audit ENYO-14, 2026-10-05
 
@@ -82,6 +84,35 @@ Un artefact de calibration follower **existe** et a ete conserve :
 >
 > Il faut **recalibrer sur le robot assemble** avant tout mouvement, et comparer
 > les deux fichiers. Ne pas reutiliser celui de 2026-09-11 comme reference.
+> *(Precise par la decision HQ du 2026-10-05 : sa reprise pour le meme bras est
+> autorisee, mais la copie reste TO_REVALIDATE — elle ne devient pas une
+> reference.)*
+
+### Follower — copie stagee pour le Pilote #001 (decision HQ, 2026-10-05)
+
+HQ autorise la reprise de l'artefact historique pour le **meme bras follower
+physique** (transfert d'hote du meme bras autorise ; original conserve). La copie
+est **stagee seulement** : elle n'est **pas** placee dans le cache LeRobot actif.
+
+| Element | Valeur |
+|---|---|
+| Source (cache LeRobot, inchangee) | `~/.cache/huggingface/lerobot/calibration/robots/so_follower/follower_nevil.json` |
+| SHA256 source | `f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d` |
+| Copie stagee (ignoree par Git) | `calibration/staging/pilot001_follower.from_follower_nevil.json` |
+| SHA256 copie | `f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d` |
+| Identite octet a octet (`cmp`) | **OUI** |
+| Chemin actif `robots/so_follower/pilot001_follower.json` | **absent** — non active |
+
+`FOLLOWER_CALIBRATION_STATUS = TO_REVALIDATE` : la copie herite de toutes les
+reserves ci-dessus (`shoulder_lift` / `elbow_flex` a `[0, 4095]`, version LeRobot
+d'origine inconnue). L'activation sous l'id du pilote est une etape distincte,
+soumise a decision HQ.
+
+> ⚠️ **Le staging n'est pas une barriere sur le Mac ENYOLAB.** Le meme fichier
+> reste actif dans le cache sous l'id `follower_nevil` : une commande LeRobot
+> lancee avec `--robot.id=follower_nevil` le chargerait sans invite si les moteurs
+> correspondent. Ne pas utiliser cet id. Le retirer du cache actif est une
+> decision HQ (question ouverte), pas une action d'agent.
 
 ### Leader
 
@@ -97,8 +128,8 @@ raisons pour lesquelles `scripts/teleop.sh` est bloque.
    `.gitignore` ignore `calibration/*.json` : c'est volontaire, ne pas le lever.
 2. Une calibration appartient a **un** bras physique. La copier d'un bras vers un
    autre produit un fichier qui a l'air valide et ne l'est pas. Le transfert
-   d'une calibration du **meme** bras vers un autre hote n'est pas regle :
-   decision HQ requise, voir ci-dessus.
+   d'une calibration du **meme** bras vers un autre hote est autorise par HQ
+   (2026-10-05), a condition de conserver l'original et de verifier le SHA256.
 3. Avant d'ecraser une calibration existante, la **sauvegarder horodatee**. Une
    calibration perdue se repaye en temps de banc.
 4. Une calibration n'est reputee bonne qu'apres verification sur le robot :

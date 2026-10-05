@@ -7,7 +7,8 @@ cameras:
   wrist:
     model: "InnoMaker U20CAM-1080P"
     form_factor: "PCB 32 x 32 mm, 4 trous M2"
-    index: CHANGEME            # index systeme — a relever, jamais a deviner
+    index: CHANGEME            # index OpenCV — a relever sur CETTE machine ; l'index AVFoundation de
+                               # scripts/test_cameras.sh n'est qu'un candidat : confirmer par capture
     width: 640                 # l'amont recommande 640x480 @30fps meme si le
     height: 480                # capteur sait faire mieux : au-dela, c'est du
     fps: 30                    # volume de donnees sans gain pour la politique
@@ -32,3 +33,12 @@ cameras:
 # PILOT_REQUIREMENT: wrist + overhead — deux vues retenues pour ce pilote.
 # Choix du projet, pas une regle generale. La webcam integree du portable
 # n'est pas une des vues retenues.
+#
+# Une seule camera (poignet) suffit pour la mise en route et la validation de
+# la teleoperation. La vue de dessus donne le contexte global de la scene
+# (ex. dessin : feuille, trace, position du bras) ; elle reste requise pour le
+# Pilote #001.
+#
+# Camera absente : ne pas inventer d'index, ecrire `status: NOT_CONNECTED`.
+# Les index sont propres a chaque machine et NON stables (ordre AVFoundation
+# observe changeant entre deux enumerations) : reconfirmer a chaque session.

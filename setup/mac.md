@@ -6,22 +6,23 @@
 
 Le dépôt **définit** son environnement (`pyproject.toml` + `uv.lock`). Aucun script du dépôt n'installe quoi que ce soit automatiquement. Un `.venv` a été créé par `uv sync --locked --python 3.12` sur le **Mac ENYOLAB** (bring-up, logiciel seulement). **Rien n'est installé sur le Mac de Boris.**
 
-Prérequis connus pour recréer l'environnement : **macOS arm64** (le `uv.lock` fige `torch` 2.11.0, dont le wheel macOS publié n'existe qu'en arm64), uv ≥ 0.12.13, Python 3.12.
+Prérequis connus pour recréer l'environnement : **macOS arm64** (le `uv.lock` fige `torch` 2.11.0, dont le wheel macOS publié n'existe qu'en arm64), uv ≥ 0.12.13, Python 3.12, et **FFmpeg système** (`brew install ffmpeg`). Selon le guide amont (`docs/source/installation.mdx` @ v0.6.1, option uv), TorchCodec ≥ 0.10 s'appuie sur ce FFmpeg pour décoder les vidéos. Sur le Mac ENYOLAB : FFmpeg 8.1.1 (Homebrew), avec `libsvtav1`, `libx264` et `h264_videotoolbox`. Aucun script du dépôt n'installe FFmpeg.
 
 ## Version LeRobot — `LEROBOT_VERSION = 0.6.1`
 
 `LEROBOT_VERSION_STATUS` : **installé sur le Mac ENYOLAB (bring-up), validation logicielle seulement** — **non installé sur le Mac de Boris**. Décision HQ (ENYO-14, 2026-10-05).
 
-- **Version retenue** : `lerobot[feetech]==0.6.1`, Python 3.12.
+- **Version retenue** : `lerobot[core_scripts,feetech]==0.6.1`, Python 3.12. `core_scripts` (= `dataset` + `hardware` + `viz`) est l'extra amont associé à `lerobot-record` / `lerobot-teleoperate` / `lerobot-calibrate` : PyAV, TorchCodec, `datasets`, pynput, rerun. Aucun extra d'entraînement ou de policy.
 - **Hôtes** (décision HQ) : bring-up = **Mac ENYOLAB** ; déploiement ultérieur = **Mac de Boris**.
-- **Environnement** : `.venv` à la racine du dépôt, ignoré par Git, défini par `pyproject.toml` et figé par `uv.lock` (sha256 `a2c6fc5bd50c890f…`). Recréer à l'identique :
+- **Environnement** : `.venv` à la racine du dépôt, ignoré par Git, défini par `pyproject.toml` et figé par `uv.lock` (99 paquets, sha256 `3b247e885c2c0990…`). Recréer à l'identique :
 
   ```bash
   uv sync --locked --python 3.12   # validé avec CPython 3.12.13, uv 0.12.13
   ```
 
 - **Validé (logiciel)** — artefact : `evidence/2026-10-05-lerobot-0.6.1-software-validation.md`. Python 3.12.13 ; `lerobot` 0.6.1 ; import de `SO101Follower`/`SO101FollowerConfig` et `SO101Leader`/`SO101LeaderConfig` ; types `so101_follower` / `so101_leader` enregistrés ; `scservo_sdk` (`feetech-servo-sdk` 1.0.0) et `FeetechMotorsBus` importables ; commandes `lerobot-find-port`, `lerobot-setup-motors`, `lerobot-calibrate`, `lerobot-teleoperate`, `lerobot-record` présentes. **Aucune de ces commandes n'a été exécutée.**
-- **Non validé** : tout comportement matériel ; `ffmpeg` (requis par `lerobot-record` pour l'encodage vidéo) non vérifié.
+- **Pile d'enregistrement (logiciel)** — artefact : `evidence/2026-10-05-record-stack-validation.md`. PyAV 15.1.0 (`libsvtav1`, codec RGB par défaut de LeRobot), TorchCodec 0.11.1, OpenCV 4.13, `datasets` 4.8.5, modules `lerobot.datasets` et `lerobot.scripts.lerobot_record` importables ; `lerobot-record` **non exécuté**.
+- **Non validé** : tout comportement de bus servo ; capture caméra poignet **BLOCKED** (`evidence/video/2026-10-05-wrist-camera-capture.md`) ; caméra dessus **NOT_CONNECTED**.
 - **Ne pas modifier** `sample-efficient-imitation/.venv` (0.5.1, bac à sable ALOHA/simulation) : il n'est pas l'environnement du pilote.
 - **Raison** (audit ENYO-14, lecture de sources, 2026-10-05) : types `so101_*`, attribut `name`, chemin de calibration, format JSON et méthode `calibrate()` relevés identiques entre le paquet 0.5.1 installé et le tag `v0.6.1` (commit `7e241bd6`) ; 0.6.1 est la version la plus récente sur PyPI au 2026-10-05 ; 0.6.1 ajoute les options `num_read_retries` et `position_{p,i,d}_coefficient`. Comportement réel de 0.6.1 : non vérifié.
 - **Types CLI** : `--robot.type=so101_follower`, `--teleop.type=so101_leader`.
@@ -48,15 +49,17 @@ Une installation validée logiciellement n'est pas une version validée sur la c
 - support SO-101 présent sous les modules génériques `robots/so_follower` et `teleoperators/so_leader` ; types CLI enregistrés `so101_follower` et `so101_leader` (`config_so_follower.py` l.45, `config_so_leader.py` l.33 du paquet 0.5.1 installé)
 - points d'entrée disponibles : `lerobot-find-port`, `lerobot-setup-motors`, `lerobot-calibrate`, `lerobot-teleoperate`, `lerobot-record`, `lerobot-train`
 
-## Premier contact, sans risque
+## Premier contact
 
 ```bash
+brew install uv ffmpeg
+uv sync --locked --python 3.12
 ./scripts/check_system.sh
 ./scripts/find_ports.sh
 ./scripts/test_cameras.sh
 ```
 
-Ces scripts sont en lecture seule. Ils n'ouvrent aucun port série.
+Les trois scripts sont en lecture seule et n'ouvrent aucun port série. `test_cameras.sh` interroge AVFoundation : macOS peut alors demander l'autorisation d'accès caméra/micro au terminal. Les commandes `lerobot-*` installées par `uv sync` ne sont **pas** bloquées : ne pas les lancer sans GO HQ.
 
 ## Points d'attention macOS
 

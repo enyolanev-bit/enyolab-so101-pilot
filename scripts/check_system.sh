@@ -70,6 +70,16 @@ else
 fi
 
 echo
+echo "=== FFMPEG (requis par TorchCodec / lerobot-record) ==="
+if command -v ffmpeg >/dev/null 2>&1; then
+  printf "  ffmpeg        : %s\n" "$(ffmpeg -hide_banner -version 2>/dev/null | head -1)"
+  ENC=$(ffmpeg -hide_banner -encoders 2>/dev/null | grep -oE 'libsvtav1|libx264 |h264_videotoolbox' | tr -d ' ' | sort -u | tr '\n' ' ')
+  printf "  encodeurs     : %s\n" "${ENC:-aucun des encodeurs attendus}"
+else
+  echo "  ffmpeg        : ABSENT — installer FFmpeg systeme (voir setup/mac.md)"
+fi
+
+echo
 echo "=== PERIPHERIQUES USB (lecture seule) ==="
 if [ "$UNAME" = "Darwin" ]; then
   # ioreg et non system_profiler : SPUSBDataType rend une sortie vide sur

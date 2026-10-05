@@ -9,6 +9,18 @@ echo "=== CAMERAS DETECTEES ==="
 if [ "$UNAME" = "Darwin" ]; then
   OUT=$(system_profiler SPCameraDataType 2>/dev/null | grep -E '^ {4,8}[^ ].*:$' | sed 's/:$//' | sed 's/^ */  - /')
   [ -n "$OUT" ] && echo "$OUT" || echo "  aucune camera rapportee par le systeme"
+  echo
+  echo "=== INDEX AVFOUNDATION (liste seule, aucun flux ouvert) ==="
+  if command -v ffmpeg >/dev/null 2>&1; then
+    ffmpeg -hide_banner -f avfoundation -list_devices true -i "" 2>&1 \
+      | sed -n '/AVFoundation video devices/,/AVFoundation audio devices/p' \
+      | grep -E '\[[0-9]+\]' | sed -E 's/.*\] (\[[0-9]+\])/  \1/'
+    echo "  Index AVFoundation (FFmpeg). Correspondance avec l'index OpenCV NON"
+    echo "  prouvee, ordre NON stable d'une enumeration a l'autre. Confirmer"
+    echo "  l'identite par une capture avant tout usage ; propre a cette machine."
+  else
+    echo "  ffmpeg absent : index non listes (voir setup/mac.md)"
+  fi
 else
   FOUND=0
   for d in /dev/video*; do

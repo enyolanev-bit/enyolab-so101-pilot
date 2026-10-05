@@ -57,7 +57,9 @@ faire pincer en le faisant. Couper l'alimentation, ne pas retenir le bras.
 
 ### 4.1 Une calibration fausse est plus dangereuse qu'une calibration absente
 
-Sans calibration, LeRobot refuse de piloter. Avec une calibration **fausse**, il
+Sans fichier de calibration, LeRobot (`lerobot-teleoperate`, `lerobot-record`)
+**lance de lui-meme une calibration**, couple coupe — voir `recording.md`. Avec une
+calibration **fausse**, il
 pilote avec assurance vers des positions qui n'existent pas mecaniquement, et le
 bras force en butee jusqu'a ce que quelque chose cede.
 
