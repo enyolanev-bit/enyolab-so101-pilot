@@ -36,7 +36,7 @@ Points non valides pour le Mac direct :
 |---|---|
 | Ports USB disponibles sur le Mac de Boris, besoin d'un hub | UNKNOWN |
 | Debit USB pour 2 cameras + 2 bus servo simultanes | NON MESURE |
-| Version LeRobot sur le Mac de Boris | UNKNOWN — voir `../setup/mac.md` |
+| Version LeRobot sur le Mac de Boris | UNKNOWN — 0.6.1 retenu (PLANNED), non installe — voir `../setup/mac.md` |
 | Calibrations presentes sur le Mac de Boris | UNKNOWN — voir `../calibration/README.md` |
 | Pannes propres a l'hote : veille, mise a jour OS, cable ou hub debranche | a couvrir par la checklist `safety.md` §2 |
 | Hote d'entrainement du Pilote #001 | UNKNOWN — non decide |
@@ -90,16 +90,19 @@ deux controleurs — et c'est un choix a faire avec une mesure en main, pas avan
 
 ## 4. Version LeRobot
 
-`LEROBOT_VERSION_STATUS = UNDETERMINED`
+`LEROBOT_VERSION = 0.6.1` · `LEROBOT_VERSION_STATUS = PLANNED`
+(decision HQ ENYO-14 ; environnement cible : nouvel environnement dedie ENYOLAB
+SO-101, pas encore cree, hote UNKNOWN)
 
 | Cible | Version | Preuve |
 |---|---|---|
-| Mac ENYOLAB (audit ENYO-14) | 0.5.1 | PROVEN — presente et importable |
-| **Mac de Boris** (cible Pilote #001) | — | UNKNOWN — non installe, non releve |
+| Mac ENYOLAB (audit ENYO-14) | 0.5.1 | PROVEN — presente et importable ; bac a sable, pas l'environnement du pilote |
+| **Mac de Boris** (cible Pilote #001) | — | UNKNOWN — non releve |
+| Environnement dedie ENYOLAB SO-101 | 0.6.1 retenu | PLANNED — pas encore cree |
 | Jetson | 0.6.1 | ASSUMED — non verifie, machine hors ligne |
 | Raspberry Pi | — | UNKNOWN |
 
-> Aucune version n'est retenue pour ce projet. La regle : la version LeRobot est
+> Version retenue : **0.6.1**, pas encore installee ni validee. La regle : la version LeRobot est
 > **explicitement epinglee et validee sur la cible de deploiement reellement
 > utilisee** pour une session. Pour le Pilote #001, cette cible est le **Mac de
 > Boris** ; la Jetson et le Pi ne sont pas requis. Si une autre cible entre plus

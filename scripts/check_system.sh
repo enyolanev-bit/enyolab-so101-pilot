@@ -35,7 +35,15 @@ echo
 echo "=== LEROBOT ==="
 if command -v python3 >/dev/null 2>&1 && python3 -c "import lerobot" >/dev/null 2>&1; then
   printf "  present       : OUI\n"
-  printf "  version       : %s\n" "$(python3 -c 'import lerobot;print(getattr(lerobot,"__version__","inconnue"))' 2>/dev/null)"
+  LR_VERSION=$(python3 -c 'import lerobot;print(getattr(lerobot,"__version__","inconnue"))' 2>/dev/null)
+  printf "  version       : %s\n" "$LR_VERSION"
+  if [ "$LR_VERSION" = "unknown" ] || [ "$LR_VERSION" = "inconnue" ] || [ -z "$LR_VERSION" ]; then
+    echo "  attendu       : 0.6.1 (decision HQ) — version indeterminee dans cet environnement"
+  elif [ "$LR_VERSION" = "0.6.1" ]; then
+    echo "  attendu       : 0.6.1 — conforme a la decision HQ, NON validee pour autant"
+  else
+    echo "  attendu       : 0.6.1 (decision HQ) — ECART : cet environnement n'est pas sur la version retenue"
+  fi
   printf "  chemin        : %s\n" "$(python3 -c 'import lerobot,os;print(os.path.dirname(lerobot.__file__))' 2>/dev/null)"
   echo "  --- support SO-101 (modules generiques so_follower / so_leader) ---"
   python3 - <<'PY' 2>/dev/null
@@ -49,8 +57,8 @@ for d in ("robots", "teleoperators"):
 PY
 else
   echo "  present       : NON"
-  echo "  note          : aucune version n'est encore retenue pour ce projet."
-  echo "                  Voir setup/mac.md — LEROBOT_VERSION_STATUS = UNDETERMINED"
+  echo "  note          : version retenue 0.6.1 (decision HQ), pas encore installee."
+  echo "                  Voir setup/mac.md — LEROBOT_VERSION_STATUS = PLANNED"
 fi
 
 echo

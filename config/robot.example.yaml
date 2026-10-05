@@ -11,7 +11,7 @@
 # bus_supply_voltage, ratio et ref sont documentaires.
 
 follower:
-  type: so_follower            # module LeRobot generique couvrant le SO-101
+  type: so101_follower         # type CLI LeRobot 0.6.1 (--robot.type) ; calibration sous robots/so_follower/
   id: CHANGEME                 # identifiant utilise pour nommer la calibration
   port: CHANGEME               # ex. /dev/tty.usbmodemXXXX — a relever, jamais a deviner
   servo_variant: "STS3215 7.4V (gamme Standard)"  # NE PAS melanger avec la gamme 12V (Pro)
@@ -27,7 +27,7 @@ follower:
     gripper:        { id: 6, ratio: "1:345", ref: STS3215-C001 }
 
 leader:
-  type: so_leader              # module LeRobot generique couvrant le SO-101
+  type: so101_leader           # type CLI LeRobot 0.6.1 (--teleop.type) ; calibration sous teleoperators/so_leader/
   id: CHANGEME
   port: CHANGEME
   servo_variant: "STS3215 7.4V (gamme Standard)"

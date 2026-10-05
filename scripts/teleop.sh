@@ -11,7 +11,7 @@ echo "Raisons, au 2026-10-05 (audit ENYO-14) :" >&2
 echo "  - calibration leader : NOT_FOUND" >&2
 echo "  - teleoperation physique : NOT_PROVEN" >&2
 echo "  - validite physique de la calibration follower : TO_REVALIDATE" >&2
-echo "  - version LeRobot du projet : UNDETERMINED" >&2
+echo "  - version LeRobot du projet : 0.6.1 decidee, NON installee ni validee" >&2
 echo >&2
 echo "Conditions de deblocage, toutes requises :" >&2
 echo "  1. bras leader mecaniquement complet (voir ENYO-6) ;" >&2

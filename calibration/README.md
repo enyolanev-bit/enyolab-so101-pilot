@@ -22,11 +22,14 @@ et force contre les butees. C'est le mode de panne le plus couteux de ce projet.
 Ces fichiers ne vivent pas dans le depot, mais dans le cache utilisateur :
 
 ```
-~/.cache/huggingface/lerobot/calibration/robots/<type>/<nom>.json        # follower
-~/.cache/huggingface/lerobot/calibration/teleoperators/<type>/<nom>.json # leader
+~/.cache/huggingface/lerobot/calibration/robots/so_follower/<nom>.json     # follower
+~/.cache/huggingface/lerobot/calibration/teleoperators/so_leader/<nom>.json # leader
 ```
 
-Le `<nom>` est celui passe a `--robot.id` / `--teleop.id`.
+Le `<nom>` est celui passe a `--robot.id` / `--teleop.id`. Les repertoires
+`so_follower` / `so_leader` sont les noms internes LeRobot et **ne changent pas** ;
+les **types** a passer en CLI sont `--robot.type=so101_follower` et
+`--teleop.type=so101_leader` (identiques en LeRobot 0.5.1 et 0.6.1).
 
 Ce cache est **local a l'hote qui execute LeRobot**. Pour le Pilote #001 (Mac
 direct), les calibrations utilisees doivent donc exister sur le **Mac de
@@ -44,8 +47,28 @@ Un artefact de calibration follower **existe** et a ete conserve :
 
 > **Sa validite physique est TO_REVALIDATE.**
 > Trois axes y portent une course `[0, 4095]`, soit la plage entiere du codeur
-> 12 bits. Une course mecanique reelle de bras est toujours plus etroite. Trois
-> lectures restent possibles et aucune n'est tranchee :
+> 12 bits (axes releves dans l'audit ENYO-14, table moteur du fichier
+> `follower_nevil.json`, sha256
+> `f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d`). Ils ne sont pas tous dans le meme
+> cas :
+>
+> | Axe | Course `[0, 4095]` | Statut |
+> |---|---|---|
+> | `wrist_roll` | **attendue** — lors d'une nouvelle calibration, la methode `calibrate()` de LeRobot fixe `wrist_roll` a `0–4095` (moteur a tour complet) et n'enregistre pas sa course | EXPECTED (plage seule) |
+> | `shoulder_lift` | enregistree comme course de mouvement | **TO_REVALIDATE** |
+> | `elbow_flex` | enregistree comme course de mouvement | **TO_REVALIDATE** |
+>
+> Source du comportement `wrist_roll` : methode `calibrate()`
+> (`full_turn_motor = "wrist_roll"`, `range_maxes[...] = 4095`) — paquet 0.5.1 installe, `robots/so_follower/so_follower.py` l.131-139 ;
+> tag GitHub `v0.6.1` (commit `7e241bd6`), meme fichier l.135-143.
+>
+> **EXPECTED ne veut pas dire sur.** Cela signifie que LeRobot n'impose **aucune
+> borne logicielle** a `wrist_roll` : au premier mouvement, surveiller cables et
+> butees de cet axe. EXPECTED porte sur la plage seule ; le `homing_offset` de
+> `wrist_roll` et le fichier entier restent **TO_REVALIDATE**.
+>
+> Pour `shoulder_lift` et `elbow_flex`, une course mecanique reelle de bras est
+> plus etroite. Trois lectures restent possibles et aucune n'est tranchee :
 > 1. la calibration a ete faite bras non assemble ou sans butees ;
 > 2. elle a ete interrompue avant d'avoir borne ces axes ;
 > 3. ces axes tournent reellement librement sur ce montage.

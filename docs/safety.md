@@ -61,8 +61,11 @@ Sans calibration, LeRobot refuse de piloter. Avec une calibration **fausse**, il
 pilote avec assurance vers des positions qui n'existent pas mecaniquement, et le
 bras force en butee jusqu'a ce que quelque chose cede.
 
-C'est l'etat actuel du dossier : la calibration follower conservee porte trois
-axes a course `[0, 4095]`, ce qui n'est pas une course de bras assemble. Elle est
+C'est l'etat actuel du dossier : la calibration follower conservee porte une
+course `[0, 4095]` sur `shoulder_lift` et `elbow_flex`, ce qui n'est pas une
+course attendue de bras assemble. `wrist_roll` a `[0, 4095]` est attendu (LeRobot
+fixe cette plage), mais cela signifie **aucune borne logicielle** sur cet axe :
+surveiller cables et butees au premier mouvement. Le fichier entier est
 **TO_REVALIDATE**. Voir `../calibration/README.md`.
 
 ### 4.2 Le premier mouvement apres une calibration
