@@ -26,13 +26,14 @@ fi
 
 echo
 echo "=== ATTENDU POUR LE PILOTE ==="
-echo "  2 vues sont necessaires a l'entrainement : poignet + vue de dessus."
-echo "  Une seule vue ne suffit pas."
+echo "  PILOT_REQUIREMENT: wrist + overhead"
+echo "  Deux vues retenues pour ce pilote : poignet (pince et objet) + dessus"
+echo "  (scene et position du bras). Choix du projet, pas une regle generale."
 echo
 echo "  Cameras prevues : InnoMaker U20CAM-1080P (poignet, UVC, 32x32 mm)"
 echo "                    InnoMaker U20CAM-720P  (dessus,  UVC, 32x32 mm)"
 echo
-echo "  La camera integree d'un portable n'est PAS une des deux vues."
+echo "  La camera integree d'un portable n'est PAS une des vues retenues."
 echo "  La mise au point de ces modules est MANUELLE : image floue au premier"
 echo "  branchement est normal, il faut tourner l'objectif."
 echo

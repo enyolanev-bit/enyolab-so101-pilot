@@ -29,4 +29,6 @@ cameras:
       Peut etre tenu par un bras articule existant plutot que par le support
       imprime amont. A trancher au montage.
 
-# Deux vues sont attendues pour l'entrainement. Une seule ne suffit pas.
+# PILOT_REQUIREMENT: wrist + overhead — deux vues retenues pour ce pilote.
+# Choix du projet, pas une regle generale. La webcam integree du portable
+# n'est pas une des vues retenues.

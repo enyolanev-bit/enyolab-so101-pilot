@@ -1,47 +1,65 @@
 # Architecture
 
-> `RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED`
-> `PI4_READY_STATE = UNKNOWN`
+> **Pilote #001 Boris = Mac direct.** Les bras et les cameras se branchent en
+> USB sur le Mac de Boris, qui execute LeRobot. Aucun Pi, aucune Jetson dans le
+> chemin d'execution du pilote.
 >
-> Le schema ci-dessous est l'architecture **cible candidate**. Elle n'a pas ete
-> montee ni mesuree. Aucune ligne de ce document ne decrit un systeme en
-> fonctionnement.
+> `RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED` — le Pi 4 est un **candidat de
+> productisation future**, pas l'architecture du pilote.
+>
+> Aucune ligne de ce document ne decrit un systeme en fonctionnement : la
+> teleoperation est `BLOCKED` (`../scripts/teleop.sh`).
 
-## 1. Architecture cible candidate
+## 1. Architecture du Pilote #001 — Mac direct (decision HQ)
 
 ```
-   ┌──────────────┐
-   │ Bras LEADER  │──── USB ────┐
-   │  6x STS3215  │             │
-   └──────────────┘             │
-          ▲                     │
-          │ 5 V / 4 A           │
-                                │
-   ┌──────────────┐             │        ┌─────────────────────┐
-   │ Bras FOLLOWER│──── USB ────┼───────▶│  RASPBERRY PI 4     │
-   │  6x STS3215  │             │        │                     │
-   └──────────────┘             │        │  LeRobot            │
-          ▲                     │        │  teleop / record    │
-          │ 5 V / 4 A           │        │  TO_BE_VALIDATED    │
-                                │        └─────────┬───────────┘
-   ┌──────────────┐             │                  │
-   │ Camera       │──── USB ────┤                  │ reseau
-   │ poignet      │             │                  │ SSH (candidat)
-   │ U20CAM-1080P │             │                  ▼
-   └──────────────┘             │        ┌─────────────────────┐
-                                │        │  Poste operateur    │
-   ┌──────────────┐             │        │  (Mac / portable)   │
-   │ Camera       │──── USB ────┘        └─────────────────────┘
-   │ dessus       │
-   │ U20CAM-720P  │
-   └──────────────┘
+Leader USB ─────┐
+Follower USB ───┼── Mac de Boris ── LeRobot
+Camera poignet ─┤
+Camera dessus ──┘
 ```
 
-4 peripheriques USB sur le Pi : 2 adaptateurs bus servo + 2 cameras.
-2 alimentations 5 V / 4 A dediees, une par bras — **separees** de l'alimentation
-du Pi.
+- 4 peripheriques USB sur le Mac : 2 adaptateurs bus servo + 2 cameras.
+- 2 alimentations 5 V / 4 A dediees, une par bras, independantes du Mac.
+- **Pourquoi le Mac** : c'est la topologie qui reduit le nombre de
+  dependances — une seule machine, pas de reseau, pas de SSH, pas de seconde
+  installation LeRobot a maintenir pour la teleoperation. Les pannes propres a
+  l'hote restent ouvertes, voir le tableau ci-dessous.
+- **La Jetson reste une infrastructure ENYOLAB.** Elle n'est pas pretee a
+  Boris et n'est pas dans le chemin d'execution du pilote.
 
-## 2. Pourquoi un Pi, et ce que ca n'est pas
+Statut : **PLANNED**. Rien de cette chaine n'a ete branche ni execute chez Boris.
+
+Points non valides pour le Mac direct :
+
+| Point | Statut |
+|---|---|
+| Ports USB disponibles sur le Mac de Boris, besoin d'un hub | UNKNOWN |
+| Debit USB pour 2 cameras + 2 bus servo simultanes | NON MESURE |
+| Version LeRobot sur le Mac de Boris | UNKNOWN — voir `../setup/mac.md` |
+| Calibrations presentes sur le Mac de Boris | UNKNOWN — voir `../calibration/README.md` |
+| Pannes propres a l'hote : veille, mise a jour OS, cable ou hub debranche | a couvrir par la checklist `safety.md` §2 |
+| Hote d'entrainement du Pilote #001 | UNKNOWN — non decide |
+
+## 1 bis. Architecture de productisation future — candidate Raspberry Pi 4
+
+`RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED` · `PI4_READY_STATE = UNKNOWN`
+
+```
+SO-101 + cameras
+      │
+      ▼
+Raspberry Pi 4
+      │ SSH / reseau
+      ▼
+Mac de Boris
+```
+
+Aucun fonctionnement sur Pi n'a ete demontre dans ce projet. Ce schema est une
+piste pour une version produit ulterieure ; il ne conditionne pas le Pilote #001.
+Les sections 2 et 3 ne concernent que cette piste.
+
+## 2. Piste Pi — ce qu'elle apporterait, et ce qu'elle n'est pas
 
 | Rend | Ne rend pas |
 |---|---|
@@ -54,7 +72,7 @@ L'**entrainement** d'une politique ne se fait pas sur le Pi. Le Pi fait de la
 teleoperation et de l'enregistrement ; l'entrainement se fait sur une machine
 avec un GPU et le checkpoint revient vers le Pi pour l'inference.
 
-## 3. Points non valides — a mesurer avant de s'engager
+## 3. Piste Pi — points non valides, a mesurer avant de s'engager
 
 | # | Point | Statut |
 |---|---|---|
@@ -76,21 +94,25 @@ deux controleurs — et c'est un choix a faire avec une mesure en main, pas avan
 
 | Cible | Version | Preuve |
 |---|---|---|
-| Mac | 0.5.1 | PROVEN — presente et importable |
+| Mac ENYOLAB (audit ENYO-14) | 0.5.1 | PROVEN — presente et importable |
+| **Mac de Boris** (cible Pilote #001) | — | UNKNOWN — non installe, non releve |
 | Jetson | 0.6.1 | ASSUMED — non verifie, machine hors ligne |
 | Raspberry Pi | — | UNKNOWN |
 
-> Aucune version n'est retenue pour ce projet. Les trois cibles doivent finir sur
-> **la meme** : un dataset enregistre avec une version et rejoue avec une autre
-> est une source de panne qui ne se voit pas tout de suite. Le choix se fait
-> quand le Pi aura ete teste, pas avant. Voir `../setup/`.
+> Aucune version n'est retenue pour ce projet. La regle : la version LeRobot est
+> **explicitement epinglee et validee sur la cible de deploiement reellement
+> utilisee** pour une session. Pour le Pilote #001, cette cible est le **Mac de
+> Boris** ; la Jetson et le Pi ne sont pas requis. Si une autre cible entre plus
+> tard dans la chaine (rejeu, entrainement, Pi), elle doit etre alignee sur la
+> version avec laquelle le dataset a ete enregistre. Voir `../setup/mac.md`.
 
 ## 5. La Jetson
 
 La Jetson Orin Nano est la plateforme **historique et actuelle** d'ENYOLAB pour
 les charges GPU. Elle reste en service pour ce qu'elle fait bien.
 
-> **Boris ne dependra pas de la Jetson dans l'architecture cible.**
+> **La Jetson n'est pas pretee a Boris et n'est pas dans le chemin
+> d'execution du Pilote #001.**
 >
 > Raison : une plateforme dont la mise en route a demande une intervention de
 > recuperation bas niveau n'est pas une plateforme qu'on livre. Le pilote doit

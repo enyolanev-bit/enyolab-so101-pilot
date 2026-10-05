@@ -5,12 +5,19 @@
 # apres identification reelle des ports (scripts/find_ports.sh).
 #
 # robot.yaml n'est pas commite : il est specifique a une machine.
+#
+# Toute valeur CHANGEME* doit etre remplacee avant usage : un fichier qui en
+# contient encore n'est PAS une configuration valide. Les champs servo_variant,
+# bus_supply_voltage, ratio et ref sont documentaires.
 
 follower:
   type: so_follower            # module LeRobot generique couvrant le SO-101
   id: CHANGEME                 # identifiant utilise pour nommer la calibration
   port: CHANGEME               # ex. /dev/tty.usbmodemXXXX — a relever, jamais a deviner
-  servo_voltage: 7.4           # V — architecture Standard. NE PAS mélanger avec du 12V
+  servo_variant: "STS3215 7.4V (gamme Standard)"  # NE PAS melanger avec la gamme 12V (Pro)
+  bus_supply_voltage: 5        # V — architecture Standard, voir power ci-dessous
+  # Affectation follower : reprise de la version initiale, source non citee
+  # dans ce depot — ASSUMED.
   motors:                      # 6 moteurs, ids 1 a 6
     shoulder_pan:   { id: 1, ratio: "1:345", ref: STS3215-C001 }
     shoulder_lift:  { id: 2, ratio: "1:345", ref: STS3215-C001 }
@@ -23,21 +30,30 @@ leader:
   type: so_leader              # module LeRobot generique couvrant le SO-101
   id: CHANGEME
   port: CHANGEME
-  servo_voltage: 7.4           # le leader est TOUJOURS en 7.4V sur SO-101
+  servo_variant: "STS3215 7.4V (gamme Standard)"
+  bus_supply_voltage: 5        # V — architecture Standard
+  # Affectation reduction <-> articulation du leader : NON VERIFIEE (UNKNOWN).
+  # Ne pas remplacer ces valeurs sans source amont primaire ou constat
+  # physique (marquage du servo releve a l'articulation), consigne dans evidence/.
+  # Pour le leader, seul le total de la PAIRE est prouve : 7 x C001 (1:345), 2 x C044 (1:191),
+  # 3 x C046 (1:147), sur 12 servos leader + follower. Voir ../docs/hardware.md
   motors:
-    shoulder_pan:   { id: 1, ratio: "1:191", ref: STS3215-C044 }
-    shoulder_lift:  { id: 2, ratio: "1:345", ref: STS3215-C001 }
-    elbow_flex:     { id: 3, ratio: "1:191", ref: STS3215-C044 }
-    wrist_flex:     { id: 4, ratio: "1:147", ref: STS3215-C046 }
-    wrist_roll:     { id: 5, ratio: "1:147", ref: STS3215-C046 }
-    gripper:        { id: 6, ratio: "1:147", ref: STS3215-C046 }
-
-# NOTE — l'affectation ratio <-> articulation du leader provient d'une source
-# secondaire et n'est pas verifiee sur une page amont primaire.
-# Statut : ASSUMED. A confirmer avant montage.
+    shoulder_pan:   { id: 1, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
+    shoulder_lift:  { id: 2, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
+    elbow_flex:     { id: 3, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
+    wrist_flex:     { id: 4, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
+    wrist_roll:     { id: 5, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
+    gripper:        { id: 6, ratio: CHANGEME_AFTER_HARDWARE_VERIFICATION, ref: CHANGEME_AFTER_HARDWARE_VERIFICATION }
 
 power:
   supply: "5V 4A, barrel 5.5 x 2.1 mm, centre positif"
-  # Le constructeur de la carte bus servo specifie 9-12.6V en entree.
-  # Le fonctionnement en 5V est une decision HQ, assumee, a surveiller
-  # au premier essai en charge. Voir ../docs/hardware.md
+  # Plage nominale couramment documentee pour la carte Waveshare : 9-12.6V.
+  # La doc Waveshare admet aussi une tension bus servo injectee plus basse
+  # (zone 5-8.4V) ; la sortie bus suit la tension fournie. Le SO-101 Standard
+  # est alimente en 5V dans son ecosysteme amont. (Elements rapportes par la
+  # revue HQ ENYO-14, citation primaire a archiver dans evidence/.)
+  # Regle : la tension fournie doit correspondre a l'architecture servo visee —
+  # jamais de 12V sur un bras Standard. Avant la premiere mise sous tension :
+  # verifier la doc de la carte en main, polarite, connecteur, et mesurer la
+  # tension sous charge.
+  # Voir ../docs/hardware.md §2

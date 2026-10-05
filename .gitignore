@@ -17,6 +17,11 @@ calibration/*.json
 calibration/**/*.json
 !calibration/README.md
 
+# Configuration specifique a une machine — seuls les *.example.yaml sont suivis
+config/**/*.yaml
+config/**/*.yml
+!config/*.example.yaml
+
 # Donnees
 datasets/
 data/

@@ -28,6 +28,13 @@ Ces fichiers ne vivent pas dans le depot, mais dans le cache utilisateur :
 
 Le `<nom>` est celui passe a `--robot.id` / `--teleop.id`.
 
+Ce cache est **local a l'hote qui execute LeRobot**. Pour le Pilote #001 (Mac
+direct), les calibrations utilisees doivent donc exister sur le **Mac de
+Boris**. Une calibration est liee au **bras physique** (et a la version LeRobot
+qui l'a produite), pas a l'hote. Qui la produit, sur quelle machine, en
+presence de qui, et si un transfert du meme bras vers le Mac de Boris est
+admis : **UNKNOWN — a decider par HQ**.
+
 ## Etat constate — audit ENYO-14, 2026-10-05
 
 ### Follower
@@ -59,8 +66,9 @@ raisons pour lesquelles `scripts/teleop.sh` est bloque.
 1. **Aucun fichier de calibration machine-specific n'est commite sans revue HQ.**
    `.gitignore` ignore `calibration/*.json` : c'est volontaire, ne pas le lever.
 2. Une calibration appartient a **un** bras physique. La copier d'un bras vers un
-   autre, ou d'une machine vers une autre, produit un fichier qui a l'air valide
-   et ne l'est pas.
+   autre produit un fichier qui a l'air valide et ne l'est pas. Le transfert
+   d'une calibration du **meme** bras vers un autre hote n'est pas regle :
+   decision HQ requise, voir ci-dessus.
 3. Avant d'ecraser une calibration existante, la **sauvegarder horodatee**. Une
    calibration perdue se repaye en temps de banc.
 4. Une calibration n'est reputee bonne qu'apres verification sur le robot :

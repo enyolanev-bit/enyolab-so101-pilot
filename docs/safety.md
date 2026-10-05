@@ -4,18 +4,22 @@ A lire **avant** la premiere mise sous tension, et avant chaque session ou le
 robot peut bouger. Ce document ne contient pas de procedure de teleoperation :
 la teleoperation est bloquee (`scripts/teleop.sh`).
 
-## 1. Ce que ce bras peut et ne peut pas faire
+## 1. Risques connus
 
-Le SO-101 est un bras de table a 6 servos. Il **ne peut pas** casser un os ni
-traverser un mur. Il **peut** :
+Le SO-101 est un bras de table a 6 servos. Ce document ne garantit aucune
+gravite maximale de blessure et aucun ordre de rupture des pieces : ni l'un ni
+l'autre n'a ete mesure dans ce projet. Risques identifies :
 
-- pincer un doigt dans la pince ou dans une articulation ;
-- balayer la table et projeter ce qui s'y trouve ;
-- forcer contre une butee ou contre la table jusqu'a surchauffe ;
-- se detruire lui-meme — une piece imprimee cede avant un servo.
+- **pincement** d'un doigt dans la pince ou dans une articulation ;
+- **collision** : le bras peut balayer la table, heurter une personne ou
+  projeter ce qui s'y trouve ;
+- **blocage et surchauffe servo** : un servo qui force contre une butee ou
+  contre la table chauffe ;
+- **casse mecanique** : une piece imprimee, un servo ou les deux peuvent ceder
+  sous un forcage prolonge.
 
-Le risque principal n'est pas la blessure grave. C'est le **geste reflexe** :
-rattraper un bras qui part, et se faire pincer en le faisant.
+Un risque identifie est le **geste reflexe** : rattraper un bras qui part, et se
+faire pincer en le faisant. Couper l'alimentation, ne pas retenir le bras.
 
 ## 2. Avant de mettre sous tension
 
@@ -31,6 +35,13 @@ rattraper un bras qui part, et se faire pincer en le faisant.
    etre centre positif.
 5. **Cameras et cables ranges** — un cable dans la course du bras sera tendu
    puis arrache.
+6. **Tension du bloc lue sur l'etiquette** — 5 V pour un bras Standard, jamais
+   12 V. Voir `hardware.md` §2.
+7. **Hote Mac pret** — sur secteur, mise en veille et mises a jour
+   automatiques suspendues pour la session, hub et cables USB fixes. Le Mac
+   pilote directement les bras (Pilote #001). Ne pas supposer qu'une veille ou
+   une perte USB arrete le bras : en cas de doute, couper l'alimentation du
+   bras.
 
 ## 3. Pendant
 

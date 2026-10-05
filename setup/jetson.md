@@ -1,14 +1,14 @@
 # Setup — Jetson Orin Nano
 
-**Statut : plateforme ENYOLAB historique et actuelle. Hors du périmètre de livraison Boris.**
+**Statut : infrastructure ENYOLAB historique et actuelle. Non prêtée à Boris, hors du chemin d'exécution du Pilote #001.**
 
 ## Position
 
 La Jetson est la plateforme de calcul du laboratoire ENYOLAB. Elle a servi aux travaux de perception et d'inférence.
 
-**Boris ne dépendra pas de la Jetson dans l'architecture cible.** Elle est documentée ici pour deux raisons seulement :
+**Le Pilote #001 ne dépend pas de la Jetson.** Elle est documentée ici pour deux raisons seulement :
 
-1. elle porte peut-être une installation LeRobot plus récente que celle du Mac, et ce point conditionne le choix de version (voir [`mac.md`](mac.md)) ;
+1. elle porte peut-être une installation LeRobot plus récente que celle du Mac ENYOLAB — information utile, mais qui ne conditionne pas la version du pilote (voir [`mac.md`](mac.md)) ;
 2. elle a pu produire des artefacts historiques utiles.
 
 ## État constaté lors d'ENYO-14

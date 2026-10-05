@@ -1,6 +1,6 @@
 # Setup — macOS
 
-Poste de développement et de téléopération manuelle.
+**Hôte principal du Pilote #001 Boris** (architecture Mac direct, voir [`../docs/architecture.md`](../docs/architecture.md)) : bras et caméras en USB sur le Mac de Boris, LeRobot exécuté localement. Statut : **PLANNED** — rien n'est installé chez Boris.
 
 ## État
 
@@ -10,19 +10,20 @@ Poste de développement et de téléopération manuelle.
 
 **Aucune version n'est retenue à ce stade, et ce n'est pas un oubli.**
 
-Le choix doit résulter d'une comparaison entre trois cibles, pas d'une préférence :
+Règle : la version LeRobot est **explicitement épinglée et validée sur la cible de déploiement réellement utilisée** pour la session. Pour le Pilote #001, cette cible est le **Mac de Boris**. La Jetson et le Raspberry Pi ne sont pas dans le chemin d'exécution du pilote et ne conditionnent pas ce choix.
 
 | Cible | Version constatée | Statut |
 |---|---|---|
-| **Mac** | **0.5.1** (wheel) | PROVEN — relevé lors de l'audit ENYO-14 |
-| **Jetson** | 0.6.1 *annoncé* | **ASSUMED** — non vérifié, machine hors ligne lors de l'audit |
-| **Raspberry Pi 4** | — | **UNKNOWN** — aucune installation constatée |
+| **Mac de Boris** (cible Pilote #001) | — | **UNKNOWN** — non installé, non relevé |
+| Mac ENYOLAB | 0.5.1 (wheel) | PROVEN — relevé lors de l'audit ENYO-14 |
+| Jetson (infrastructure ENYOLAB) | 0.6.1 *annoncé* | ASSUMED — non vérifié, machine hors ligne lors de l'audit |
+| Raspberry Pi 4 (productisation future) | — | UNKNOWN — aucune installation constatée |
 
-Choisir une version avant d'avoir vérifié les trois reviendrait à épingler un chiffre sur une hypothèse. Un leader et un follower qui ne parlent pas la même version de la couche moteur, c'est une incompatibilité qu'on découvre le bras sous tension.
+Choisir une version sans l'avoir validée sur la cible reviendrait à épingler un chiffre sur une hypothèse.
 
-**Critère de sortie** : les trois lignes du tableau sont en PROVEN, et la version retenue est écrite ici avec la date et la raison du choix.
+**Critère de sortie** : une version est épinglée, installée et validée sur le Mac de Boris, et elle est écrite ici avec la date et la raison du choix. « Validée » = artefacts consignés dans `evidence/` (version affichée par le gestionnaire de paquets, hash du lockfile), et calibrations utilisées produites sous cette même version. Si une autre machine entre plus tard dans la chaîne (rejeu, entraînement), elle s'aligne sur la version avec laquelle le dataset a été enregistré.
 
-## Constaté sur le Mac lors d'ENYO-14
+## Constaté sur le Mac ENYOLAB lors d'ENYO-14
 
 - Python 3.12
 - gestionnaire de paquets `uv` (ni conda, ni poetry, ni pyenv)

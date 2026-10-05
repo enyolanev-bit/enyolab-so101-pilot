@@ -9,18 +9,30 @@ Etat au **2026-10-05**. Chaque ligne porte son niveau de preuve.
 | Modele | SO-101, variante **Standard** | PROVEN — decision HQ, archi arretee |
 | Bras | 1 leader + 1 follower | PROVEN |
 | Servos par bras | 6 | PROVEN |
-| Tension servos | **7.4 V** pour les deux bras | PROVEN — doc upstream SO-ARM100 |
+| Variante servo | STS3215 gamme **7.4 V** (Standard), les deux bras | PROVEN — doc upstream SO-ARM100 |
+| Alimentation bus servo | **5 V**, architecture Standard (voir §2) | DECISION HQ — sources amont rapportees, non archivees ici (voir §2) |
 | Variante Pro / follower 12 V | **non utilisee** | PROVEN — decision HQ |
 
-### Repartition des servos (par bras, 6 unites)
+> « 7.4 V » est la tension nominale de la gamme servo STS3215 Standard, pas la
+> tension du bloc retenu pour ce pilote. Pour ce pilote, le bloc est un **5 V**.
+> Ne pas acheter de bloc 7.4 V sur la foi de ce nom.
 
-| Reference | Reduction | Qte / bras |
+### Repartition des servos — PAIRE COMPLETE (leader + follower = 12 unites)
+
+Ces quantites portent sur **les deux bras ensemble**, pas sur un bras.
+
+| Reference | Reduction | Qte pour la paire (sur 12) |
 |---|---|---|
-| Feetech STS3215 **C001** | 1:345 | 7 sur les 12 |
-| Feetech STS3215 **C044** | 1:191 | 2 sur les 12 |
-| Feetech STS3215 **C046** | 1:147 | 3 sur les 12 |
+| Feetech STS3215 **C001** | 1:345 | 7 |
+| Feetech STS3215 **C044** | 1:191 | 2 |
+| Feetech STS3215 **C046** | 1:147 | 3 |
+| **Total** | | **12** = 6 leader + 6 follower |
 
-Total 12 pour la paire — repartition 7 / 2 / 3 issue de la nomenclature upstream.
+Repartition 7 / 2 / 3 issue de la nomenclature upstream, au niveau de la paire.
+**Quelle articulation du leader recoit quelle reduction n'est pas verifiee** sur
+une source primaire ni sur le bras : `UNKNOWN`. L'affectation du follower
+(6 x C001) est reprise de la version initiale sans source citee ici : `ASSUMED`. Voir
+`../config/robot.example.yaml`.
 
 > Les trois references partagent le meme boitier et le meme connecteur. **Elles
 > ne sont pas interchangeables** : la reduction determine couple et vitesse de
@@ -34,16 +46,32 @@ Total 12 pour la paire — repartition 7 / 2 / 3 issue de la nomenclature upstre
 |---|---|---|
 | Carte bus servo | Waveshare Bus Servo Adapter (A), WSH-SBS-01 | PROVEN |
 | Connecteur alim carte | barillet DC **5.5 x 2.1 mm** | PROVEN — datasheet |
-| Alimentation cible | **5 V / 4 A minimum**, un bloc par bras | PROVEN — decision HQ |
+| Alimentation cible | **5 V / 4 A minimum**, un bloc par bras | DECISION HQ — tension : voir ci-dessous |
 | Modele retenu | Mean Well **GST25E05-P1J** | PROVEN |
 | Polarite | **centre positif** — suffixe `P1J` = 2.1 x 5.5 x 11 mm, C+ | PROVEN — datasheet constructeur |
 
-> ⚠️ **Divergence a connaitre.** La datasheet Waveshare annonce une plage
-> d'entree **9–12.6 V**, alors que l'architecture retenue est **5 V**. Les deux
-> informations sont exactes et elles ne concordent pas. Ce point est
-> **[A VERIFIER AVANT MISE SOUS TENSION]** : relire la datasheet de la carte
-> reellement en main et confirmer que 5 V est dans sa plage admissible.
-> Ne pas alimenter en se fiant a ce document.
+**Tension d'alimentation de la carte — elements amont rapportes par la revue
+HQ (ENYO-14).** Les pages sources ne sont pas encore archivees dans ce depot :
+niveau de preuve ici = **rapporte HQ, citation primaire a joindre sous
+`evidence/`**.
+
+- la plage nominale couramment documentee pour la carte Waveshare est
+  **9–12.6 V** ;
+- la documentation Waveshare admet aussi des tensions de bus servo injectees
+  plus basses, dont la zone **5–8.4 V** ;
+- la sortie bus suit la tension servo fournie ;
+- l'architecture **SO-101 Standard** est alimentee en **5 V** dans son ecosysteme
+  amont.
+
+Sur cette base, HQ retient 5 V pour l'architecture Standard. La regle reste :
+**la tension fournie doit correspondre a l'architecture servo visee.** Standard
+= 5 V. Pro / follower 12 V = autre architecture, autres servos, non utilisee ici.
+Ne jamais brancher un bloc 12 V sur un bras Standard.
+
+> **[A VERIFIER AVANT PREMIERE MISE SOUS TENSION]** — relire la documentation
+> de la carte reellement en main et confirmer que la tension du bloc est dans la
+> plage d'injection admise ; lire l'etiquette du bloc ; mesurer la tension du
+> bus sous charge au premier essai et la consigner dans `evidence/`.
 
 > ⚠️ **Polarite.** Un barillet inverse sur un bus servo detruit
 > silencieusement. La polarite du GST25E05-P1J est prouvee par le suffixe de
@@ -60,8 +88,11 @@ Total 12 pour la paire — repartition 7 / 2 / 3 issue de la nomenclature upstre
 - UVC, aucun pilote a installer.
 - PCB **32 x 32 mm**, 4 trous **M2**.
 - **Mise au point manuelle** : flou au premier branchement est normal.
-- 2 vues sont necessaires a l'entrainement. Une seule ne suffit pas.
-- La webcam du portable n'est **pas** une des deux vues.
+- `PILOT_REQUIREMENT: wrist + overhead` — le pilote retient deux vues : poignet
+  (gros plan sur la pince et l'objet) et dessus (scene et position du bras).
+  C'est un choix de ce projet, pas une regle generale de l'apprentissage par
+  imitation.
+- La webcam integree du portable n'est **pas** une des vues retenues.
 
 > Le support imprime correspondant est un **FORM_FACTOR_MATCH_ONLY** : l'entraxe
 > du support et celui du module concordent sur les cotes relevees, mais aucune

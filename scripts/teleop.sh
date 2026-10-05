@@ -15,9 +15,15 @@ echo "  - version LeRobot du projet : UNDETERMINED" >&2
 echo >&2
 echo "Conditions de deblocage, toutes requises :" >&2
 echo "  1. bras leader mecaniquement complet (voir ENYO-6) ;" >&2
-echo "  2. calibration leader obtenue et conservee ;" >&2
-echo "  3. calibration follower revalidee sur le robot assemble ;" >&2
-echo "  4. version LeRobot arretee et identique sur toutes les cibles ;" >&2
+echo "  2. calibration leader obtenue et conservee, presente sur l'hote de" >&2
+echo "     deploiement (Pilote #001 : Mac de Boris) ;" >&2
+echo "  3. calibration follower revalidee sur le robot assemble, presente sur" >&2
+echo "     l'hote de deploiement ;" >&2
+echo "  4. version LeRobot explicitement epinglee et validee sur la cible de" >&2
+echo "     deploiement utilisee pour CETTE session (Pilote #001 : Mac de Boris ;" >&2
+echo "     Jetson et Raspberry Pi ne sont pas requis pour le Mac direct) ;" >&2
+echo "  4b. affectation servo <-> articulation du leader relevee et consignee" >&2
+echo "      dans evidence/ (actuellement UNKNOWN) ;" >&2
 echo "  5. docs/safety.md lu, zone degagee, coupure d'alimentation a portee ;" >&2
 echo "  6. autorisation humaine explicite pour CETTE session." >&2
 echo >&2

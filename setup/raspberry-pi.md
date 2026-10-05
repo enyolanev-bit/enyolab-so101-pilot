@@ -4,9 +4,9 @@
 
 ## Pourquoi un Raspberry Pi
 
-L'architecture cible du pilote Boris ne doit pas dépendre de la Jetson, qui est la plateforme historique ENYOLAB. Un Pi 4 est envisagé comme hôte local des deux bras et des caméras. Voir [`../docs/architecture.md`](../docs/architecture.md).
+**Le Pilote #001 Boris n'utilise pas de Pi** : il tourne en Mac direct (voir [`mac.md`](mac.md)). Le Pi 4 est un **candidat de productisation future**, envisagé comme hôte local des deux bras et des caméras, piloté depuis le Mac en SSH. Voir [`../docs/architecture.md`](../docs/architecture.md).
 
-**`RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED`** — cette architecture est une **candidate**, pas une solution en service.
+**`RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED`** — candidate, pas une solution en service. Aucun fonctionnement sur Pi n'a été démontré.
 
 ## État constaté lors d'ENYO-14
 

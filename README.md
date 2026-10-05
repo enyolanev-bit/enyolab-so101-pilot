@@ -37,7 +37,8 @@ Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé s
 ### UNKNOWN
 
 - version de LeRobot à retenir — voir [`setup/mac.md`](setup/mac.md) ;
-- architecture Raspberry Pi — voir [`docs/architecture.md`](docs/architecture.md) ;
+- affectation réduction ↔ articulation du **leader** — voir [`docs/hardware.md`](docs/hardware.md) ;
+- architecture Raspberry Pi (productisation future, hors Pilote #001) — voir [`docs/architecture.md`](docs/architecture.md) ;
 - état physique réel du bras leader, dont la pièce `Trigger_SO101` est en cours de réimpression (ENYO-6).
 
 > Aucune ligne de ce dépôt n'affirme que le leader est calibré, ni que la téléopération fonctionne.
@@ -85,13 +86,13 @@ Lire [`docs/safety.md`](docs/safety.md). Sans exception.
 
 | Chemin | Contenu |
 |---|---|
-| [`docs/architecture.md`](docs/architecture.md) | architecture cible candidate, `RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED`, place de la Jetson |
+| [`docs/architecture.md`](docs/architecture.md) | Pilote #001 = Mac direct ; Pi 4 = candidat futur, `RASPBERRY_PI_ARCHITECTURE = TO_BE_VALIDATED` ; place de la Jetson |
 | [`docs/hardware.md`](docs/hardware.md) | bras, servos, carte, alimentation, caméras, pièces imprimées — avec le niveau de preuve par ligne |
 | [`docs/safety.md`](docs/safety.md) | à lire avant toute mise sous tension |
 | [`docs/recovery.md`](docs/recovery.md) | que faire quand quelque chose ne va pas |
-| [`setup/mac.md`](setup/mac.md) | `LEROBOT_VERSION_STATUS = UNDETERMINED` et le tableau des trois cibles |
-| [`setup/raspberry-pi.md`](setup/raspberry-pi.md) | `PLANNED` — rien n'a été installé ni mesuré |
-| [`setup/jetson.md`](setup/jetson.md) | plateforme historique ENYOLAB ; le pilote n'en dépendra pas |
+| [`setup/mac.md`](setup/mac.md) | hôte du Pilote #001 ; `LEROBOT_VERSION_STATUS = UNDETERMINED` |
+| [`setup/raspberry-pi.md`](setup/raspberry-pi.md) | productisation future, `PLANNED` — rien n'a été installé ni mesuré |
+| [`setup/jetson.md`](setup/jetson.md) | infrastructure ENYOLAB, non prêtée à Boris ; le pilote n'en dépend pas |
 | [`config/robot.example.yaml`](config/robot.example.yaml) | gabarit, valeurs `CHANGEME` |
 | [`config/cameras.example.yaml`](config/cameras.example.yaml) | gabarit, valeurs `CHANGEME` |
 | [`calibration/README.md`](calibration/README.md) | rôle des fichiers de calibration, état constaté, règles |
