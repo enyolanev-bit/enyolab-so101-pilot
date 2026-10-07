@@ -1,0 +1,22 @@
+{
+  "status": "PROVEN_CAPTURE_ONLY",
+  "frame_id": "20261006T213127346817Z-f9382e92",
+  "device_name": "Innomaker-U20CAM-1080p-S1",
+  "device_unique_id": "0x11100000c456366",
+  "backend": "ffmpeg/AVFoundation; name selection; audio disabled",
+  "capture_started_utc": "2026-10-06T21:31:27.346817+00:00",
+  "capture_finished_utc": "2026-10-06T21:31:33.109684+00:00",
+  "host_elapsed_s": 5.763,
+  "sensor_exposure_timestamp": "UNKNOWN; host interval only",
+  "width": 640,
+  "height": 480,
+  "requested_fps": 30,
+  "measured_fps": null,
+  "discarded_frames": 15,
+  "rotation_applied_degrees": 0,
+  "path": "evidence/video/wrist-20261006T213127346817Z-f9382e92.png",
+  "sha256": "b7882b28a4754204447e82939cb6c7a6222bcf168249551d67685cf0ca07a228",
+  "bytes": 176901,
+  "ffmpeg_warnings": "",
+  "robot_access": "NONE; camera-only subprocess"
+}

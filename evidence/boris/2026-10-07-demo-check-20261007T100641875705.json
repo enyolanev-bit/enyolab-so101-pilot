@@ -1,0 +1,39 @@
+{
+ "command": "check",
+ "started": "2026-10-07T10:06:41.135451+02:00",
+ "pose": {
+  "t": "2026-10-07T10:06:41.873450+02:00",
+  "joints_deg": {
+   "shoulder_pan": -0.484,
+   "shoulder_lift": -2.33,
+   "elbow_flex": 0.044,
+   "wrist_flex": 11.473,
+   "wrist_roll": -97.538
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2056,
+   "shoulder_lift": 2021,
+   "elbow_flex": 2048,
+   "wrist_flex": 1383,
+   "wrist_roll": 938,
+   "gripper": 2072
+  },
+  "state": "READ_ONLY"
+ },
+ "result": "ROBOT_OK",
+ "stop": {
+  "reason": "check done",
+  "torque_zero_writes": {},
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

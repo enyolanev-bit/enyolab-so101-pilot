@@ -1,0 +1,104 @@
+{
+  "recorded_at_utc": "2026-10-07T07:33:41.190649+00:00",
+  "VIDEO_DEVICES_FOUND": {
+    "ffmpeg_avfoundation_video_source_count": 8,
+    "external_usb_camera_identities": 3,
+    "built_in_camera_identities": 1,
+    "virtual_desk_view_sources": 1,
+    "screen_capture_sources": 3,
+    "note": "Eight enumerated sources are not eight independent physical cameras. Built-in and virtual/screen sources were enumerated only."
+  },
+  "ROBOT_CAMERAS_CONFIRMED": {
+    "count": 3,
+    "evidence": "Three unique external device IDs successfully selected and captured; visually distinct views of the paper/tool/palette setup",
+    "simultaneous_capture_proven_count": 2,
+    "simultaneous_pair": [
+      "tool_camera",
+      "paper_context_camera"
+    ],
+    "simultaneous_pair_receipt_overlap_s": 0.452018,
+    "three_way_simultaneous_capture": "NOT_PROVEN: 5MP capture failed during concurrent attempt, succeeded alone; root cause UNKNOWN",
+    "limitations": "Brief snapshots, not a sustained-stream bandwidth test or optical calibration"
+  },
+  "views": {
+    "tool_camera": {
+      "device_name": "Innomaker-U20CAM-1080p-S1",
+      "device_unique_id": "0x11100000c456366",
+      "frame_path": "evidence/video/camera-20261007T073031098331Z-6c37fe51.png",
+      "frame_sha256": "27a4356e9a3e84bd08f74ebe5237ecf221a1cf824d6b1352cba1cdf8588b1d4a",
+      "metadata_path": "evidence/video/camera-20261007T073031098331Z-6c37fe51.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "received_frame_unix_s": 1791358239.443393,
+      "paper_or_work_surface_visible": true,
+      "tool_tip_visible": true,
+      "gripper_body_visible": false,
+      "workspace_usable_for_local_drawing_observation": true,
+      "physical_mount_left_right_assignment": "UNKNOWN",
+      "useful_robot_context": "YES: close tool/brush view; arm/base not visible",
+      "observation": "Brush tip enters from bottom over paper; broad blank local area and paper edges visible; tip is soft/out of focus; full paper outline not visible",
+      "role_evidence": "Primary view shows tool tip and paper together"
+    },
+    "paper_context_camera": {
+      "device_name": "Innomaker-U20CAM-720P  ",
+      "device_unique_id": "0x11200000c456367",
+      "frame_path": "evidence/video/camera-20261007T073031098197Z-d3497390.png",
+      "frame_sha256": "263f11b210f3bd724b68746c44b631b39fa5a19495987717c67846a199e92ea4",
+      "metadata_path": "evidence/video/camera-20261007T073031098197Z-d3497390.json",
+      "resolution": [
+        1280,
+        720
+      ],
+      "received_frame_unix_s": 1791358239.486511,
+      "paper_or_work_surface_visible": true,
+      "tool_tip_visible": false,
+      "gripper_body_visible": false,
+      "workspace_usable_for_local_drawing_observation": true,
+      "physical_mount_left_right_assignment": "UNKNOWN",
+      "useful_robot_context": "NO: no identifiable tool tip or gripper",
+      "observation": "Broad white paper area with some boundary/table context; no identifiable tool tip",
+      "role_evidence": "Secondary context view of paper; no left/right mounting claim"
+    },
+    "palette_context_camera": {
+      "device_name": "5MP USB Camera",
+      "device_unique_id": "0x114000032e40335",
+      "frame_path": "evidence/video/camera-20261007T073108847768Z-67265377.png",
+      "frame_sha256": "c59596968c2e420ed15b008b426ff123cb8b5655a77ea48f1d0126c874ac0ec5",
+      "metadata_path": "evidence/video/camera-20261007T073108847768Z-67265377.json",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "received_frame_unix_s": 1791358270.830764,
+      "paper_or_work_surface_visible": true,
+      "tool_tip_visible": true,
+      "gripper_body_visible": false,
+      "workspace_usable_for_local_drawing_observation": false,
+      "physical_mount_left_right_assignment": "UNKNOWN",
+      "useful_robot_context": "LIMITED: small tool tip at top edge; arm/base not visible",
+      "observation": "Oblique/rolled palette and partial white work-surface view; window/wall occupy much of frame; brush tip near top edge; intended drawing zone not sufficiently framed",
+      "role_evidence": "Palette/context view only; actual side mounting is not independently established"
+    }
+  },
+  "PRIMARY_CAMERA": "tool_camera",
+  "SECONDARY_CAMERA": "paper_context_camera",
+  "WHY": "1080p InnoMaker shows paper and brush tip together with a clear local drawing area. 720p supplies additional paper context. 5MP palette-dominated framing is weaker for drawing control.",
+  "READY_FOR_DRAWING_VISION": true,
+  "readiness_scope": "YES for basic image observation and dry-run action proposals using visible local paper and tip. Exact paper-center localization, contact clearance, focus at the tip and physical motion readiness remain unverified.",
+  "recommended_adjustments": [
+    "Improve 1080p focus at the brush tip and include the full paper outline for center-relative positioning",
+    "If a contact-clearance view is needed, reframe the 5MP camera on the tip and paper plane instead of the palette/window"
+  ],
+  "logical_name_scope": "Aliases describe evidenced image roles, not unverified physical left/right mounts. Revalidate after reconnection; USB location-derived unique IDs may change. 5MP unique ID changed since the previous session.",
+  "camera_capture_method": "Exact AVFoundation unique ID plus exact localizedName; no FFmpeg numeric-index selection",
+  "capture_log": "evidence/2026-10-07-camera-multiview-capture.json",
+  "camera_access_only": true,
+  "robot_serial_ports_opened": false,
+  "servo_commands": 0,
+  "torque_commands": 0,
+  "calibration_changes": false,
+  "astra_api_called": false,
+  "stopped_after_capture_and_analysis": true
+}

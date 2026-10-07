@@ -1,0 +1,30 @@
+{
+  "upstream": {
+    "url": "https://github.com/pham-tuan-binh/so-paint",
+    "commit": "3209abe06939007fc9a3cf60dfbd55fc82bb6200"
+  },
+  "checkout_relative_to_pilot": "../so-paint",
+  "report": "../so-paint/runs/adoption/integration-report.json",
+  "report_sha256": "1dfa36ddede14faabf8ad87f4397a26b68b6f59115439d65c95dee21db54b69b",
+  "status": "Primary planning/simulation/vision base installed; physical motor adapter NOT_IMPLEMENTED",
+  "tests": {
+    "passed": 78,
+    "skipped": 1
+  },
+  "motion_executed": false,
+  "register_writes": 0,
+  "physical_so_paint_painting": "NOT_PROVEN",
+  "remaining": [
+    "Qualified adapter from so-paint timed trajectory to SafeFollower safety lifecycle and budgets",
+    "Physical motor-to-URDF mapping; shoulder_lift measured 135.69 deg versus model +/-100; wrist raw98 is 7 ticks above min91",
+    "Brush mount/tip transform and paper/station metric geometry",
+    "Overview including paper corners, robot base and tip",
+    "Resolve 12V current report against original Standard/5V documentation using installed servo label"
+  ],
+  "launcher": "scripts/so_paint_pilot.py",
+  "commands": [
+    "python scripts/so_paint_pilot.py doctor",
+    "python scripts/so_paint_pilot.py observe",
+    "python scripts/so_paint_pilot.py simulate-bridge"
+  ]
+}

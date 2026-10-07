@@ -1,0 +1,22 @@
+{
+  "software_tests": "84/84 PASS",
+  "requested_joint": "shoulder_pan",
+  "requested_delta_deg": 3,
+  "measured_delta_deg": 2.725,
+  "motion_status": "PASS",
+  "physical_mark_status": "UNVERIFIED: tool obscures possible fresh stroke; other views miss tip",
+  "astra_end_to_end": "NOT_RUN",
+  "torque_off_verified": true,
+  "port_closed": true,
+  "move_begin_joints": [
+    "shoulder_pan"
+  ],
+  "motion_write_addresses": [
+    42
+  ],
+  "calibration_write_addresses_detected": [],
+  "controller_sha256": "d6195902d1378a1e8bf8254af197427cc259a7bdf99aab6ade8e2412e82dbbf5",
+  "summary_sha256": "7926a3f0b60706fef01c9c73b4d875a18aa92687b64e8f6add6670b315d6c977",
+  "controller_log_sha256": "2c95f54382e89709a8b25d4eddc3739c4578830d146784172b901d7e31ab4a92",
+  "human_setup": "User confirms same proven 12 V setup, brush in contact, supervised GO pan +3 only; historical 5 V note superseded for this run"
+}

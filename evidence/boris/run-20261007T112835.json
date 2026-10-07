@@ -1,0 +1,1145 @@
+{
+ "started": "2026-10-07T11:28:35.070351+02:00",
+ "prompt": "draw a simple Golden Gate Bridge",
+ "dry_run": false,
+ "pose_before": {
+  "t": "2026-10-07T11:28:35.947518+02:00",
+  "joints_deg": {
+   "shoulder_pan": 10.418,
+   "shoulder_lift": -2.505,
+   "elbow_flex": -93.67,
+   "wrist_flex": 87.165,
+   "wrist_roll": -97.714
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2180,
+   "shoulder_lift": 2019,
+   "elbow_flex": 982,
+   "wrist_flex": 2244,
+   "wrist_roll": 936,
+   "gripper": 2072
+  },
+  "state": "READ_ONLY"
+ },
+ "frames_before": [
+  {
+   "frame_id": "20261007T092836054257Z-fcde1185",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T092836054257Z-fcde1185.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "0625f32958af806f1a3539c64779aff3723a68e047ef18eadd1227cf5446cbfa",
+   "bytes": 1460690,
+   "capture_started_utc": "2026-10-07T09:28:36.054257+00:00",
+   "frame_received_unix_s": 1791365317.25835,
+   "host_elapsed_s": 1.419,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0,
+   "astra_image_path": "<repo>/boris/frames/tool_camera-20261007T092836054257Z-fcde1185.astra1280.jpg",
+   "astra_image_sha256": "4e6d50b2402a9ebe745a4f3fa97c7136f08876c92b3a568aaf8e1ad6be84fa7d",
+   "age_s_at_return": 0.264
+  },
+  {
+   "frame_id": "20261007T092837609799Z-8389b6aa",
+   "camera": "context_camera",
+   "device_name": "Innomaker-U20CAM-720P  ",
+   "device_unique_id": "0x11200000c456367",
+   "path": "<repo>/boris/frames/context_camera-20261007T092837609799Z-8389b6aa.png",
+   "width": 1280,
+   "height": 720,
+   "sha256": "f1f3eff59215fda76ec6de450eca3461e989125a976251db991755fe00e2e526",
+   "bytes": 752117,
+   "capture_started_utc": "2026-10-07T09:28:37.609799+00:00",
+   "frame_received_unix_s": 1791365319.0424008,
+   "host_elapsed_s": 1.577,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "astra": {
+  "mode": "offline",
+  "command": {
+   "task": "draw",
+   "scale": 1.0,
+   "summary": "offline mapping to golden_gate_bridge",
+   "template": "golden_gate_bridge",
+   "path": [
+    [
+     0.0,
+     0.25
+    ],
+    [
+     1.0,
+     0.25
+    ],
+    [
+     0.75,
+     1.0
+    ],
+    [
+     0.75,
+     0.05
+    ],
+    [
+     0.75,
+     1.0
+    ],
+    [
+     0.625,
+     0.55
+    ],
+    [
+     0.5,
+     0.4
+    ],
+    [
+     0.375,
+     0.55
+    ],
+    [
+     0.25,
+     1.0
+    ],
+    [
+     0.25,
+     0.05
+    ],
+    [
+     0.25,
+     1.0
+    ],
+    [
+     0.0,
+     0.25
+    ]
+   ]
+  },
+  "elapsed_s": 0.0,
+  "raw": {
+   "task": "draw",
+   "template": "golden_gate_bridge",
+   "scale": 1.0,
+   "summary": "offline mapping to golden_gate_bridge"
+  }
+ },
+ "plan_preview": {
+  "command": {
+   "task": "draw",
+   "scale": 1.0,
+   "summary": "offline mapping to golden_gate_bridge",
+   "template": "golden_gate_bridge",
+   "path": [
+    [
+     0.0,
+     0.25
+    ],
+    [
+     1.0,
+     0.25
+    ],
+    [
+     0.75,
+     1.0
+    ],
+    [
+     0.75,
+     0.05
+    ],
+    [
+     0.75,
+     1.0
+    ],
+    [
+     0.625,
+     0.55
+    ],
+    [
+     0.5,
+     0.4
+    ],
+    [
+     0.375,
+     0.55
+    ],
+    [
+     0.25,
+     1.0
+    ],
+    [
+     0.25,
+     0.05
+    ],
+    [
+     0.25,
+     1.0
+    ],
+    [
+     0.0,
+     0.25
+    ]
+   ]
+  },
+  "size_mm": [
+   26.7,
+   12.0
+  ],
+  "fit_factor": 0.667,
+  "gains": {
+   "u_mm_per_deg_pan": 3.333,
+   "v_mm_per_deg_wrist": 2.779,
+   "source": "LeRobot RobotKinematics FK at start pose (gripper_frame_link; a pen tip further out draws larger)"
+  },
+  "start_joints": {
+   "shoulder_pan": 10.418,
+   "wrist_flex": 87.165
+  },
+  "segments": 11,
+  "max_excursion_deg": {
+   "shoulder_pan": 8.0,
+   "wrist_flex": 3.238
+  },
+  "travel_deg": {
+   "shoulder_pan": 16.0,
+   "wrist_flex": 28.065
+  },
+  "problems": [],
+  "estimated_duration_s": 126.0
+ },
+ "plan": {
+  "command": {
+   "task": "draw",
+   "scale": 1.0,
+   "summary": "offline mapping to golden_gate_bridge",
+   "template": "golden_gate_bridge",
+   "path": [
+    [
+     0.0,
+     0.25
+    ],
+    [
+     1.0,
+     0.25
+    ],
+    [
+     0.75,
+     1.0
+    ],
+    [
+     0.75,
+     0.05
+    ],
+    [
+     0.75,
+     1.0
+    ],
+    [
+     0.625,
+     0.55
+    ],
+    [
+     0.5,
+     0.4
+    ],
+    [
+     0.375,
+     0.55
+    ],
+    [
+     0.25,
+     1.0
+    ],
+    [
+     0.25,
+     0.05
+    ],
+    [
+     0.25,
+     1.0
+    ],
+    [
+     0.0,
+     0.25
+    ]
+   ]
+  },
+  "size_mm": [
+   26.7,
+   12.0
+  ],
+  "fit_factor": 0.667,
+  "gains": {
+   "u_mm_per_deg_pan": 3.333,
+   "v_mm_per_deg_wrist": 2.779,
+   "source": "LeRobot RobotKinematics FK at start pose (gripper_frame_link; a pen tip further out draws larger)"
+  },
+  "start_joints": {
+   "shoulder_pan": 10.418,
+   "wrist_flex": 87.165
+  },
+  "segments": 11,
+  "max_excursion_deg": {
+   "shoulder_pan": 8.0,
+   "wrist_flex": 3.238
+  },
+  "travel_deg": {
+   "shoulder_pan": 16.0,
+   "wrist_flex": 28.065
+  },
+  "problems": [],
+  "estimated_duration_s": 126.0,
+  "n_waypoints": 79
+ },
+ "draw": {
+  "reached": [
+   {
+    "i": 1,
+    "seg": 1,
+    "shoulder_pan": 11.209,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.291,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 2,
+    "seg": 1,
+    "shoulder_pan": 11.209,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.209,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 3,
+    "seg": 1,
+    "shoulder_pan": 12.176,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.258,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 4,
+    "seg": 1,
+    "shoulder_pan": 12.176,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.242,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 5,
+    "seg": 1,
+    "shoulder_pan": 12.791,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.127,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 6,
+    "seg": 1,
+    "shoulder_pan": 13.143,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.275,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 7,
+    "seg": 1,
+    "shoulder_pan": 14.022,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.104,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 8,
+    "seg": 1,
+    "shoulder_pan": 14.549,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.131,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 9,
+    "seg": 1,
+    "shoulder_pan": 14.725,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.193,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 10,
+    "seg": 1,
+    "shoulder_pan": 15.604,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.186,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 11,
+    "seg": 1,
+    "shoulder_pan": 16.132,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.214,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 12,
+    "seg": 1,
+    "shoulder_pan": 16.132,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.286,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 13,
+    "seg": 1,
+    "shoulder_pan": 16.835,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.083,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 14,
+    "seg": 1,
+    "shoulder_pan": 17.714,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.296,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 15,
+    "seg": 1,
+    "shoulder_pan": 17.714,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": -0.204,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 16,
+    "seg": 1,
+    "shoulder_pan": 18.418,
+    "wrist_flex": 87.165,
+    "err": {
+     "shoulder_pan": 0.0,
+     "wrist_flex": 0.0
+    }
+   },
+   {
+    "i": 17,
+    "seg": 2,
+    "shoulder_pan": 18.418,
+    "wrist_flex": 86.813,
+    "err": {
+     "shoulder_pan": 0.286,
+     "wrist_flex": 0.111
+    }
+   },
+   {
+    "i": 18,
+    "seg": 2,
+    "shoulder_pan": 17.802,
+    "wrist_flex": 86.462,
+    "err": {
+     "shoulder_pan": -0.045,
+     "wrist_flex": 0.222
+    }
+   },
+   {
+    "i": 19,
+    "seg": 2,
+    "shoulder_pan": 17.802,
+    "wrist_flex": 86.286,
+    "err": {
+     "shoulder_pan": 0.241,
+     "wrist_flex": 0.509
+    }
+   },
+   {
+    "i": 20,
+    "seg": 2,
+    "shoulder_pan": 17.011,
+    "wrist_flex": 85.846,
+    "err": {
+     "shoulder_pan": -0.264,
+     "wrist_flex": 0.531
+    }
+   },
+   {
+    "i": 21,
+    "seg": 2,
+    "shoulder_pan": 17.011,
+    "wrist_flex": 85.319,
+    "err": {
+     "shoulder_pan": 0.022,
+     "wrist_flex": 0.467
+    }
+   },
+   {
+    "i": 22,
+    "seg": 2,
+    "shoulder_pan": 17.011,
+    "wrist_flex": 84.879,
+    "err": {
+     "shoulder_pan": 0.307,
+     "wrist_flex": 0.49
+    }
+   },
+   {
+    "i": 23,
+    "seg": 2,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.337
+    }
+   },
+   {
+    "i": 24,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": -0.119
+    }
+   },
+   {
+    "i": 25,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 85.319,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.481
+    }
+   },
+   {
+    "i": 26,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 85.319,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.025
+    }
+   },
+   {
+    "i": 27,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.448
+    }
+   },
+   {
+    "i": 28,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": -0.008
+    }
+   },
+   {
+    "i": 29,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.328
+    }
+   },
+   {
+    "i": 30,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": -0.128
+    }
+   },
+   {
+    "i": 31,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 87.868,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.295
+    }
+   },
+   {
+    "i": 32,
+    "seg": 3,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 87.868,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": -0.161
+    }
+   },
+   {
+    "i": 33,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 87.868,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.295
+    }
+   },
+   {
+    "i": 34,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 87.341,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.224
+    }
+   },
+   {
+    "i": 35,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.328
+    }
+   },
+   {
+    "i": 36,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.462,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.256
+    }
+   },
+   {
+    "i": 37,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 86.286,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.536
+    }
+   },
+   {
+    "i": 38,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 85.846,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.552
+    }
+   },
+   {
+    "i": 39,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 85.319,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.481
+    }
+   },
+   {
+    "i": 40,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 84.879,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.496
+    }
+   },
+   {
+    "i": 41,
+    "seg": 4,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": -0.022,
+     "wrist_flex": 0.337
+    }
+   },
+   {
+    "i": 42,
+    "seg": 5,
+    "shoulder_pan": 16.396,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": 0.228,
+     "wrist_flex": -0.148
+    }
+   },
+   {
+    "i": 43,
+    "seg": 5,
+    "shoulder_pan": 16.044,
+    "wrist_flex": 85.319,
+    "err": {
+     "shoulder_pan": 0.126,
+     "wrist_flex": 0.421
+    }
+   },
+   {
+    "i": 44,
+    "seg": 5,
+    "shoulder_pan": 16.044,
+    "wrist_flex": 85.319,
+    "err": {
+     "shoulder_pan": 0.376,
+     "wrist_flex": -0.065
+    }
+   },
+   {
+    "i": 45,
+    "seg": 5,
+    "shoulder_pan": 15.429,
+    "wrist_flex": 86.286,
+    "err": {
+     "shoulder_pan": 0.011,
+     "wrist_flex": 0.416
+    }
+   },
+   {
+    "i": 46,
+    "seg": 6,
+    "shoulder_pan": 14.901,
+    "wrist_flex": 86.286,
+    "err": {
+     "shoulder_pan": -0.017,
+     "wrist_flex": 0.092
+    }
+   },
+   {
+    "i": 47,
+    "seg": 6,
+    "shoulder_pan": 14.462,
+    "wrist_flex": 86.286,
+    "err": {
+     "shoulder_pan": 0.044,
+     "wrist_flex": -0.231
+    }
+   },
+   {
+    "i": 48,
+    "seg": 7,
+    "shoulder_pan": 13.846,
+    "wrist_flex": 86.286,
+    "err": {
+     "shoulder_pan": -0.072,
+     "wrist_flex": 0.092
+    }
+   },
+   {
+    "i": 49,
+    "seg": 7,
+    "shoulder_pan": 13.319,
+    "wrist_flex": 85.934,
+    "err": {
+     "shoulder_pan": -0.099,
+     "wrist_flex": 0.064
+    }
+   },
+   {
+    "i": 50,
+    "seg": 8,
+    "shoulder_pan": 13.319,
+    "wrist_flex": 85.67,
+    "err": {
+     "shoulder_pan": 0.151,
+     "wrist_flex": 0.286
+    }
+   },
+   {
+    "i": 51,
+    "seg": 8,
+    "shoulder_pan": 12.879,
+    "wrist_flex": 85.231,
+    "err": {
+     "shoulder_pan": -0.039,
+     "wrist_flex": 0.333
+    }
+   },
+   {
+    "i": 52,
+    "seg": 8,
+    "shoulder_pan": 12.791,
+    "wrist_flex": 84.791,
+    "err": {
+     "shoulder_pan": 0.123,
+     "wrist_flex": 0.379
+    }
+   },
+   {
+    "i": 53,
+    "seg": 8,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.337
+    }
+   },
+   {
+    "i": 54,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": -0.119
+    }
+   },
+   {
+    "i": 55,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 85.231,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.393
+    }
+   },
+   {
+    "i": 56,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 85.231,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": -0.063
+    }
+   },
+   {
+    "i": 57,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.448
+    }
+   },
+   {
+    "i": 58,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": -0.008
+    }
+   },
+   {
+    "i": 59,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.328
+    }
+   },
+   {
+    "i": 60,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": -0.128
+    }
+   },
+   {
+    "i": 61,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 87.868,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.295
+    }
+   },
+   {
+    "i": 62,
+    "seg": 9,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 87.868,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": -0.161
+    }
+   },
+   {
+    "i": 63,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 87.868,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.295
+    }
+   },
+   {
+    "i": 64,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 87.341,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.224
+    }
+   },
+   {
+    "i": 65,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.328
+    }
+   },
+   {
+    "i": 66,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.462,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.256
+    }
+   },
+   {
+    "i": 67,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.448
+    }
+   },
+   {
+    "i": 68,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 85.67,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.376
+    }
+   },
+   {
+    "i": 69,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 85.231,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.393
+    }
+   },
+   {
+    "i": 70,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 84.791,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.408
+    }
+   },
+   {
+    "i": 71,
+    "seg": 10,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": -0.066,
+     "wrist_flex": 0.337
+    }
+   },
+   {
+    "i": 72,
+    "seg": 11,
+    "shoulder_pan": 12.352,
+    "wrist_flex": 84.264,
+    "err": {
+     "shoulder_pan": 0.22,
+     "wrist_flex": -0.125
+    }
+   },
+   {
+    "i": 73,
+    "seg": 11,
+    "shoulder_pan": 11.824,
+    "wrist_flex": 85.231,
+    "err": {
+     "shoulder_pan": -0.023,
+     "wrist_flex": 0.379
+    }
+   },
+   {
+    "i": 74,
+    "seg": 11,
+    "shoulder_pan": 11.824,
+    "wrist_flex": 85.231,
+    "err": {
+     "shoulder_pan": 0.263,
+     "wrist_flex": -0.084
+    }
+   },
+   {
+    "i": 75,
+    "seg": 11,
+    "shoulder_pan": 11.297,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": 0.022,
+     "wrist_flex": 0.421
+    }
+   },
+   {
+    "i": 76,
+    "seg": 11,
+    "shoulder_pan": 10.945,
+    "wrist_flex": 86.198,
+    "err": {
+     "shoulder_pan": -0.044,
+     "wrist_flex": -0.042
+    }
+   },
+   {
+    "i": 77,
+    "seg": 11,
+    "shoulder_pan": 10.945,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": 0.241,
+     "wrist_flex": 0.287
+    }
+   },
+   {
+    "i": 78,
+    "seg": 11,
+    "shoulder_pan": 10.242,
+    "wrist_flex": 86.989,
+    "err": {
+     "shoulder_pan": -0.176,
+     "wrist_flex": -0.176
+    }
+   }
+  ],
+  "stalled_within": 31,
+  "max_abs_error_deg": {
+   "shoulder_pan": 0.376,
+   "wrist_flex": 0.552
+  }
+ },
+ "result": "DRAWN",
+ "stop": {
+  "reason": "drawing finished",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ },
+ "draw_seconds": 83.5,
+ "frames_after": [
+  {
+   "frame_id": "20261007T093005469293Z-ea07a7d0",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T093005469293Z-ea07a7d0.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "28f05da347992670824b21dfed25f5936a45e14c6fa4d1e7cad34b766aeebd31",
+   "bytes": 1469312,
+   "capture_started_utc": "2026-10-07T09:30:05.469293+00:00",
+   "frame_received_unix_s": 1791365406.6860862,
+   "host_elapsed_s": 1.4,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0,
+   "astra_image_path": "<repo>/boris/frames/tool_camera-20261007T093005469293Z-ea07a7d0.astra1280.jpg",
+   "astra_image_sha256": "47786ba4b6ead08c262dfdd2e75254aef3d09ac35ddae0c83a3b439e49d4804f",
+   "age_s_at_return": 0.229
+  },
+  {
+   "frame_id": "20261007T093006988419Z-0df52215",
+   "camera": "context_camera",
+   "device_name": "Innomaker-U20CAM-720P  ",
+   "device_unique_id": "0x11200000c456367",
+   "path": "<repo>/boris/frames/context_camera-20261007T093006988419Z-0df52215.png",
+   "width": 1280,
+   "height": 720,
+   "sha256": "51efdfcc683c0e0fbd9813a85c7e9f3dc7e1cc7a5ec05e224e67b1d12c269067",
+   "bytes": 778300,
+   "capture_started_utc": "2026-10-07T09:30:06.988419+00:00",
+   "frame_received_unix_s": 1791365408.40764,
+   "host_elapsed_s": 1.606,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "finished": "2026-10-07T11:30:08.594423+02:00"
+}

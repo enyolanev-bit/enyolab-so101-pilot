@@ -1,0 +1,45 @@
+{
+ "test": "read-only bus soak",
+ "n": 2000,
+ "started": "2026-10-07T10:59:07.197443+02:00",
+ "failures": [],
+ "duration_s": 1.87,
+ "fail_count": 0,
+ "fail_rate": 0.0,
+ "latency_ms": {
+  "p50": 0.93,
+  "p99": 1.0,
+  "max": 1.08
+ },
+ "position_spread_raw": {
+  "shoulder_pan": 0,
+  "shoulder_lift": 0,
+  "elbow_flex": 0,
+  "wrist_flex": 0,
+  "wrist_roll": 0,
+  "gripper": 0
+ },
+ "pose_min": {
+  "shoulder_pan": 2034,
+  "shoulder_lift": 2019,
+  "elbow_flex": 982,
+  "wrist_flex": 2275,
+  "wrist_roll": 936,
+  "gripper": 2072
+ },
+ "error_kinds": {},
+ "stop": {
+  "reason": "bus soak done",
+  "torque_zero_writes": {},
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

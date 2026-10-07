@@ -1,0 +1,711 @@
+{
+ "started": "2026-10-06T23:04:41.959677+02:00",
+ "abort": "ConnectionError[follower_goal_alignment]: Failed to sync read 'Goal_Position' on ids=[1, 2, 3, 4, 5, 6] after 1 tries. [TxRxResult] Incorrect status packet!",
+ "writes": [
+  {
+   "t": 1571633.776,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.776,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1571633.776,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.777,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1571633.777,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.777,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1571633.778,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.778,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1571633.778,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.779,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1571633.779,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.779,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1571633.78,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1571633.78,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1571633.78,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1571633.781,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1571633.782,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1571633.782,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1571633.783,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1571633.783,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1571633.783,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1571633.784,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1571633.785,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1571633.785,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1571633.786,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1571633.786,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1571633.787,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1571633.787,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1571633.788,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1571633.788,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1571633.789,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1571633.789,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1571633.79,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1571633.79,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1571633.791,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1571633.791,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1571633.792,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1571633.792,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1571633.793,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1571633.793,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1571633.794,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1571633.794,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1571633.794,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1571633.795,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1571633.795,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1571633.796,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1571633.796,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1571633.797,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1571633.797,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1571633.798,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1571633.798,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1571633.799,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1571633.799,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1571633.8,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1571633.8,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 16,
+   "value": 500
+  },
+  {
+   "t": 1571633.801,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 28,
+   "value": 250
+  },
+  {
+   "t": 1571633.801,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 36,
+   "value": 25
+  },
+  {
+   "t": 1571633.802,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 1,
+   "addr": 42,
+   "value": 2085
+  },
+  {
+   "t": 1571633.803,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 2,
+   "addr": 42,
+   "value": 2024
+  },
+  {
+   "t": 1571633.803,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 3,
+   "addr": 42,
+   "value": 2047
+  },
+  {
+   "t": 1571633.803,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 4,
+   "addr": 42,
+   "value": 101
+  },
+  {
+   "t": 1571633.804,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 5,
+   "addr": 42,
+   "value": 951
+  },
+  {
+   "t": 1571633.804,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 6,
+   "addr": 42,
+   "value": 2140
+  },
+  {
+   "t": 1571633.855,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.855,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.856,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.856,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.856,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1571633.856,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  }
+ ],
+ "phase": "follower_goal_alignment",
+ "result": "BLOCKED",
+ "follower_precheck": {
+  "ids": {
+   "1": 777,
+   "2": 777,
+   "3": 777,
+   "4": 777,
+   "5": 777,
+   "6": 777
+  },
+  "torque": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  }
+ },
+ "initial_raw": {
+  "shoulder_pan": 2085,
+  "shoulder_lift": 2024,
+  "elbow_flex": 2047,
+  "wrist_flex": 101,
+  "wrist_roll": 951,
+  "gripper": 2140
+ },
+ "follower_registers_before": {
+  "Goal_Position": {
+   "shoulder_pan": 2085,
+   "shoulder_lift": 2024,
+   "elbow_flex": 2047,
+   "wrist_flex": 101,
+   "wrist_roll": 951,
+   "gripper": 2140
+  },
+  "Goal_Time": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Goal_Velocity": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Torque_Limit": {
+   "shoulder_pan": 1000,
+   "shoulder_lift": 1000,
+   "elbow_flex": 1000,
+   "wrist_flex": 1000,
+   "wrist_roll": 1000,
+   "gripper": 500
+  }
+ },
+ "shutdown": {
+  "follower": {
+   "torque_zero_writes": {
+    "shoulder_pan": true,
+    "shoulder_lift": true,
+    "elbow_flex": true,
+    "wrist_flex": true,
+    "wrist_roll": true,
+    "gripper": true
+   },
+   "torque_readback": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  }
+ },
+ "finished": "2026-10-06T23:04:42.069303+02:00"
+}

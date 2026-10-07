@@ -1,0 +1,32 @@
+{
+ "test": "wrist_flex reverse recovery",
+ "max_step_counts": 22,
+ "max_step_deg": 1.934,
+ "target_raw": 1370,
+ "start_raw": 1391,
+ "start_deg": 12.176,
+ "target_deg": 10.33,
+ "result": "STOPPED",
+ "error": "SafetyStop: wrist_flex: no measurable progress over 3 iterations (error -1.14 deg) -> stopped; result: {\"joint\": \"wrist_flex\", \"requested_delta_deg\": null, \"target_deg\": 10.33, \"target_raw\": 1370, \"start_deg\": 12.176, \"start_raw\": 1391, \"iterations\": [{\"i\": 1, \"goal_raw\": 1370, \"measured_raw\": 1383, \"measured_deg\": 11.473, \"moved_counts\": -8, \"error_deg\": -1.143}, {\"i\": 2, \"goal_raw\": 1370, \"measured_raw\": 1383, \"measured_deg\": 11.473, \"moved_counts\": 0, \"error_deg\": -1.143}, {\"i\": 3, \"goal_raw\": 1370, \"measured_raw\": 1383, \"measured_deg\": 11.473, \"moved_counts\": 0, \"error_deg\": -1.143}, {\"i\": 4, \"goal_raw\": 1370, \"measured_raw\": 1383, \"measured_deg\": 11.473, \"moved_counts\": 0, \"error_deg\": -1.143}], \"other_joint_max_drift\": {\"shoulder_pan\": 0.0, \"shoulder_lift\": 0.0, \"elbow_flex\": 0.0, \"wrist_roll\": 0.0, \"gripper\": 0.0}, \"fault\": \"wrist_flex: no measurable progress over 3 iterations (error -1.14 deg)\"}",
+ "stop": {
+  "reason": "wrist_flex: no measurable progress over 3 iterations (error -1.14 deg)",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

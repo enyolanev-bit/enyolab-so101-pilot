@@ -1,0 +1,10 @@
+{
+  "offline_only": true,
+  "accepted_step_counts": 11,
+  "rejected_cases": [
+    "step_over_1_degree",
+    "excursion_over_2_degrees",
+    "consecutive_goal_over_1_degree"
+  ],
+  "physical_execution": "NOT_RUN; pending GO"
+}

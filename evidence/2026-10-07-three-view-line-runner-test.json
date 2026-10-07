@@ -1,0 +1,7 @@
+{
+  "mode": "OFFLINE_MOCK_ONLY_NO_HARDWARE",
+  "all_three_views_before_arm": "PASS",
+  "pan_only_3_degrees": "PASS",
+  "stop_before_after_images": "PASS",
+  "failed_camera_prevents_arm": "PASS"
+}

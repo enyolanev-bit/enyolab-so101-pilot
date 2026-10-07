@@ -1,0 +1,51 @@
+{
+ "command": "move",
+ "joint": "shoulder_pan",
+ "delta_deg": 3.0,
+ "return": false,
+ "started": "2026-10-07T11:16:20.379314+02:00",
+ "moves": [],
+ "pose_start": {
+  "t": "2026-10-07T11:16:25.464580+02:00",
+  "joints_deg": {
+   "shoulder_pan": -1.538,
+   "shoulder_lift": -2.505,
+   "elbow_flex": -93.67,
+   "wrist_flex": 89.89,
+   "wrist_roll": -97.714
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2044,
+   "shoulder_lift": 2019,
+   "elbow_flex": 982,
+   "wrist_flex": 2275,
+   "wrist_roll": 936,
+   "gripper": 2072
+  },
+  "state": "ARMED"
+ },
+ "result": "MOVE_STOPPED",
+ "error": "SafetyStop: shoulder_pan: no measurable progress over 3 iterations (error +2.73 deg) -> stopped; result: {\"joint\": \"shoulder_pan\", \"requested_delta_deg\": 3.0, \"target_deg\": 1.462, \"target_raw\": 2078, \"start_deg\": -1.538, \"start_raw\": 2044, \"iterations\": [{\"i\": 1, \"goal_raw\": 2055, \"measured_raw\": 2045, \"measured_deg\": -1.451, \"moved_counts\": 1, \"error_deg\": 2.901}, {\"i\": 2, \"goal_raw\": 2056, \"measured_raw\": 2046, \"measured_deg\": -1.363, \"moved_counts\": 1, \"error_deg\": 2.813}, {\"i\": 3, \"goal_raw\": 2057, \"measured_raw\": 2046, \"measured_deg\": -1.363, \"moved_counts\": 0, \"error_deg\": 2.813}, {\"i\": 4, \"goal_raw\": 2057, \"measured_raw\": 2047, \"measured_deg\": -1.275, \"moved_counts\": 1, \"error_deg\": 2.725}, {\"i\": 5, \"goal_raw\": 2058, \"measured_raw\": 2047, \"measured_deg\": -1.275, \"moved_counts\": 0, \"error_deg\": 2.725}, {\"i\": 6, \"goal_raw\": 2058, \"measured_raw\": 2047, \"measured_deg\": -1.275, \"moved_counts\": 0, \"error_deg\": 2.725}, {\"i\": 7, \"goal_raw\": 2058, \"measured_raw\": 2047, \"measured_deg\": -1.275, \"moved_counts\": 0, \"error_deg\": 2.725}], \"other_joint_max_drift\": {\"shoulder_lift\": 0.0, \"elbow_flex\": 0.0, \"wrist_flex\": 0.0, \"wrist_roll\": 0.0, \"gripper\": 0.0}, \"fault\": \"shoulder_pan: no measurable progress over 3 iterations (error +2.73 deg)\"}",
+ "stop": {
+  "reason": "shoulder_pan: no measurable progress over 3 iterations (error +2.73 deg)",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

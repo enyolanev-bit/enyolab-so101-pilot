@@ -10,7 +10,9 @@ dependencies = [
     # - core_scripts = dataset + hardware + viz : extra amont associe a
     #   lerobot-record / lerobot-teleoperate / lerobot-calibrate
     #   (pyproject.toml @ v0.6.1). Pas d'extra entrainement / policy.
-    "lerobot[core_scripts,feetech]==0.6.1",
+    # - kinematics = placo-dep : RobotKinematics officiel (FK/IK SO-101) pour
+    #   le controleur Boris (ENYO-14, 2026-10-07). Ajout seul, aucune mise a jour.
+    "lerobot[core_scripts,feetech,kinematics]==0.6.1",
 ]
 
 [tool.uv]

@@ -1,0 +1,29 @@
+{
+  "status": "CAPTURED_BY_EXACT_DEVICE_ID",
+  "frame_id": "20261007T073031098331Z-6c37fe51",
+  "device_name": "Innomaker-U20CAM-1080p-S1",
+  "device_unique_id": "0x11100000c456366",
+  "backend": "native AVFoundation exact uniqueID and localizedName match; video only",
+  "capture_started_utc": "2026-10-07T07:30:31.098331+00:00",
+  "capture_finished_utc": "2026-10-07T07:30:39.763406+00:00",
+  "host_elapsed_s": 8.665,
+  "sensor_exposure_timestamp": "UNKNOWN; native frame PTS and host receipt timestamps recorded separately",
+  "native_capture": {
+    "device_name": "Innomaker-U20CAM-1080p-S1",
+    "device_unique_id": "0x11100000c456366",
+    "first_receipt_uptime_s": 1609190.668696125,
+    "frame_presentation_timestamp_s": 1609191.1071666668,
+    "frames_received_after_barrier": 16,
+    "last_receipt_unix_s": 1791358239.443393,
+    "last_receipt_uptime_s": 1609191.1634809168
+  },
+  "width": 1920,
+  "height": 1080,
+  "discarded_frames": 15,
+  "rotation_applied_degrees": 0,
+  "path": "evidence/video/camera-20261007T073031098331Z-6c37fe51.png",
+  "sha256": "27a4356e9a3e84bd08f74ebe5237ecf221a1cf824d6b1352cba1cdf8588b1d4a",
+  "bytes": 1839583,
+  "robot_access": "NONE",
+  "warnings": ""
+}

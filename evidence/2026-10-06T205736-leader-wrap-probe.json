@@ -1,0 +1,136 @@
+{
+ "started": "2026-10-06T20:57:37.951138+02:00",
+ "port": "/dev/cu.usbmodem5B7B0154401",
+ "method": "FeetechMotorsBus direct; connect(handshake=False); broadcast_ping; ping; read(normalize=False); port_handler.closePort()",
+ "tx_counts": {
+  "PING": 7,
+  "READ": 7545
+ },
+ "write_calls": 0,
+ "blocked_calls": [],
+ "comm_errors": [],
+ "abort": "timeout 900.0s without STOP",
+ "broadcast_ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "eeprom_regs": {
+  "1": {
+   "Homing_Offset": -2000,
+   "Min_Position_Limit": 781,
+   "Max_Position_Limit": 3512,
+   "Phase": 76
+  },
+  "2": {
+   "Homing_Offset": 1063,
+   "Min_Position_Limit": 1,
+   "Max_Position_Limit": 4095,
+   "Phase": 12
+  },
+  "3": {
+   "Homing_Offset": -1431,
+   "Min_Position_Limit": 0,
+   "Max_Position_Limit": 4095,
+   "Phase": 76
+  },
+  "4": {
+   "Homing_Offset": -349,
+   "Min_Position_Limit": 0,
+   "Max_Position_Limit": 4095,
+   "Phase": 76
+  },
+  "5": {
+   "Homing_Offset": 1928,
+   "Min_Position_Limit": 0,
+   "Max_Position_Limit": 4095,
+   "Phase": 76
+  },
+  "6": {
+   "Homing_Offset": -1828,
+   "Min_Position_Limit": 2010,
+   "Max_Position_Limit": 3251,
+   "Phase": 76
+  }
+ },
+ "torque_start": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0
+ },
+ "torque_end": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0
+ },
+ "port_closed": true,
+ "close_path": "bus.port_handler.closePort() (direct; disconnect() NOT called)",
+ "stats": {
+  "ID2/2": {
+   "n": 2499,
+   "min": 2045,
+   "max": 2045,
+   "first": 2045,
+   "last": 2045,
+   "max_abs_delta": 0,
+   "wraps": [],
+   "gap_resets": 0
+  },
+  "ID2/3": {
+   "n": 2499,
+   "min": 2040,
+   "max": 2040,
+   "first": 2040,
+   "last": 2040,
+   "max_abs_delta": 0,
+   "wraps": [],
+   "gap_resets": 0
+  },
+  "ID2/4": {
+   "n": 2499,
+   "min": 2081,
+   "max": 2081,
+   "first": 2081,
+   "last": 2081,
+   "max_abs_delta": 0,
+   "wraps": [],
+   "gap_resets": 0
+  }
+ },
+ "per_joint_own_phase": {
+  "2": {
+   "observed_range": [
+    2045,
+    2045
+   ],
+   "max_abs_delta": 0,
+   "wrap": false,
+   "samples": 2499,
+   "gap_resets": 0,
+   "travel": 0,
+   "travelled": false
+  },
+  "3": null,
+  "4": null
+ },
+ "torque_changed": false,
+ "result": "BLOCKED",
+ "finished": "2026-10-06T21:12:38.792341+02:00"
+}

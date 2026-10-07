@@ -1,0 +1,44 @@
+{
+  "session_id": "astra-dryrun-20261006T214726901207Z-b50cd926",
+  "motor_execution_authorized": false,
+  "execution_dispatched": false,
+  "request_journal": "evidence/2026-10-06-astra-dryrun-proposal.request.json",
+  "response_id": "resp_0e485d4436fb9103016ac56cf791dc87d2b888aa789dbe9b8d",
+  "model": "gpt-6-astra",
+  "response_status": "completed",
+  "usage": {
+    "input_tokens": 1697,
+    "input_tokens_details": {
+      "cache_write_tokens": 1694,
+      "cached_tokens": 0
+    },
+    "output_tokens": 207,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 1904
+  },
+  "status": "ONE_PROPOSAL_RECEIVED",
+  "astra_answer": {
+    "camera_frame_usable": false,
+    "visible_context": "A plush toy is visible in front of a window and shutter. No identifiable drawing work surface, tool tip, or useful drawing target is visible.",
+    "reasoning_summary": "No bounded positioning move is justified: the drawing target and tool are not visible, camera-to-joint and tool geometry are unvalidated, and image and pose are stale and unsynchronized. Propose hold, which does not enable torque; no execution or writes are requested.",
+    "proposal": {
+      "session_id": "astra-dryrun-20261006T214726901207Z-b50cd926",
+      "action_id": "astra-dryrun-20261006T214726901207Z-b50cd926-one",
+      "observation_id": "20261006T214726901207Z-b50cd926",
+      "action": {
+        "type": "hold"
+      }
+    }
+  },
+  "action_schema_valid": true,
+  "schema_errors": [],
+  "ids_match": true,
+  "controller_would_accept": false,
+  "controller_assessment_kind": "OFFLINE_CONTRACT_REVIEW_NOT_RUNTIME_TEST",
+  "controller_why": "Reject: no motion authorization or armed controller; hold cannot enable torque; move preflight/freshness/geometry are not established.",
+  "physical_execution_allowed": false,
+  "elapsed_s": 7.107,
+  "finished_at_utc": "2026-10-06T21:49:49.685529+00:00"
+}

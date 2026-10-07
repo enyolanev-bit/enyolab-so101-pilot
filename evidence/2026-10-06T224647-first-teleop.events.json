@@ -1,0 +1,141 @@
+{
+ "started": "2026-10-06T22:46:49.118460+02:00",
+ "abort": "ABORT[follower_precheck]: follower wrist_flex present 103 outside [91+20, 2414-20]",
+ "writes": [
+  {
+   "t": 1570560.938,
+   "who": "follower",
+   "phase": "follower_precheck",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1570560.938,
+   "who": "follower",
+   "phase": "follower_precheck",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1570560.939,
+   "who": "follower",
+   "phase": "follower_precheck",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1570560.939,
+   "who": "follower",
+   "phase": "follower_precheck",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1570560.939,
+   "who": "follower",
+   "phase": "follower_precheck",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1570560.94,
+   "who": "follower",
+   "phase": "follower_precheck",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  }
+ ],
+ "phase": "follower_precheck",
+ "result": "ABORTED",
+ "follower_precheck": {
+  "ids": {
+   "1": 777,
+   "2": 777,
+   "3": 777,
+   "4": 777,
+   "5": 777,
+   "6": 777
+  },
+  "torque": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  }
+ },
+ "follower_registers_before": {
+  "Goal_Position": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Goal_Time": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Goal_Velocity": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Torque_Limit": {
+   "shoulder_pan": 1000,
+   "shoulder_lift": 1000,
+   "elbow_flex": 1000,
+   "wrist_flex": 1000,
+   "wrist_roll": 1000,
+   "gripper": 500
+  }
+ },
+ "shutdown": {
+  "follower": {
+   "torque_zero_writes": {
+    "shoulder_pan": true,
+    "shoulder_lift": true,
+    "elbow_flex": true,
+    "wrist_flex": true,
+    "wrist_roll": true,
+    "gripper": true
+   },
+   "torque_readback": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  },
+  "leader": {
+   "torque_zero_writes": {},
+   "torque_readback": null,
+   "note": "port never opened or already closed: no torque possible from this process"
+  }
+ },
+ "finished": "2026-10-06T22:46:49.149555+02:00"
+}

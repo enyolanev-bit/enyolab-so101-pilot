@@ -1,0 +1,143 @@
+{
+  "started_utc": "2026-10-07T07:30:29.604001+00:00",
+  "system_profiler": {
+    "SPCameraDataType": [
+      {
+        "_name": "Innomaker-U20CAM-1080p-S1",
+        "spcamera_model-id": "UVC Camera VendorID_3141 ProductID_25446",
+        "spcamera_unique-id": "0x11100000c456366"
+      },
+      {
+        "_name": "Cam\u00e9ra du MacBook\u00a0Pro",
+        "spcamera_model-id": "Cam\u00e9ra du MacBook\u00a0Pro",
+        "spcamera_unique-id": "6C707041-05AC-0011-0002-000000000001"
+      },
+      {
+        "_name": "5MP USB Camera",
+        "spcamera_model-id": "UVC Camera VendorID_13028 ProductID_821",
+        "spcamera_unique-id": "0x114000032e40335"
+      },
+      {
+        "_name": "Innomaker-U20CAM-720P  ",
+        "spcamera_model-id": "UVC Camera VendorID_3141 ProductID_25447",
+        "spcamera_unique-id": "0x11200000c456367"
+      }
+    ]
+  },
+  "native_avfoundation": [
+    {
+      "connected": true,
+      "device_type": "AVCaptureDeviceTypeExternal",
+      "model_id": "UVC Camera VendorID_3141 ProductID_25446",
+      "name": "Innomaker-U20CAM-1080p-S1",
+      "unique_id": "0x11100000c456366"
+    },
+    {
+      "connected": true,
+      "device_type": "AVCaptureDeviceTypeBuiltInWideAngleCamera",
+      "model_id": "Cam\u00e9ra du MacBook\u00a0Pro",
+      "name": "Cam\u00e9ra du MacBook\u00a0Pro",
+      "unique_id": "6C707041-05AC-0011-0002-000000000001"
+    },
+    {
+      "connected": true,
+      "device_type": "AVCaptureDeviceTypeExternal",
+      "model_id": "UVC Camera VendorID_13028 ProductID_821",
+      "name": "5MP USB Camera",
+      "unique_id": "0x114000032e40335"
+    },
+    {
+      "connected": true,
+      "device_type": "AVCaptureDeviceTypeExternal",
+      "model_id": "UVC Camera VendorID_3141 ProductID_25447",
+      "name": "Innomaker-U20CAM-720P  ",
+      "unique_id": "0x11200000c456367"
+    }
+  ],
+  "ffmpeg_enumeration": "[AVFoundation indev @ 0x94f020140] AVFoundation video devices:\n[AVFoundation indev @ 0x94f020140] [0] Innomaker-U20CAM-1080p-S1\n[AVFoundation indev @ 0x94f020140] [1] Cam\u00e9ra du MacBook\u00a0Pro\n[AVFoundation indev @ 0x94f020140] [2] 5MP USB Camera\n[AVFoundation indev @ 0x94f020140] [3] Innomaker-U20CAM-720P  \n[AVFoundation indev @ 0x94f020140] [4] Cam\u00e9ra Desk\u00a0View du MacBook\u00a0Pro\n[AVFoundation indev @ 0x94f020140] [5] Capture screen 0\n[AVFoundation indev @ 0x94f020140] [6] Capture screen 1\n[AVFoundation indev @ 0x94f020140] [7] Capture screen 2\n[AVFoundation indev @ 0x94f020140] AVFoundation audio devices:\n[AVFoundation indev @ 0x94f020140] [0] Micro MacBook Pro\n[AVFoundation indev @ 0x94f020140] [1] Microsoft Teams Audio\n[in#0 @ 0x94f020000] Error opening input: Input/output error\nError opening input file .\nError opening input files: Input/output error\n",
+  "robot_access": "NONE",
+  "candidates": [
+    {
+      "name": "Innomaker-U20CAM-1080p-S1",
+      "unique_id": "0x11100000c456366"
+    },
+    {
+      "name": "5MP USB Camera",
+      "unique_id": "0x114000032e40335"
+    },
+    {
+      "name": "Innomaker-U20CAM-720P  ",
+      "unique_id": "0x11200000c456367"
+    }
+  ],
+  "capture_barrier_unix_s": 1791358238.930942,
+  "captures": [
+    {
+      "status": "CAPTURED_BY_EXACT_DEVICE_ID",
+      "frame_id": "20261007T073031098197Z-d3497390",
+      "device_name": "Innomaker-U20CAM-720P  ",
+      "device_unique_id": "0x11200000c456367",
+      "backend": "native AVFoundation exact uniqueID and localizedName match; video only",
+      "capture_started_utc": "2026-10-07T07:30:31.098197+00:00",
+      "capture_finished_utc": "2026-10-07T07:30:39.674484+00:00",
+      "host_elapsed_s": 8.576,
+      "sensor_exposure_timestamp": "UNKNOWN; native frame PTS and host receipt timestamps recorded separately",
+      "native_capture": {
+        "device_name": "Innomaker-U20CAM-720P  ",
+        "device_unique_id": "0x11200000c456367",
+        "first_receipt_uptime_s": 1609190.71146275,
+        "frame_presentation_timestamp_s": 1609191.1391666667,
+        "frames_received_after_barrier": 16,
+        "last_receipt_unix_s": 1791358239.486511,
+        "last_receipt_uptime_s": 1609191.2065990001
+      },
+      "width": 1280,
+      "height": 720,
+      "discarded_frames": 15,
+      "rotation_applied_degrees": 0,
+      "path": "evidence/video/camera-20261007T073031098197Z-d3497390.png",
+      "sha256": "263f11b210f3bd724b68746c44b631b39fa5a19495987717c67846a199e92ea4",
+      "bytes": 767473,
+      "robot_access": "NONE",
+      "warnings": ""
+    },
+    {
+      "status": "CAPTURED_BY_EXACT_DEVICE_ID",
+      "frame_id": "20261007T073031098331Z-6c37fe51",
+      "device_name": "Innomaker-U20CAM-1080p-S1",
+      "device_unique_id": "0x11100000c456366",
+      "backend": "native AVFoundation exact uniqueID and localizedName match; video only",
+      "capture_started_utc": "2026-10-07T07:30:31.098331+00:00",
+      "capture_finished_utc": "2026-10-07T07:30:39.763406+00:00",
+      "host_elapsed_s": 8.665,
+      "sensor_exposure_timestamp": "UNKNOWN; native frame PTS and host receipt timestamps recorded separately",
+      "native_capture": {
+        "device_name": "Innomaker-U20CAM-1080p-S1",
+        "device_unique_id": "0x11100000c456366",
+        "first_receipt_uptime_s": 1609190.668696125,
+        "frame_presentation_timestamp_s": 1609191.1071666668,
+        "frames_received_after_barrier": 16,
+        "last_receipt_unix_s": 1791358239.443393,
+        "last_receipt_uptime_s": 1609191.1634809168
+      },
+      "width": 1920,
+      "height": 1080,
+      "discarded_frames": 15,
+      "rotation_applied_degrees": 0,
+      "path": "evidence/video/camera-20261007T073031098331Z-6c37fe51.png",
+      "sha256": "27a4356e9a3e84bd08f74ebe5237ecf221a1cf824d6b1352cba1cdf8588b1d4a",
+      "bytes": 1839583,
+      "robot_access": "NONE",
+      "warnings": ""
+    },
+    {
+      "device_name": "5MP USB Camera",
+      "device_unique_id": "0x114000032e40335",
+      "status": "CAPTURE_FAILED",
+      "error_type": "CalledProcessError"
+    }
+  ],
+  "all_successful_capture_receipt_overlap_s": 0.452018,
+  "three_external_streams_concurrently_received": false,
+  "finished_utc": "2026-10-07T07:30:47.439875+00:00"
+}

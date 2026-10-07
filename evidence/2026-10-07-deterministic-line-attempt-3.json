@@ -1,0 +1,209 @@
+{
+ "command": "line",
+ "started": "2026-10-07T13:59:58.317258+02:00",
+ "delta_deg": 3.0,
+ "joints": [
+  "shoulder_pan"
+ ],
+ "frames_before": [
+  {
+   "frame_id": "20261007T115958449287Z-7b7d5475",
+   "camera": "side_camera",
+   "device_name": "5MP USB Camera",
+   "device_unique_id": "0x114000032e40335",
+   "path": "<repo>/boris/frames/side_camera-20261007T115958449287Z-7b7d5475.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "74212e6de2c82fcceff64d9827eafca414f3caed8cb78554c6ad1ca26ef8a968",
+   "bytes": 1220766,
+   "capture_started_utc": "2026-10-07T11:59:58.449287+00:00",
+   "frame_received_unix_s": 1791374399.6646461,
+   "host_elapsed_s": 1.316,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  },
+  {
+   "frame_id": "20261007T115959844124Z-07c2a6b4",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T115959844124Z-07c2a6b4.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "c22f7ad9213075953dcd2e538763f4b8e3107216d7a82b554124d397066e5ad8",
+   "bytes": 1671174,
+   "capture_started_utc": "2026-10-07T11:59:59.844124+00:00",
+   "frame_received_unix_s": 1791374401.033911,
+   "host_elapsed_s": 1.411,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "frames_after": [
+  {
+   "frame_id": "20261007T120007593699Z-73bf2a11",
+   "camera": "side_camera",
+   "device_name": "5MP USB Camera",
+   "device_unique_id": "0x114000032e40335",
+   "path": "<repo>/boris/frames/side_camera-20261007T120007593699Z-73bf2a11.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "155c852c550f0dbc46ecd9e0423106b7ec6f6cca9642e52800b976797cb12ebe",
+   "bytes": 1223362,
+   "capture_started_utc": "2026-10-07T12:00:07.593699+00:00",
+   "frame_received_unix_s": 1791374408.6584492,
+   "host_elapsed_s": 1.168,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  },
+  {
+   "frame_id": "20261007T120008847982Z-9a669042",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T120008847982Z-9a669042.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "60fe7c7d10af5e52cf0a1b5e19999879428c8eb173acb094242b4e2a28ebc26e",
+   "bytes": 861013,
+   "capture_started_utc": "2026-10-07T12:00:08.847982+00:00",
+   "frame_received_unix_s": 1791374410.035859,
+   "host_elapsed_s": 1.377,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "frames_during": [
+  {
+   "frame_id": "20261007T120006332942Z-4d57ac67",
+   "camera": "side_camera",
+   "device_name": "5MP USB Camera",
+   "device_unique_id": "0x114000032e40335",
+   "path": "<repo>/boris/frames/side_camera-20261007T120006332942Z-4d57ac67.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "661163c832db60bf12ae38413bb6f82e0ca4957d6997c19d4d4cb76b639644c7",
+   "bytes": 1223388,
+   "capture_started_utc": "2026-10-07T12:00:06.332942+00:00",
+   "frame_received_unix_s": 1791374407.409741,
+   "host_elapsed_s": 1.18,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "physical_mark": "PENDING_IMAGE_REVIEW",
+ "length_mm": null,
+ "astra_used": false,
+ "controller_log": "<repo>/boris/logs/session-20261007T140001256631-58725.jsonl",
+ "draw": {
+  "primitive": "pan_line",
+  "delta_deg": 3.0,
+  "before": {
+   "t": "2026-10-07T14:00:06.234899+02:00",
+   "joints_deg": {
+    "shoulder_pan": -6.374,
+    "shoulder_lift": 148.176,
+    "elbow_flex": -38.549,
+    "wrist_flex": -101.407,
+    "wrist_roll": -97.626
+   },
+   "gripper_pct": 4.57,
+   "raw": {
+    "shoulder_pan": 1989,
+    "shoulder_lift": 3733,
+    "elbow_flex": 1609,
+    "wrist_flex": 99,
+    "wrist_roll": 937,
+    "gripper": 2098
+   },
+   "state": "ARMED"
+  },
+  "after": {
+   "t": "2026-10-07T14:00:07.124690+02:00",
+   "joints_deg": {
+    "shoulder_pan": -3.648,
+    "shoulder_lift": 148.176,
+    "elbow_flex": -38.549,
+    "wrist_flex": -101.407,
+    "wrist_roll": -97.802
+   },
+   "gripper_pct": 4.57,
+   "raw": {
+    "shoulder_pan": 2020,
+    "shoulder_lift": 3733,
+    "elbow_flex": 1609,
+    "wrist_flex": 99,
+    "wrist_roll": 935,
+    "gripper": 2098
+   },
+   "state": "ARMED"
+  },
+  "move": {
+   "joint": "shoulder_pan",
+   "requested_delta_deg": null,
+   "target_deg": -3.374,
+   "target_raw": 2023,
+   "start_deg": -6.374,
+   "start_raw": 1989,
+   "iterations": [
+    {
+     "i": 1,
+     "goal_raw": 2011,
+     "measured_raw": 2005,
+     "measured_deg": -4.967,
+     "moved_counts": 16,
+     "error_deg": 1.582
+    },
+    {
+     "i": 2,
+     "goal_raw": 2027,
+     "measured_raw": 2020,
+     "measured_deg": -3.648,
+     "moved_counts": 15,
+     "error_deg": 0.264
+    }
+   ],
+   "other_joint_max_drift": {
+    "shoulder_lift": 0.0,
+    "elbow_flex": 0.0,
+    "wrist_flex": 0.0,
+    "wrist_roll": 0.176,
+    "gripper": 0.0
+   },
+   "final_deg": -3.648,
+   "final_raw": 2020,
+   "final_error_deg": 0.264,
+   "encoder_counts": 31,
+   "measured_motion_deg": 2.725,
+   "reached": true,
+   "tolerance_deg": 0.3,
+   "travel_used_deg": 2.725
+  },
+  "length_mm": null,
+  "physical_mark": "PENDING_IMAGE_REVIEW"
+ },
+ "result": "MOTION_COMPLETED_MARK_UNVERIFIED",
+ "stop": {
+  "reason": "deterministic pan line finished",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ },
+ "controller_log_sha256": "f78bbbfb5a3e779b0c8082ef3341a6d6e6253c124068444220b583aeaa244660",
+ "summary_path": "<repo>/boris/logs/demo-line-20261007T140010225137.json"
+}

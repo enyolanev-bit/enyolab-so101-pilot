@@ -1,0 +1,40 @@
+{
+ "command": "check",
+ "started": "2026-10-07T14:20:34.651648+02:00",
+ "pose": {
+  "t": "2026-10-07T14:20:35.619768+02:00",
+  "joints_deg": {
+   "shoulder_pan": -3.297,
+   "shoulder_lift": 148.352,
+   "elbow_flex": -38.198,
+   "wrist_flex": -101.231,
+   "wrist_roll": -97.714
+  },
+  "gripper_pct": 4.57,
+  "raw": {
+   "shoulder_pan": 2024,
+   "shoulder_lift": 3735,
+   "elbow_flex": 1613,
+   "wrist_flex": 101,
+   "wrist_roll": 936,
+   "gripper": 2098
+  },
+  "state": "READ_ONLY"
+ },
+ "result": "ROBOT_OK",
+ "stop": {
+  "reason": "check done",
+  "torque_zero_writes": {},
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ },
+ "summary_path": "<repo>/boris/logs/demo-check-20261007T142035622240.json"
+}

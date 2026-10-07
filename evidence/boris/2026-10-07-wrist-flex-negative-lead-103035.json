@@ -1,0 +1,33 @@
+{
+ "test": "wrist_flex negative lead",
+ "lead_counts": {
+  "positive": 0,
+  "negative": 13
+ },
+ "max_step_counts": 22,
+ "excursion_deg": 8.0,
+ "requested_delta_deg": -2.0,
+ "result": "STOPPED",
+ "error": "ConnectionError: Failed to write 'Goal_Position' on id_=5 with '938' after 1 tries. [TxRxResult] There is no status packet!",
+ "stop": {
+  "reason": "open failed: ConnectionError: Failed to write 'Goal_Position' on id_=5 with '938' after 1 tries. [TxRxResult] There is no status packet!",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

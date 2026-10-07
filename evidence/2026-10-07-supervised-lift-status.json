@@ -1,0 +1,197 @@
+{
+  "status": "AWAITING_SHOULDER_STEP_1_DEG_AUTHORIZATION",
+  "origin_raw": {
+    "shoulder_pan": 2024,
+    "shoulder_lift": 3735,
+    "elbow_flex": 1613,
+    "wrist_flex": 101,
+    "wrist_roll": 936,
+    "gripper": 2098
+  },
+  "active_motion_process": false,
+  "torque_off_verified": true,
+  "wrist_max_goal_offset_deg": 4.923,
+  "wrist_max_measured_offset_deg": 4.044,
+  "pen_up": "NOT_PROVEN: profile images still show bristles against paper",
+  "pen_down": "NOT_COMMISSIONED: no clear pen_up to return from",
+  "phase_2": "NOT_RUN: phase 1 clearance gate unmet",
+  "phase_3": "NOT_RUN",
+  "astra": "NOT_RUN",
+  "changes": "Commissioning runner uses fixed origin across processes, <=11 count goal increments, <=56 count excursion, startup gain equality check, sampled speed/acceleration guard, existing startup and verified stop. Controller gained optional strict goal envelope and consecutive goal bounds.",
+  "tests": [
+    "evidence/2026-10-07-lift-controller-regression.txt",
+    "evidence/2026-10-07-strict-lift-simulation.json"
+  ],
+  "runs": [
+    {
+      "path": "evidence/2026-10-07-lift-session-1.jsonl",
+      "sha256": "78a23a2efb4d70de7fd5989284694f67ea1f1f83792603ee2c32e56b47622849",
+      "stop": {
+        "kind": "stop",
+        "time": 1791375995.2588758,
+        "result": {
+          "reason": "wrist_flex: no measurable progress over 3 iterations (error +0.35 deg)",
+          "torque_zero_writes": {
+            "shoulder_pan": true,
+            "shoulder_lift": true,
+            "elbow_flex": true,
+            "wrist_flex": true,
+            "wrist_roll": true,
+            "gripper": true
+          },
+          "torque_readback": {
+            "shoulder_pan": 0,
+            "shoulder_lift": 0,
+            "elbow_flex": 0,
+            "wrist_flex": 0,
+            "wrist_roll": 0,
+            "gripper": 0
+          },
+          "port_closed": true,
+          "torque_off_verified": true
+        }
+      },
+      "faults": [
+        "SafetyStop: wrist_flex: no measurable progress over 3 iterations (error +0.35 deg)"
+      ]
+    },
+    {
+      "path": "evidence/2026-10-07-lift-session-2.jsonl",
+      "sha256": "453dc752a4c3498f5a6d435294c00189046b775c69c3fcaaeb7bcd2c4132dc6a",
+      "stop": {
+        "kind": "stop",
+        "time": 1791376175.666664,
+        "result": {
+          "reason": "supervised lift session finished",
+          "torque_zero_writes": {
+            "shoulder_pan": true,
+            "shoulder_lift": true,
+            "elbow_flex": true,
+            "wrist_flex": true,
+            "wrist_roll": true,
+            "gripper": true
+          },
+          "torque_readback": {
+            "shoulder_pan": 0,
+            "shoulder_lift": 0,
+            "elbow_flex": 0,
+            "wrist_flex": 0,
+            "wrist_roll": 0,
+            "gripper": 0
+          },
+          "port_closed": true,
+          "torque_off_verified": true
+        }
+      },
+      "faults": []
+    },
+    {
+      "path": "evidence/2026-10-07-lift-session-3.jsonl",
+      "sha256": "f353016fbe69c6964f32dd1f4f9a876d7b59439fdae15411fead72e7c3a4e0fd",
+      "stop": {
+        "kind": "stop",
+        "time": 1791376481.1519942,
+        "result": {
+          "reason": "wrist_flex: no measurable progress over 3 iterations (error +0.62 deg)",
+          "torque_zero_writes": {
+            "shoulder_pan": true,
+            "shoulder_lift": true,
+            "elbow_flex": true,
+            "wrist_flex": true,
+            "wrist_roll": true,
+            "gripper": true
+          },
+          "torque_readback": {
+            "shoulder_pan": 0,
+            "shoulder_lift": 0,
+            "elbow_flex": 0,
+            "wrist_flex": 0,
+            "wrist_roll": 0,
+            "gripper": 0
+          },
+          "port_closed": true,
+          "torque_off_verified": true
+        }
+      },
+      "faults": [
+        "SafetyStop: wrist_flex: no measurable progress over 3 iterations (error +0.62 deg)"
+      ]
+    },
+    {
+      "path": "evidence/2026-10-07-lift-shoulder-session-1.jsonl",
+      "sha256": "3753fcfe72361ebf9a0749c4f94f788bb3fc41fcaa7eb8b99a89230cc3c814aa",
+      "stop": {
+        "kind": "stop",
+        "time": 1791376842.009004,
+        "result": {
+          "reason": "supervised lift session finished",
+          "torque_zero_writes": {
+            "shoulder_pan": true,
+            "shoulder_lift": true,
+            "elbow_flex": true,
+            "wrist_flex": true,
+            "wrist_roll": true,
+            "gripper": true
+          },
+          "torque_readback": {
+            "shoulder_pan": 0,
+            "shoulder_lift": 0,
+            "elbow_flex": 0,
+            "wrist_flex": 0,
+            "wrist_roll": 0,
+            "gripper": 0
+          },
+          "port_closed": true,
+          "torque_off_verified": true
+        }
+      },
+      "faults": []
+    },
+    {
+      "path": "evidence/2026-10-07-lift-shoulder-session-2.jsonl",
+      "sha256": "5a359096eef756fc1d77b53705c1b174e6d0cb968b3b74403161a302d6780b3c",
+      "stop": {
+        "kind": "stop",
+        "time": 1791376977.143622,
+        "result": {
+          "reason": "shoulder_lift: no measurable progress over 3 iterations (error -0.44 deg)",
+          "torque_zero_writes": {
+            "shoulder_pan": true,
+            "shoulder_lift": true,
+            "elbow_flex": true,
+            "wrist_flex": true,
+            "wrist_roll": true,
+            "gripper": true
+          },
+          "torque_readback": {
+            "shoulder_pan": 0,
+            "shoulder_lift": 0,
+            "elbow_flex": 0,
+            "wrist_flex": 0,
+            "wrist_roll": 0,
+            "gripper": 0
+          },
+          "port_closed": true,
+          "torque_off_verified": true
+        }
+      },
+      "faults": [
+        "SafetyStop: shoulder_lift: no measurable progress over 3 iterations (error -0.44 deg)"
+      ]
+    }
+  ],
+  "next_requested_experiment": {
+    "joint": "shoulder_lift",
+    "max_step_deg": 1.0,
+    "max_excursion_deg": 2.0,
+    "authorization": "PENDING"
+  },
+  "shoulder_lift_authorization": "GO received: <=0.5 degree steps, +/-2 degree excursion, unchanged gains",
+  "shoulder_lift_result": {
+    "positive_max_measured_offset_deg": 0.967,
+    "negative_trial_command_deg": -0.44,
+    "negative_trial_measured_deg": 0,
+    "negative_trial_result": "NO_PROGRESS_ABORT; torque OFF verified",
+    "pen_up": "NOT_PROVEN"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "offline_only": true,
+  "forward_and_reverse_goals_within_1_degree": true,
+  "fixed_5_degree_envelope_including_lead": true,
+  "verified_iterations": 21,
+  "stop_torque_off": true
+}

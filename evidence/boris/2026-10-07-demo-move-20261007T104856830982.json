@@ -1,0 +1,31 @@
+{
+ "command": "move",
+ "joint": "shoulder_pan",
+ "delta_deg": 3.0,
+ "return": false,
+ "started": "2026-10-07T10:48:55.616405+02:00",
+ "moves": [],
+ "result": "MOVE_STOPPED",
+ "error": "SafetyStop: Present_Position: communication failure (ConnectionError: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] Incorrect status packet!)",
+ "stop": {
+  "reason": "open failed: SafetyStop: Present_Position: communication failure (ConnectionError: Failed to sync read 'Present_Position' on ids=[1, 2, 3, 4, 5, 6] after 3 tries. [TxRxResult] Incorrect status packet!)",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

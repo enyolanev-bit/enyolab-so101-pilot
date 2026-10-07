@@ -1,0 +1,1031 @@
+{
+ "started": "2026-10-06T23:15:37.340093+02:00",
+ "abort": null,
+ "writes": [
+  {
+   "t": 1572289.149,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572289.149,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572289.15,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572289.15,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572289.15,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572289.15,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572289.151,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572289.151,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572289.151,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572289.152,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572289.152,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572289.152,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572289.152,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572289.153,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572289.153,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572289.154,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572289.154,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572289.155,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572289.155,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572289.156,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572289.156,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572289.157,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572289.157,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572289.158,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572289.158,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572289.159,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572289.159,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572289.16,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572289.16,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572289.161,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572289.161,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572289.162,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572289.162,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572289.163,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572289.163,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572289.164,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572289.164,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572289.165,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572289.165,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572289.166,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572289.166,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572289.167,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572289.167,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572289.168,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572289.168,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572289.169,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572289.169,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572289.169,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572289.17,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572289.17,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572289.171,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572289.171,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572289.172,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572289.172,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572289.173,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 16,
+   "value": 500
+  },
+  {
+   "t": 1572289.173,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 28,
+   "value": 250
+  },
+  {
+   "t": 1572289.174,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 36,
+   "value": 25
+  },
+  {
+   "t": 1572289.175,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 1,
+   "addr": 42,
+   "value": 2092
+  },
+  {
+   "t": 1572289.175,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 2,
+   "addr": 42,
+   "value": 2024
+  },
+  {
+   "t": 1572289.176,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 3,
+   "addr": 42,
+   "value": 2047
+  },
+  {
+   "t": 1572289.176,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 4,
+   "addr": 42,
+   "value": 101
+  },
+  {
+   "t": 1572289.176,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 5,
+   "addr": 42,
+   "value": 951
+  },
+  {
+   "t": 1572289.177,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 6,
+   "addr": 42,
+   "value": 2140
+  },
+  {
+   "t": 1572289.179,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572289.179,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 1,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572289.179,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572289.18,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 2,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572289.18,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572289.18,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 3,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572289.18,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572289.181,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 4,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572289.181,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572289.181,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 5,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572289.182,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572289.182,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 6,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572293.231,
+   "who": "follower",
+   "phase": "multi_step",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572293.781,
+   "who": "follower",
+   "phase": "multi_step",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572294.336,
+   "who": "follower",
+   "phase": "multi_step",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572294.882,
+   "who": "follower",
+   "phase": "multi_step",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572295.431,
+   "who": "follower",
+   "phase": "multi_step",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572295.987,
+   "who": "follower",
+   "phase": "done",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572295.988,
+   "who": "follower",
+   "phase": "done",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572295.988,
+   "who": "follower",
+   "phase": "done",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572295.988,
+   "who": "follower",
+   "phase": "done",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572295.989,
+   "who": "follower",
+   "phase": "done",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572295.989,
+   "who": "follower",
+   "phase": "done",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  }
+ ],
+ "phase": "done",
+ "result": "PASS",
+ "follower_precheck": {
+  "ids": {
+   "1": 777,
+   "2": 777,
+   "3": 777,
+   "4": 777,
+   "5": 777,
+   "6": 777
+  },
+  "torque": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  }
+ },
+ "initial_raw": {
+  "shoulder_pan": 2092,
+  "shoulder_lift": 2024,
+  "elbow_flex": 2047,
+  "wrist_flex": 101,
+  "wrist_roll": 951,
+  "gripper": 2140
+ },
+ "follower_registers_before": {
+  "Goal_Position": {
+   "shoulder_pan": 2096,
+   "shoulder_lift": 2024,
+   "elbow_flex": 2047,
+   "wrist_flex": 101,
+   "wrist_roll": 951,
+   "gripper": 2140
+  },
+  "Goal_Time": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Goal_Velocity": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Torque_Limit": {
+   "shoulder_pan": 1000,
+   "shoulder_lift": 1000,
+   "elbow_flex": 1000,
+   "wrist_flex": 1000,
+   "wrist_roll": 1000,
+   "gripper": 500
+  }
+ },
+ "follower_goal_alignment": {
+  "shoulder_pan": {
+   "written": 2092,
+   "goal_readback": 2092,
+   "present_now": 2092,
+   "moved_since_precheck": 0
+  },
+  "shoulder_lift": {
+   "written": 2024,
+   "goal_readback": 2024,
+   "present_now": 2024,
+   "moved_since_precheck": 0
+  },
+  "elbow_flex": {
+   "written": 2047,
+   "goal_readback": 2047,
+   "present_now": 2047,
+   "moved_since_precheck": 0
+  },
+  "wrist_flex": {
+   "written": 101,
+   "goal_readback": 101,
+   "present_now": 101,
+   "moved_since_precheck": 0
+  },
+  "wrist_roll": {
+   "written": 951,
+   "goal_readback": 951,
+   "present_now": 951,
+   "moved_since_precheck": 0
+  },
+  "gripper": {
+   "written": 2140,
+   "goal_readback": 2140,
+   "present_now": 2140,
+   "moved_since_precheck": 0
+  }
+ },
+ "torque_enabled_at": "2026-10-06T23:15:37.399276+02:00",
+ "follower_aligned_positions": {
+  "shoulder_pan": 2092,
+  "shoulder_lift": 2024,
+  "elbow_flex": 2047,
+  "wrist_flex": 101,
+  "wrist_roll": 951,
+  "gripper": 2140
+ },
+ "hold_max_drift_raw": {
+  "shoulder_pan": 0,
+  "shoulder_lift": 0,
+  "elbow_flex": 0,
+  "wrist_flex": 0,
+  "wrist_roll": 0,
+  "gripper": 0
+ },
+ "obs_start": {
+  "shoulder_pan.pos": 2.681318681318681,
+  "shoulder_lift.pos": -2.065934065934066,
+  "elbow_flex.pos": -0.04395604395604396,
+  "wrist_flex.pos": -101.23076923076923,
+  "wrist_roll.pos": -96.3956043956044,
+  "gripper.pos": 7.346128391793514
+ },
+ "steps": [
+  {
+   "step": 1,
+   "requested_target_deg": 3.681,
+   "sent_deg": 3.681,
+   "measured_before_deg": 2.681,
+   "measured_after_deg": 3.297,
+   "delta_deg": 0.615,
+   "raw_before": 2092,
+   "raw_after": 2099,
+   "encoder_counts": 7,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "step": 2,
+   "requested_target_deg": 4.297,
+   "sent_deg": 4.297,
+   "measured_before_deg": 3.297,
+   "measured_after_deg": 3.824,
+   "delta_deg": 0.527,
+   "raw_before": 2099,
+   "raw_after": 2105,
+   "encoder_counts": 6,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "step": 3,
+   "requested_target_deg": 4.824,
+   "sent_deg": 4.824,
+   "measured_before_deg": 3.824,
+   "measured_after_deg": 4.352,
+   "delta_deg": 0.527,
+   "raw_before": 2105,
+   "raw_after": 2111,
+   "encoder_counts": 6,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "step": 4,
+   "requested_target_deg": 5.352,
+   "sent_deg": 5.352,
+   "measured_before_deg": 4.352,
+   "measured_after_deg": 4.879,
+   "delta_deg": 0.527,
+   "raw_before": 2111,
+   "raw_after": 2117,
+   "encoder_counts": 6,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "step": 5,
+   "requested_target_deg": 5.879,
+   "sent_deg": 5.879,
+   "measured_before_deg": 4.879,
+   "measured_after_deg": 5.407,
+   "delta_deg": 0.527,
+   "raw_before": 2117,
+   "raw_after": 2123,
+   "encoder_counts": 6,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  }
+ ],
+ "obs_end": {
+  "shoulder_pan.pos": 5.406593406593407,
+  "shoulder_lift.pos": -2.065934065934066,
+  "elbow_flex.pos": -0.04395604395604396,
+  "wrist_flex.pos": -101.23076923076923,
+  "wrist_roll.pos": -96.3956043956044,
+  "gripper.pos": 7.346128391793514
+ },
+ "total_shoulder_pan_deg": 2.725,
+ "total_encoder_counts": 31,
+ "other_joint_drift_total": {
+  "shoulder_lift.pos": 0.0,
+  "elbow_flex.pos": 0.0,
+  "wrist_flex.pos": 0.0,
+  "wrist_roll.pos": 0.0,
+  "gripper.pos": 0.0
+ },
+ "shutdown": {
+  "follower": {
+   "torque_zero_writes": {
+    "shoulder_pan": true,
+    "shoulder_lift": true,
+    "elbow_flex": true,
+    "wrist_flex": true,
+    "wrist_roll": true,
+    "gripper": true
+   },
+   "torque_readback": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  }
+ },
+ "finished": "2026-10-06T23:15:44.208321+02:00"
+}

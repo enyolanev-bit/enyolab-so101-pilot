@@ -1,0 +1,304 @@
+{
+ "started": "2026-10-07T15:11:01.472816+02:00",
+ "arms": {
+  "follower": {
+   "port": "/dev/cu.usbmodem5B7B0152071",
+   "tx_counts": {
+    "PING": 6,
+    "READ": 156
+   },
+   "calibration_sha256": "f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d",
+   "ping": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": 777,
+    "6": 777
+   },
+   "torque": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "registers": {
+    "shoulder_pan": {
+     "Homing_Offset": -1634,
+     "Min_Position_Limit": 857,
+     "Max_Position_Limit": 3266
+    },
+    "shoulder_lift": {
+     "Homing_Offset": 1693,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "elbow_flex": {
+     "Homing_Offset": -1340,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "wrist_flex": {
+     "Homing_Offset": -1147,
+     "Min_Position_Limit": 91,
+     "Max_Position_Limit": 2414
+    },
+    "wrist_roll": {
+     "Homing_Offset": -1084,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "gripper": {
+     "Homing_Offset": 900,
+     "Min_Position_Limit": 2029,
+     "Max_Position_Limit": 3540
+    }
+   },
+   "registers_match_file": true,
+   "raw_mean": {
+    "shoulder_pan": 2023.0,
+    "shoulder_lift": 2015.0,
+    "elbow_flex": 2048.0,
+    "wrist_flex": 101.0,
+    "wrist_roll": 936.0,
+    "gripper": 2097.0
+   },
+   "raw_spread": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "norm_mean": {
+    "shoulder_pan": -3.3846153846153846,
+    "shoulder_lift": -2.857142857142857,
+    "elbow_flex": 0.04395604395604396,
+    "wrist_flex": -101.23076923076923,
+    "wrist_roll": -97.71428571428571,
+    "gripper": 4.500330906684315
+   },
+   "mid": {
+    "shoulder_pan": 2061.5,
+    "shoulder_lift": 2047.5,
+    "elbow_flex": 2047.5,
+    "wrist_flex": 1252.5,
+    "wrist_roll": 2047.5,
+    "gripper": 2784.5
+   },
+   "torque_end": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  },
+  "leader": {
+   "port": "/dev/cu.usbmodem5B7B0154401",
+   "tx_counts": {
+    "PING": 6,
+    "READ": 156
+   },
+   "calibration_sha256": "974f819f98567cb7c88fb746d389a9424f88a6fc531fb0587343e5285e4c0dae",
+   "ping": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": 777,
+    "6": 777
+   },
+   "torque": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "registers": {
+    "shoulder_pan": {
+     "Homing_Offset": -1912,
+     "Min_Position_Limit": 696,
+     "Max_Position_Limit": 3322
+    },
+    "shoulder_lift": {
+     "Homing_Offset": 1065,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4089
+    },
+    "elbow_flex": {
+     "Homing_Offset": -1335,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "wrist_flex": {
+     "Homing_Offset": 1681,
+     "Min_Position_Limit": 3,
+     "Max_Position_Limit": 4088
+    },
+    "wrist_roll": {
+     "Homing_Offset": 1900,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "gripper": {
+     "Homing_Offset": -1860,
+     "Min_Position_Limit": 2024,
+     "Max_Position_Limit": 3367
+    }
+   },
+   "registers_match_file": true,
+   "raw_mean": {
+    "shoulder_pan": 2009.0,
+    "shoulder_lift": 2041.0,
+    "elbow_flex": 2046.0,
+    "wrist_flex": 2041.0,
+    "wrist_roll": 3893.0,
+    "gripper": 2045.0
+   },
+   "raw_spread": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "norm_mean": {
+    "shoulder_pan": 0.0,
+    "shoulder_lift": -0.3076923076923077,
+    "elbow_flex": -0.13186813186813187,
+    "wrist_flex": -0.3956043956043956,
+    "wrist_roll": 162.24175824175825,
+    "gripper": 1.5636634400595681
+   },
+   "mid": {
+    "shoulder_pan": 2009.0,
+    "shoulder_lift": 2044.5,
+    "elbow_flex": 2047.5,
+    "wrist_flex": 2045.5,
+    "wrist_roll": 2047.5,
+    "gripper": 2695.5
+   },
+   "torque_end": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  }
+ },
+ "write_calls": 0,
+ "abort": null,
+ "comparison": {
+  "shoulder_pan": {
+   "leader": 0.0,
+   "follower": -3.38,
+   "abs_diff": 3.38,
+   "exceeds_5": false,
+   "leader_raw": 2009.0,
+   "leader_mid": 2009.0,
+   "follower_raw": 2023.0,
+   "follower_mid": 2061.5
+  },
+  "shoulder_lift": {
+   "leader": -0.31,
+   "follower": -2.86,
+   "abs_diff": 2.55,
+   "exceeds_5": false,
+   "leader_raw": 2041.0,
+   "leader_mid": 2044.5,
+   "follower_raw": 2015.0,
+   "follower_mid": 2047.5
+  },
+  "elbow_flex": {
+   "leader": -0.13,
+   "follower": 0.04,
+   "abs_diff": 0.18,
+   "exceeds_5": false,
+   "leader_raw": 2046.0,
+   "leader_mid": 2047.5,
+   "follower_raw": 2048.0,
+   "follower_mid": 2047.5
+  },
+  "wrist_flex": {
+   "leader": -0.4,
+   "follower": -101.23,
+   "abs_diff": 100.84,
+   "exceeds_5": true,
+   "leader_raw": 2041.0,
+   "leader_mid": 2045.5,
+   "follower_raw": 101.0,
+   "follower_mid": 1252.5
+  },
+  "wrist_roll": {
+   "leader": 162.24,
+   "follower": -97.71,
+   "abs_diff": 259.96,
+   "exceeds_5": true,
+   "leader_raw": 3893.0,
+   "leader_mid": 2047.5,
+   "follower_raw": 936.0,
+   "follower_mid": 2047.5
+  },
+  "gripper": {
+   "leader": 1.56,
+   "follower": 4.5,
+   "abs_diff": 2.94,
+   "exceeds_5": false,
+   "leader_raw": 2045.0,
+   "leader_mid": 2695.5,
+   "follower_raw": 2097.0,
+   "follower_mid": 2784.5
+  }
+ },
+ "detected": {
+  "follower": true,
+  "leader": true
+ },
+ "joint_degrees_comparison": {
+  "shoulder_pan": {
+   "leader_deg": 0.0,
+   "follower_deg": -3.385,
+   "difference_deg": 3.385
+  },
+  "shoulder_lift": {
+   "leader_deg": -0.308,
+   "follower_deg": -2.857,
+   "difference_deg": 2.549
+  },
+  "elbow_flex": {
+   "leader_deg": -0.132,
+   "follower_deg": 0.044,
+   "difference_deg": -0.176
+  },
+  "wrist_flex": {
+   "leader_deg": -0.396,
+   "follower_deg": -101.231,
+   "difference_deg": 100.835
+  },
+  "wrist_roll": {
+   "leader_deg": 162.242,
+   "follower_deg": -97.714,
+   "difference_deg": 259.956
+  },
+  "gripper": {
+   "leader_deg": -57.187,
+   "follower_deg": -60.44,
+   "difference_deg": 3.253
+  }
+ },
+ "pose_gate_pass": false,
+ "gripper_note": "Gripper degree comparison is calibrated motor angle, not jaw opening angle; comparison above also retains percentage opening.",
+ "finished": "2026-10-07T15:11:02.675044+02:00"
+}

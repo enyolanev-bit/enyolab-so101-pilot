@@ -1,0 +1,16 @@
+{
+  "frame_id": "20261007T122022483165Z-f034ca3e",
+  "camera": "tool_camera",
+  "device_name": "Innomaker-U20CAM-1080p-S1",
+  "device_unique_id": "0x11100000c456366",
+  "path": "<repo>/boris/frames/tool_camera-20261007T122022483165Z-f034ca3e.png",
+  "width": 1920,
+  "height": 1080,
+  "sha256": "81d931c7fe2b9238fad996f87e65f02902b103aacba83b3afcdfa4bffc2d7083",
+  "bytes": 1126217,
+  "capture_started_utc": "2026-10-07T12:20:22.483165+00:00",
+  "frame_received_unix_s": 1791375623.678765,
+  "host_elapsed_s": 1.421,
+  "discarded_warmup_frames": 15,
+  "rotation_applied_degrees": 0
+}

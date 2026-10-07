@@ -1,0 +1,29 @@
+{
+  "status": "INVALID_WRONG_SOURCE_DESKTOP",
+  "frame_id": "20261007T071226540578Z-b3fe8376",
+  "device_name": "5MP USB Camera",
+  "device_unique_id": "0x112000032e40335",
+  "backend": "ffmpeg/AVFoundation; name selection; audio disabled",
+  "capture_started_utc": "2026-10-07T07:12:26.540578+00:00",
+  "capture_finished_utc": "2026-10-07T07:12:27.651953+00:00",
+  "host_elapsed_s": 1.111,
+  "sensor_exposure_timestamp": "UNKNOWN; host interval only",
+  "width": 1920,
+  "height": 1080,
+  "requested_fps": 30,
+  "measured_fps": null,
+  "discarded_frames": 15,
+  "rotation_applied_degrees": 0,
+  "path": "evidence/video/camera-20261007T071226540578Z-b3fe8376.png",
+  "sha256": "b79a7833f7d78e599ccdb10563d436c5ccf03be7d7ce25db2a95caa64f558b15",
+  "bytes": 1233544,
+  "ffmpeg_warnings": "objc[95353]: class `NSKVONotifying_AVCaptureScreenInput' not linked into application\nobjc[95353]: class `NSKVONotifying_AVCaptureScreenInput' not linked into application\nobjc[95353]: class `NSKVONotifying_AVCaptureScreenInput' not linked into application\n[AVFoundation indev @ 0x806c18140] Configuration of video device failed, falling back to default.\n[in#0/avfoundation @ 0x807018000] Stream #0: not enough frames to estimate rate; consider increasing probesize\n",
+  "robot_access": "NONE; camera-only subprocess",
+  "original_capture_status": "PROVEN_CAPTURE_ONLY",
+  "correction": {
+    "recorded_at_utc": "2026-10-07T07:16:25.459742+00:00",
+    "source_verified_by_visual_inspection": "desktop screenshot, not requested physical camera",
+    "cause": "FFmpeg numeric-prefix device-name parsing selected index 5",
+    "use_for_robot_control": false
+  }
+}

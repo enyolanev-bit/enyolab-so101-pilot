@@ -1,0 +1,14 @@
+{
+ "command": "check",
+ "started": "2026-10-07T14:31:04.702110+02:00",
+ "result": "ROBOT_NOT_OK",
+ "error": "Refused: another process owns the follower (exclusive lock held)",
+ "stop": {
+  "reason": "open failed: Refused: another process owns the follower (exclusive lock held)",
+  "torque_zero_writes": {},
+  "torque_readback": null,
+  "port_closed": null,
+  "torque_off_verified": false
+ },
+ "summary_path": "<repo>/boris/logs/demo-check-20261007T143106087825.json"
+}

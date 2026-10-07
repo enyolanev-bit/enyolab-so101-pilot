@@ -1,0 +1,816 @@
+{
+ "command": {
+  "task": "draw",
+  "template": "golden_gate_bridge",
+  "scale": 1.0
+ },
+ "plan": {
+  "template": "golden_gate_bridge",
+  "scale": 1.0,
+  "size_mm": [
+   40.0,
+   18.0
+  ],
+  "gains": {
+   "u_mm_per_deg_pan": 6.036,
+   "v_mm_per_deg_wrist": 2.779,
+   "source": "LeRobot RobotKinematics FK at start pose"
+  },
+  "start_joints": {
+   "shoulder_pan": -0.484,
+   "wrist_flex": 11.473
+  },
+  "strokes": [
+   {
+    "stroke": 1,
+    "label": "deck",
+    "u": 1.0,
+    "v": 0.25,
+    "x_mm": 40.0,
+    "y_mm": 0.0,
+    "pan_deg": 6.143,
+    "wrist_deg": 11.473,
+    "d_pan": 6.627,
+    "d_wrist": 0.0,
+    "substeps": 14,
+    "needs_wrist_negative": false
+   },
+   {
+    "stroke": 2,
+    "label": "right side cable",
+    "u": 0.75,
+    "v": 1.0,
+    "x_mm": 30.0,
+    "y_mm": 13.5,
+    "pan_deg": 4.486,
+    "wrist_deg": 6.615,
+    "d_pan": -1.657,
+    "d_wrist": -4.858,
+    "substeps": 10,
+    "needs_wrist_negative": true
+   },
+   {
+    "stroke": 3,
+    "label": "right tower down",
+    "u": 0.75,
+    "v": 0.05,
+    "x_mm": 30.0,
+    "y_mm": -3.6,
+    "pan_deg": 4.486,
+    "wrist_deg": 12.768,
+    "d_pan": 0.0,
+    "d_wrist": 6.153,
+    "substeps": 13,
+    "needs_wrist_negative": false
+   },
+   {
+    "stroke": 4,
+    "label": "right tower (retrace up)",
+    "u": 0.75,
+    "v": 1.0,
+    "x_mm": 30.0,
+    "y_mm": 13.5,
+    "pan_deg": 4.486,
+    "wrist_deg": 6.615,
+    "d_pan": 0.0,
+    "d_wrist": -6.153,
+    "substeps": 13,
+    "needs_wrist_negative": true
+   },
+   {
+    "stroke": 5,
+    "label": "main cable sag",
+    "u": 0.625,
+    "v": 0.55,
+    "x_mm": 25.0,
+    "y_mm": 5.4,
+    "pan_deg": 3.658,
+    "wrist_deg": 9.53,
+    "d_pan": -0.828,
+    "d_wrist": 2.915,
+    "substeps": 6,
+    "needs_wrist_negative": false
+   },
+   {
+    "stroke": 6,
+    "label": "main cable sag",
+    "u": 0.5,
+    "v": 0.4,
+    "x_mm": 20.0,
+    "y_mm": 2.7,
+    "pan_deg": 2.829,
+    "wrist_deg": 10.501,
+    "d_pan": -0.828,
+    "d_wrist": 0.972,
+    "substeps": 2,
+    "needs_wrist_negative": false
+   },
+   {
+    "stroke": 7,
+    "label": "main cable sag",
+    "u": 0.375,
+    "v": 0.55,
+    "x_mm": 15.0,
+    "y_mm": 5.4,
+    "pan_deg": 2.001,
+    "wrist_deg": 9.53,
+    "d_pan": -0.828,
+    "d_wrist": -0.972,
+    "substeps": 2,
+    "needs_wrist_negative": true
+   },
+   {
+    "stroke": 8,
+    "label": "main cable to left tower top",
+    "u": 0.25,
+    "v": 1.0,
+    "x_mm": 10.0,
+    "y_mm": 13.5,
+    "pan_deg": 1.173,
+    "wrist_deg": 6.615,
+    "d_pan": -0.828,
+    "d_wrist": -2.915,
+    "substeps": 6,
+    "needs_wrist_negative": true
+   },
+   {
+    "stroke": 9,
+    "label": "left tower down",
+    "u": 0.25,
+    "v": 0.05,
+    "x_mm": 10.0,
+    "y_mm": -3.6,
+    "pan_deg": 1.173,
+    "wrist_deg": 12.768,
+    "d_pan": 0.0,
+    "d_wrist": 6.153,
+    "substeps": 13,
+    "needs_wrist_negative": false
+   },
+   {
+    "stroke": 10,
+    "label": "left tower (retrace up)",
+    "u": 0.25,
+    "v": 1.0,
+    "x_mm": 10.0,
+    "y_mm": 13.5,
+    "pan_deg": 1.173,
+    "wrist_deg": 6.615,
+    "d_pan": 0.0,
+    "d_wrist": -6.153,
+    "substeps": 13,
+    "needs_wrist_negative": true
+   },
+   {
+    "stroke": 11,
+    "label": "left side cable",
+    "u": 0.0,
+    "v": 0.25,
+    "x_mm": 0.0,
+    "y_mm": 0.0,
+    "pan_deg": -0.484,
+    "wrist_deg": 11.473,
+    "d_pan": -1.657,
+    "d_wrist": 4.858,
+    "substeps": 10,
+    "needs_wrist_negative": false
+   }
+  ],
+  "waypoints": [
+   {
+    "i": 0,
+    "stroke": 0,
+    "shoulder_pan": -0.484,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 1,
+    "stroke": 1,
+    "shoulder_pan": -0.011,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 2,
+    "stroke": 1,
+    "shoulder_pan": 0.463,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 3,
+    "stroke": 1,
+    "shoulder_pan": 0.936,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 4,
+    "stroke": 1,
+    "shoulder_pan": 1.409,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 5,
+    "stroke": 1,
+    "shoulder_pan": 1.883,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 6,
+    "stroke": 1,
+    "shoulder_pan": 2.356,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 7,
+    "stroke": 1,
+    "shoulder_pan": 2.829,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 8,
+    "stroke": 1,
+    "shoulder_pan": 3.303,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 9,
+    "stroke": 1,
+    "shoulder_pan": 3.776,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 10,
+    "stroke": 1,
+    "shoulder_pan": 4.25,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 11,
+    "stroke": 1,
+    "shoulder_pan": 4.723,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 12,
+    "stroke": 1,
+    "shoulder_pan": 5.196,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 13,
+    "stroke": 1,
+    "shoulder_pan": 5.67,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 14,
+    "stroke": 1,
+    "shoulder_pan": 6.143,
+    "wrist_flex": 11.473
+   },
+   {
+    "i": 15,
+    "stroke": 2,
+    "shoulder_pan": 5.977,
+    "wrist_flex": 10.987
+   },
+   {
+    "i": 16,
+    "stroke": 2,
+    "shoulder_pan": 5.812,
+    "wrist_flex": 10.501
+   },
+   {
+    "i": 17,
+    "stroke": 2,
+    "shoulder_pan": 5.646,
+    "wrist_flex": 10.016
+   },
+   {
+    "i": 18,
+    "stroke": 2,
+    "shoulder_pan": 5.48,
+    "wrist_flex": 9.53
+   },
+   {
+    "i": 19,
+    "stroke": 2,
+    "shoulder_pan": 5.315,
+    "wrist_flex": 9.044
+   },
+   {
+    "i": 20,
+    "stroke": 2,
+    "shoulder_pan": 5.149,
+    "wrist_flex": 8.558
+   },
+   {
+    "i": 21,
+    "stroke": 2,
+    "shoulder_pan": 4.983,
+    "wrist_flex": 8.072
+   },
+   {
+    "i": 22,
+    "stroke": 2,
+    "shoulder_pan": 4.818,
+    "wrist_flex": 7.587
+   },
+   {
+    "i": 23,
+    "stroke": 2,
+    "shoulder_pan": 4.652,
+    "wrist_flex": 7.101
+   },
+   {
+    "i": 24,
+    "stroke": 2,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 6.615
+   },
+   {
+    "i": 25,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 7.088
+   },
+   {
+    "i": 26,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 7.562
+   },
+   {
+    "i": 27,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 8.035
+   },
+   {
+    "i": 28,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 8.508
+   },
+   {
+    "i": 29,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 8.982
+   },
+   {
+    "i": 30,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 9.455
+   },
+   {
+    "i": 31,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 9.928
+   },
+   {
+    "i": 32,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 10.402
+   },
+   {
+    "i": 33,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 10.875
+   },
+   {
+    "i": 34,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 11.348
+   },
+   {
+    "i": 35,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 11.822
+   },
+   {
+    "i": 36,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 12.295
+   },
+   {
+    "i": 37,
+    "stroke": 3,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 12.768
+   },
+   {
+    "i": 38,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 12.295
+   },
+   {
+    "i": 39,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 11.822
+   },
+   {
+    "i": 40,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 11.348
+   },
+   {
+    "i": 41,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 10.875
+   },
+   {
+    "i": 42,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 10.402
+   },
+   {
+    "i": 43,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 9.928
+   },
+   {
+    "i": 44,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 9.455
+   },
+   {
+    "i": 45,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 8.982
+   },
+   {
+    "i": 46,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 8.508
+   },
+   {
+    "i": 47,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 8.035
+   },
+   {
+    "i": 48,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 7.562
+   },
+   {
+    "i": 49,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 7.088
+   },
+   {
+    "i": 50,
+    "stroke": 4,
+    "shoulder_pan": 4.486,
+    "wrist_flex": 6.615
+   },
+   {
+    "i": 51,
+    "stroke": 5,
+    "shoulder_pan": 4.348,
+    "wrist_flex": 7.101
+   },
+   {
+    "i": 52,
+    "stroke": 5,
+    "shoulder_pan": 4.21,
+    "wrist_flex": 7.587
+   },
+   {
+    "i": 53,
+    "stroke": 5,
+    "shoulder_pan": 4.072,
+    "wrist_flex": 8.072
+   },
+   {
+    "i": 54,
+    "stroke": 5,
+    "shoulder_pan": 3.934,
+    "wrist_flex": 8.558
+   },
+   {
+    "i": 55,
+    "stroke": 5,
+    "shoulder_pan": 3.796,
+    "wrist_flex": 9.044
+   },
+   {
+    "i": 56,
+    "stroke": 5,
+    "shoulder_pan": 3.658,
+    "wrist_flex": 9.53
+   },
+   {
+    "i": 57,
+    "stroke": 6,
+    "shoulder_pan": 3.244,
+    "wrist_flex": 10.016
+   },
+   {
+    "i": 58,
+    "stroke": 6,
+    "shoulder_pan": 2.829,
+    "wrist_flex": 10.501
+   },
+   {
+    "i": 59,
+    "stroke": 7,
+    "shoulder_pan": 2.415,
+    "wrist_flex": 10.016
+   },
+   {
+    "i": 60,
+    "stroke": 7,
+    "shoulder_pan": 2.001,
+    "wrist_flex": 9.53
+   },
+   {
+    "i": 61,
+    "stroke": 8,
+    "shoulder_pan": 1.863,
+    "wrist_flex": 9.044
+   },
+   {
+    "i": 62,
+    "stroke": 8,
+    "shoulder_pan": 1.725,
+    "wrist_flex": 8.558
+   },
+   {
+    "i": 63,
+    "stroke": 8,
+    "shoulder_pan": 1.587,
+    "wrist_flex": 8.072
+   },
+   {
+    "i": 64,
+    "stroke": 8,
+    "shoulder_pan": 1.449,
+    "wrist_flex": 7.587
+   },
+   {
+    "i": 65,
+    "stroke": 8,
+    "shoulder_pan": 1.311,
+    "wrist_flex": 7.101
+   },
+   {
+    "i": 66,
+    "stroke": 8,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 6.615
+   },
+   {
+    "i": 67,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 7.088
+   },
+   {
+    "i": 68,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 7.562
+   },
+   {
+    "i": 69,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 8.035
+   },
+   {
+    "i": 70,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 8.508
+   },
+   {
+    "i": 71,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 8.982
+   },
+   {
+    "i": 72,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 9.455
+   },
+   {
+    "i": 73,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 9.928
+   },
+   {
+    "i": 74,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 10.402
+   },
+   {
+    "i": 75,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 10.875
+   },
+   {
+    "i": 76,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 11.348
+   },
+   {
+    "i": 77,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 11.822
+   },
+   {
+    "i": 78,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 12.295
+   },
+   {
+    "i": 79,
+    "stroke": 9,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 12.768
+   },
+   {
+    "i": 80,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 12.295
+   },
+   {
+    "i": 81,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 11.822
+   },
+   {
+    "i": 82,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 11.348
+   },
+   {
+    "i": 83,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 10.875
+   },
+   {
+    "i": 84,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 10.402
+   },
+   {
+    "i": 85,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 9.928
+   },
+   {
+    "i": 86,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 9.455
+   },
+   {
+    "i": 87,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 8.982
+   },
+   {
+    "i": 88,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 8.508
+   },
+   {
+    "i": 89,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 8.035
+   },
+   {
+    "i": 90,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 7.562
+   },
+   {
+    "i": 91,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 7.088
+   },
+   {
+    "i": 92,
+    "stroke": 10,
+    "shoulder_pan": 1.173,
+    "wrist_flex": 6.615
+   },
+   {
+    "i": 93,
+    "stroke": 11,
+    "shoulder_pan": 1.007,
+    "wrist_flex": 7.101
+   },
+   {
+    "i": 94,
+    "stroke": 11,
+    "shoulder_pan": 0.841,
+    "wrist_flex": 7.587
+   },
+   {
+    "i": 95,
+    "stroke": 11,
+    "shoulder_pan": 0.676,
+    "wrist_flex": 8.072
+   },
+   {
+    "i": 96,
+    "stroke": 11,
+    "shoulder_pan": 0.51,
+    "wrist_flex": 8.558
+   },
+   {
+    "i": 97,
+    "stroke": 11,
+    "shoulder_pan": 0.344,
+    "wrist_flex": 9.044
+   },
+   {
+    "i": 98,
+    "stroke": 11,
+    "shoulder_pan": 0.179,
+    "wrist_flex": 9.53
+   },
+   {
+    "i": 99,
+    "stroke": 11,
+    "shoulder_pan": 0.013,
+    "wrist_flex": 10.016
+   },
+   {
+    "i": 100,
+    "stroke": 11,
+    "shoulder_pan": -0.153,
+    "wrist_flex": 10.501
+   },
+   {
+    "i": 101,
+    "stroke": 11,
+    "shoulder_pan": -0.318,
+    "wrist_flex": 10.987
+   },
+   {
+    "i": 102,
+    "stroke": 11,
+    "shoulder_pan": -0.484,
+    "wrist_flex": 11.473
+   }
+  ],
+  "max_excursion_deg": {
+   "shoulder_pan": 6.627,
+   "wrist_flex": 4.858
+  },
+  "travel_deg": {
+   "shoulder_pan": 13.254,
+   "wrist_flex": 42.101
+  },
+  "wrist_negative_strokes": [
+   2,
+   4,
+   7,
+   8,
+   10
+  ],
+  "problems": []
+ }
+}

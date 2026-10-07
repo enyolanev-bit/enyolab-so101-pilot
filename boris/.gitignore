@@ -1,0 +1,8 @@
+# Local secrets and machine state
+.env
+!.env.example
+# Runtime outputs: logs, camera frames, compiled Swift helper
+logs/
+frames/
+.build/
+__pycache__/

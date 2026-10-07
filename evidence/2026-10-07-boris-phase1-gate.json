@@ -1,0 +1,140 @@
+{
+  "recorded_at_utc": "2026-10-07T07:16:25.464415+00:00",
+  "objective": "Draw one short visible horizontal line near the center of the paper.",
+  "status": "STOPPED_AT_PHASE_1_VISIBILITY_GATE",
+  "PRIMARY_CAMERA": "NONE_ACCEPTABLE",
+  "camera_role_assignment": "UNKNOWN: device names verified, physical top/side roles not established by usable views",
+  "PAPER_VISIBLE": false,
+  "TOOL_TIP_VISIBLE": false,
+  "DRAWING_ZONE_VISIBLE": false,
+  "CURRENT_POSE": {
+    "shoulder_pan": {
+      "raw": 2061,
+      "value": -0.043956,
+      "unit": "calibration_relative_degrees"
+    },
+    "shoulder_lift": {
+      "raw": 3276,
+      "value": 108.0,
+      "unit": "calibration_relative_degrees"
+    },
+    "elbow_flex": {
+      "raw": 1976,
+      "value": -6.285714,
+      "unit": "calibration_relative_degrees"
+    },
+    "wrist_flex": {
+      "raw": 108,
+      "value": -100.615385,
+      "unit": "calibration_relative_degrees"
+    },
+    "wrist_roll": {
+      "raw": 955,
+      "value": -96.043956,
+      "unit": "calibration_relative_degrees"
+    },
+    "gripper": {
+      "raw": 2072,
+      "value": 2.845797,
+      "unit": "percent"
+    }
+  },
+  "pose_measured_at": "2026-10-07T09:12:03.801444+02:00",
+  "pose_evidence": "evidence/20261007T071159Z-boris-phase1-pose.json",
+  "pose_sha256": "011a7e4aef5b8dacd6f819fe0b91be7bc49d31804f373c57eb5dd595651c8581",
+  "all_six_torque_read_zero": true,
+  "read_only_tx_counts": {
+    "PING": 7,
+    "READ": 72
+  },
+  "servo_register_write_calls": 0,
+  "port_closed": true,
+  "READY_FOR_AIR_MOVE": false,
+  "AIR_MOVE_SUCCESS": "NOT_ATTEMPTED",
+  "TOOL_STILL_VISIBLE": "NOT_APPLICABLE",
+  "UPDATED_POSE": "NO_POST_MOVE_POSE; no movement attempted",
+  "READY_FOR_CONTACT_TEST": false,
+  "CONTACT_ATTEMPTED": false,
+  "LINE_VISIBLE": "NOT_PROVEN; no identifiable paper view",
+  "FINAL_IMAGES": [
+    {
+      "metadata": "evidence/video/wrist-20261007T071157423916Z-2020a9b4.json",
+      "frame": "evidence/video/wrist-20261007T071157423916Z-2020a9b4.png",
+      "sha256": "e2b29b7d31781eb9b740e1da16638652ec2983005194c15a7223929856d3c710",
+      "device_name": "Innomaker-U20CAM-1080p-S1",
+      "device_unique_id": "0x11100000c456366",
+      "capture_started_utc": "2026-10-07T07:11:57.423916+00:00",
+      "capture_finished_utc": "2026-10-07T07:11:58.983160+00:00",
+      "visual_assessment": "Window/backlit scene; no identifiable paper, tool tip, or drawing zone"
+    },
+    {
+      "metadata": "evidence/video/camera-20261007T071431790092Z-6d29ae69.json",
+      "frame": "evidence/video/camera-20261007T071431790092Z-6d29ae69.png",
+      "sha256": "cf435c8d68fd0048df7c9e7eb146a4e4376212ffb252141cfcc2e336eb58eca5",
+      "device_name": "5MP USB Camera",
+      "device_unique_id": "0x112000032e40335",
+      "capture_started_utc": "2026-10-07T07:14:31.790092+00:00",
+      "capture_finished_utc": "2026-10-07T07:14:41.577733+00:00",
+      "visual_assessment": "Near-uniform white frame; no identifiable paper boundary, tool tip, or drawing zone"
+    }
+  ],
+  "FINAL_POSE": {
+    "shoulder_pan": {
+      "raw": 2061,
+      "value": -0.043956,
+      "unit": "calibration_relative_degrees"
+    },
+    "shoulder_lift": {
+      "raw": 3276,
+      "value": 108.0,
+      "unit": "calibration_relative_degrees"
+    },
+    "elbow_flex": {
+      "raw": 1976,
+      "value": -6.285714,
+      "unit": "calibration_relative_degrees"
+    },
+    "wrist_flex": {
+      "raw": 108,
+      "value": -100.615385,
+      "unit": "calibration_relative_degrees"
+    },
+    "wrist_roll": {
+      "raw": 955,
+      "value": -96.043956,
+      "unit": "calibration_relative_degrees"
+    },
+    "gripper": {
+      "raw": 2072,
+      "value": 2.845797,
+      "unit": "percent"
+    }
+  },
+  "final_pose_note": "Last measured pose only; no claim of continuous monitoring",
+  "WHAT_WORKED": [
+    "Both physical USB cameras enumerated",
+    "InnoMaker capture succeeded",
+    "Native exact-ID/name capture of 5MP camera succeeded",
+    "Follower read-only probe passed; calibration registers match; no writes",
+    "Numeric-name FFmpeg misselection identified and blocked in helper"
+  ],
+  "WHAT_BLOCKED": [
+    "Both available views fail required visibility",
+    "5MP frame grayscale mean 251.9999, standard deviation 0.0130 on 0..255 scale; cause UNKNOWN",
+    "InnoMaker looks toward window, not drawing surface"
+  ],
+  "NEXT_STEP": [
+    "Human: aim the top camera downward with all four paper edges, center drawing zone, and mounted tool tip visible; include surrounding table for scale/context",
+    "Human: inspect 5MP lens obstruction/focus/exposure and lighting until paper edges and tool are distinguishable; a white frame alone does not identify the cause",
+    "Human: aim side camera across paper level so the tool tip and its air gap above paper are visible; keep bright window out of view",
+    "Repeat Phase 1 after adjustment; do not reposition the robot autonomously to find the workspace"
+  ],
+  "astra_request_sent": false,
+  "astra_request_reason": "Phase 1 failed before model-directed movement could be justified",
+  "motor_execution_attempted": false,
+  "leader_accessed": false,
+  "code_checks": "Python compilation and numeric-name rejection before any subprocess passed; native capture ran successfully",
+  "camera_backend_fix_source": "https://www.ffmpeg.org/doxygen/9.0/avfoundation_8m_source.html",
+  "wrong_source_metadata": "evidence/video/camera-20261007T071226540578Z-b3fe8376.json",
+  "motion_readiness_note": "Prepared general controller remains a specification. Existing bounded pan tests do not establish paper-plane clearance or a contact trajectory in this pose."
+}

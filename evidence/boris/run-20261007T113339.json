@@ -1,0 +1,65 @@
+{
+ "started": "2026-10-07T11:33:39.150672+02:00",
+ "prompt": "draw a simple Golden Gate Bridge",
+ "dry_run": true,
+ "pose_before": {
+  "t": "2026-10-07T11:33:39.801447+02:00",
+  "joints_deg": {
+   "shoulder_pan": 10.242,
+   "shoulder_lift": -2.593,
+   "elbow_flex": -93.67,
+   "wrist_flex": 86.989,
+   "wrist_roll": -97.714
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2178,
+   "shoulder_lift": 2018,
+   "elbow_flex": 982,
+   "wrist_flex": 2242,
+   "wrist_roll": 936,
+   "gripper": 2072
+  },
+  "state": "READ_ONLY"
+ },
+ "frames_before": [
+  {
+   "frame_id": "20261007T093339883626Z-7b1e5537",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T093339883626Z-7b1e5537.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "badc1949f7df661d77b44be826a2c0ce978b798c2447430be40feffdfa173360",
+   "bytes": 1440684,
+   "capture_started_utc": "2026-10-07T09:33:39.883626+00:00",
+   "frame_received_unix_s": 1791365621.082506,
+   "host_elapsed_s": 1.419,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0,
+   "astra_image_path": "<repo>/boris/frames/tool_camera-20261007T093339883626Z-7b1e5537.astra1280.jpg",
+   "astra_image_sha256": "4749e924d4ef8f21988f97193adba38fdee0d35ce42d57b47cea0bf6ee972acd",
+   "age_s_at_return": 0.264
+  },
+  {
+   "frame_id": "20261007T093341427778Z-454b22b2",
+   "camera": "context_camera",
+   "device_name": "Innomaker-U20CAM-720P  ",
+   "device_unique_id": "0x11200000c456367",
+   "path": "<repo>/boris/frames/context_camera-20261007T093341427778Z-454b22b2.png",
+   "width": 1280,
+   "height": 720,
+   "sha256": "24a74fd8d43a2e396bb27ffa642a959d299d9eb184b1680518bdbb790188c95f",
+   "bytes": 746684,
+   "capture_started_utc": "2026-10-07T09:33:41.427778+00:00",
+   "frame_received_unix_s": 1791365622.878057,
+   "host_elapsed_s": 1.639,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "result": "ERROR",
+ "error": "AstraError: Astra API HTTP 400: invalid_request_error: Response input messages must contain the word 'json' in some form to use 'text.format' of type 'json_object'.",
+ "finished": "2026-10-07T11:33:43.440328+02:00"
+}

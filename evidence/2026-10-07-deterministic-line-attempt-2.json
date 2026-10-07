@@ -1,0 +1,217 @@
+{
+ "command": "line",
+ "started": "2026-10-07T13:53:30.647216+02:00",
+ "delta_deg": 3.0,
+ "joints": [
+  "shoulder_pan"
+ ],
+ "frames_before": [
+  {
+   "frame_id": "20261007T115330766717Z-a41acd38",
+   "camera": "side_camera",
+   "device_name": "5MP USB Camera",
+   "device_unique_id": "0x114000032e40335",
+   "path": "<repo>/boris/frames/side_camera-20261007T115330766717Z-a41acd38.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "3840544f9c92476bd4c0c4aa4a1a90db55c9d92a37567ac2e15f63f449b619a2",
+   "bytes": 1260598,
+   "capture_started_utc": "2026-10-07T11:53:30.766717+00:00",
+   "frame_received_unix_s": 1791374011.845623,
+   "host_elapsed_s": 1.178,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  },
+  {
+   "frame_id": "20261007T115332028004Z-44162bfc",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T115332028004Z-44162bfc.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "acaf52afffac785f73e6a4ce69b3340ea304077115ce0afec53615c7c7e03b7e",
+   "bytes": 933715,
+   "capture_started_utc": "2026-10-07T11:53:32.028004+00:00",
+   "frame_received_unix_s": 1791374013.213451,
+   "host_elapsed_s": 1.404,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "frames_after": [
+  {
+   "frame_id": "20261007T115339882513Z-993a7ea8",
+   "camera": "side_camera",
+   "device_name": "5MP USB Camera",
+   "device_unique_id": "0x114000032e40335",
+   "path": "<repo>/boris/frames/side_camera-20261007T115339882513Z-993a7ea8.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "2cfabaa0ea22829f08da168be001c709006eeff22eac6d3d9490f5c80a171b30",
+   "bytes": 1262565,
+   "capture_started_utc": "2026-10-07T11:53:39.882513+00:00",
+   "frame_received_unix_s": 1791374020.945704,
+   "host_elapsed_s": 1.162,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  },
+  {
+   "frame_id": "20261007T115341127424Z-bd0abb18",
+   "camera": "tool_camera",
+   "device_name": "Innomaker-U20CAM-1080p-S1",
+   "device_unique_id": "0x11100000c456366",
+   "path": "<repo>/boris/frames/tool_camera-20261007T115341127424Z-bd0abb18.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "48f96e0acb4554b98efe8420601db764ed5b5226f2bd60993240109fdfbf54a7",
+   "bytes": 1071813,
+   "capture_started_utc": "2026-10-07T11:53:41.127424+00:00",
+   "frame_received_unix_s": 1791374022.319347,
+   "host_elapsed_s": 1.384,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "frames_during": [
+  {
+   "frame_id": "20261007T115338572127Z-6c1431c2",
+   "camera": "side_camera",
+   "device_name": "5MP USB Camera",
+   "device_unique_id": "0x114000032e40335",
+   "path": "<repo>/boris/frames/side_camera-20261007T115338572127Z-6c1431c2.png",
+   "width": 1920,
+   "height": 1080,
+   "sha256": "1d7535eb4bfd50fce29707f83e54e149609827e79a00f2588e4927fe0be7b781",
+   "bytes": 1257873,
+   "capture_started_utc": "2026-10-07T11:53:38.572127+00:00",
+   "frame_received_unix_s": 1791374019.6498132,
+   "host_elapsed_s": 1.182,
+   "discarded_warmup_frames": 15,
+   "rotation_applied_degrees": 0
+  }
+ ],
+ "physical_mark": "PENDING_IMAGE_REVIEW",
+ "length_mm": null,
+ "astra_used": false,
+ "controller_log": "<repo>/boris/logs/session-20261007T135333432034-55365.jsonl",
+ "draw": {
+  "primitive": "pan_line",
+  "delta_deg": 3.0,
+  "before": {
+   "t": "2026-10-07T13:53:38.474071+02:00",
+   "joints_deg": {
+    "shoulder_pan": 3.209,
+    "shoulder_lift": 137.099,
+    "elbow_flex": -24.484,
+    "wrist_flex": -101.231,
+    "wrist_roll": -97.802
+   },
+   "gripper_pct": 4.57,
+   "raw": {
+    "shoulder_pan": 2098,
+    "shoulder_lift": 3607,
+    "elbow_flex": 1769,
+    "wrist_flex": 101,
+    "wrist_roll": 935,
+    "gripper": 2098
+   },
+   "state": "ARMED"
+  },
+  "after": {
+   "t": "2026-10-07T13:53:39.797417+02:00",
+   "joints_deg": {
+    "shoulder_pan": 6.286,
+    "shoulder_lift": 137.099,
+    "elbow_flex": -24.484,
+    "wrist_flex": -101.231,
+    "wrist_roll": -97.802
+   },
+   "gripper_pct": 4.57,
+   "raw": {
+    "shoulder_pan": 2133,
+    "shoulder_lift": 3607,
+    "elbow_flex": 1769,
+    "wrist_flex": 101,
+    "wrist_roll": 935,
+    "gripper": 2098
+   },
+   "state": "ARMED"
+  },
+  "move": {
+   "joint": "shoulder_pan",
+   "requested_delta_deg": null,
+   "target_deg": 6.209,
+   "target_raw": 2132,
+   "start_deg": 3.209,
+   "start_raw": 2098,
+   "iterations": [
+    {
+     "i": 1,
+     "goal_raw": 2120,
+     "measured_raw": 2112,
+     "measured_deg": 4.44,
+     "moved_counts": 14,
+     "error_deg": 1.758
+    },
+    {
+     "i": 2,
+     "goal_raw": 2134,
+     "measured_raw": 2127,
+     "measured_deg": 5.758,
+     "moved_counts": 15,
+     "error_deg": 0.44
+    },
+    {
+     "i": 3,
+     "goal_raw": 2142,
+     "measured_raw": 2133,
+     "measured_deg": 6.286,
+     "moved_counts": 6,
+     "error_deg": -0.088
+    }
+   ],
+   "other_joint_max_drift": {
+    "shoulder_lift": 0.0,
+    "elbow_flex": 0.0,
+    "wrist_flex": 0.0,
+    "wrist_roll": 0.0,
+    "gripper": 0.0
+   },
+   "final_deg": 6.286,
+   "final_raw": 2133,
+   "final_error_deg": -0.088,
+   "encoder_counts": 35,
+   "measured_motion_deg": 3.077,
+   "reached": true,
+   "tolerance_deg": 0.3,
+   "travel_used_deg": 3.077
+  },
+  "length_mm": null,
+  "physical_mark": "PENDING_IMAGE_REVIEW"
+ },
+ "result": "MOTION_COMPLETED_MARK_UNVERIFIED",
+ "stop": {
+  "reason": "deterministic pan line finished",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ },
+ "controller_log_sha256": "e65f902a87f3d1ab23bdb7c5f25146229369e60ae6debdff1017748b76e955a5",
+ "summary_path": "<repo>/boris/logs/demo-line-20261007T135342511884.json"
+}

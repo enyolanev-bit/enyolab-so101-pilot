@@ -1,0 +1,20 @@
+{
+  "status": "CAPTURED_BY_EXACT_DEVICE_ID",
+  "frame_id": "20261007T071431790092Z-6d29ae69",
+  "device_name": "5MP USB Camera",
+  "device_unique_id": "0x112000032e40335",
+  "backend": "native AVFoundation exact uniqueID and localizedName match; video only",
+  "capture_started_utc": "2026-10-07T07:14:31.790092+00:00",
+  "capture_finished_utc": "2026-10-07T07:14:41.577733+00:00",
+  "host_elapsed_s": 9.788,
+  "sensor_exposure_timestamp": "UNKNOWN; host interval includes Swift startup",
+  "width": 1920,
+  "height": 1080,
+  "discarded_frames": 15,
+  "rotation_applied_degrees": 0,
+  "path": "evidence/video/camera-20261007T071431790092Z-6d29ae69.png",
+  "sha256": "cf435c8d68fd0048df7c9e7eb146a4e4376212ffb252141cfcc2e336eb58eca5",
+  "bytes": 29998,
+  "robot_access": "NONE",
+  "warnings": ""
+}

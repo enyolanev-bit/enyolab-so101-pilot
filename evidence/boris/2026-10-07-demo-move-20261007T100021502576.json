@@ -1,0 +1,113 @@
+{
+ "command": "move",
+ "joint": "wrist_flex",
+ "delta_deg": 2.0,
+ "return": true,
+ "started": "2026-10-07T10:00:13.231586+02:00",
+ "moves": [
+  {
+   "joint": "wrist_flex",
+   "requested_delta_deg": 2.0,
+   "target_deg": 12.33,
+   "target_raw": 1393,
+   "start_deg": 10.33,
+   "start_raw": 1370,
+   "iterations": [
+    {
+     "i": 1,
+     "goal_raw": 1381,
+     "measured_raw": 1379,
+     "measured_deg": 11.121,
+     "moved_counts": 9,
+     "error_deg": 1.231
+    },
+    {
+     "i": 2,
+     "goal_raw": 1390,
+     "measured_raw": 1390,
+     "measured_deg": 12.088,
+     "moved_counts": 11,
+     "error_deg": 0.264
+    }
+   ],
+   "other_joint_max_drift": {
+    "shoulder_pan": 0.0,
+    "shoulder_lift": 0.0,
+    "elbow_flex": 0.0,
+    "wrist_roll": 0.0,
+    "gripper": 0.0
+   },
+   "final_deg": 12.088,
+   "final_raw": 1390,
+   "final_error_deg": 0.264,
+   "encoder_counts": 20,
+   "measured_motion_deg": 1.758,
+   "reached": true,
+   "tolerance_deg": 0.3,
+   "travel_used_deg": 1.758
+  }
+ ],
+ "pose_start": {
+  "t": "2026-10-07T10:00:18.311447+02:00",
+  "joints_deg": {
+   "shoulder_pan": -0.484,
+   "shoulder_lift": -2.33,
+   "elbow_flex": 0.044,
+   "wrist_flex": 10.33,
+   "wrist_roll": -97.538
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2056,
+   "shoulder_lift": 2021,
+   "elbow_flex": 2048,
+   "wrist_flex": 1370,
+   "wrist_roll": 938,
+   "gripper": 2072
+  },
+  "state": "ARMED"
+ },
+ "pose_after_move": {
+  "t": "2026-10-07T10:00:20.200101+02:00",
+  "joints_deg": {
+   "shoulder_pan": -0.484,
+   "shoulder_lift": -2.33,
+   "elbow_flex": 0.044,
+   "wrist_flex": 12.088,
+   "wrist_roll": -97.538
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2056,
+   "shoulder_lift": 2021,
+   "elbow_flex": 2048,
+   "wrist_flex": 1390,
+   "wrist_roll": 938,
+   "gripper": 2072
+  },
+  "state": "ARMED"
+ },
+ "result": "MOVE_STOPPED",
+ "error": "SafetyStop: wrist_flex: no measurable progress over 3 iterations (error -1.76 deg) -> stopped; result: {\"joint\": \"wrist_flex\", \"requested_delta_deg\": null, \"target_deg\": 10.33, \"target_raw\": 1370, \"start_deg\": 12.088, \"start_raw\": 1390, \"iterations\": [{\"i\": 1, \"goal_raw\": 1379, \"measured_raw\": 1390, \"measured_deg\": 12.088, \"moved_counts\": 0, \"error_deg\": -1.758}, {\"i\": 2, \"goal_raw\": 1379, \"measured_raw\": 1390, \"measured_deg\": 12.088, \"moved_counts\": 0, \"error_deg\": -1.758}, {\"i\": 3, \"goal_raw\": 1379, \"measured_raw\": 1390, \"measured_deg\": 12.088, \"moved_counts\": 0, \"error_deg\": -1.758}], \"other_joint_max_drift\": {\"shoulder_pan\": 0.0, \"shoulder_lift\": 0.0, \"elbow_flex\": 0.0, \"wrist_roll\": 0.0, \"gripper\": 0.0}, \"fault\": \"wrist_flex: no measurable progress over 3 iterations (error -1.76 deg)\"}",
+ "stop": {
+  "reason": "wrist_flex: no measurable progress over 3 iterations (error -1.76 deg)",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

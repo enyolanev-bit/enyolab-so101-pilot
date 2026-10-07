@@ -1,0 +1,5 @@
+# Python 3.12 only (LeRobot 0.6.1 pin of this pilot). Install: see README_BORIS.md, step 4.
+# controller.py refuses to run if the installed LeRobot source differs from the audited 0.6.1.
+lerobot[feetech,kinematics]==0.6.1   # kinematics = official RobotKinematics (placo 0.9.x)
+# Astra / OpenAI client: NOT needed by these files. Add it only when wiring the model call:
+# openai

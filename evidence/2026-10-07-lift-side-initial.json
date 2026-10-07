@@ -1,0 +1,16 @@
+{
+  "frame_id": "20261007T122019504033Z-368aa90b",
+  "camera": "context_camera",
+  "device_name": "Innomaker-U20CAM-720P  ",
+  "device_unique_id": "0x11200000c456367",
+  "path": "<repo>/boris/frames/context_camera-20261007T122019504033Z-368aa90b.png",
+  "width": 1280,
+  "height": 720,
+  "sha256": "d6bf3133c003caf7de78ca83290d0355aaee5be218fd51a4c474894c0ea45ecd",
+  "bytes": 732402,
+  "capture_started_utc": "2026-10-07T12:20:19.504033+00:00",
+  "frame_received_unix_s": 1791375620.9402819,
+  "host_elapsed_s": 1.577,
+  "discarded_warmup_frames": 15,
+  "rotation_applied_degrees": 0
+}

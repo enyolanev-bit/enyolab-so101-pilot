@@ -1,0 +1,122 @@
+{
+ "started": "2026-10-06T22:20:41.691850+02:00",
+ "port": "/dev/cu.usbmodem5B7B0152071",
+ "method": "FeetechMotorsBus direct; connect(handshake=False); broadcast_ping; ping; read(normalize=False); port_handler.closePort()",
+ "calibration_file": "follower_nevil.json",
+ "calibration_sha256": "f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d",
+ "tx_counts": {
+  "PING": 7,
+  "READ": 36
+ },
+ "write_calls": 0,
+ "blocked_calls": [],
+ "abort": null,
+ "broadcast_ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "regs": {
+  "1": {
+   "Torque_Enable": 0,
+   "Goal_Position": 0,
+   "Present_Position": 2085
+  },
+  "2": {
+   "Torque_Enable": 0,
+   "Goal_Position": 0,
+   "Present_Position": 2024
+  },
+  "3": {
+   "Torque_Enable": 0,
+   "Goal_Position": 0,
+   "Present_Position": 2047
+  },
+  "4": {
+   "Torque_Enable": 0,
+   "Goal_Position": 0,
+   "Present_Position": 103
+  },
+  "5": {
+   "Torque_Enable": 0,
+   "Goal_Position": 0,
+   "Present_Position": 951
+  },
+  "6": {
+   "Torque_Enable": 0,
+   "Goal_Position": 0,
+   "Present_Position": 2140
+  }
+ },
+ "torque_end": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0
+ },
+ "port_closed": true,
+ "close_path": "bus.port_handler.closePort() (direct; disconnect() NOT called)",
+ "torque_changed": false,
+ "torque_nonzero": false,
+ "diffs": {
+  "1": {
+   "goal": 0,
+   "present": 2085,
+   "raw_diff": 2085,
+   "circular_diff": 2011
+  },
+  "2": {
+   "goal": 0,
+   "present": 2024,
+   "raw_diff": 2024,
+   "circular_diff": 2024
+  },
+  "3": {
+   "goal": 0,
+   "present": 2047,
+   "raw_diff": 2047,
+   "circular_diff": 2047
+  },
+  "4": {
+   "goal": 0,
+   "present": 103,
+   "raw_diff": 103,
+   "circular_diff": 103
+  },
+  "5": {
+   "goal": 0,
+   "present": 951,
+   "raw_diff": 951,
+   "circular_diff": 951
+  },
+  "6": {
+   "goal": 0,
+   "present": 2140,
+   "raw_diff": 2140,
+   "circular_diff": 1956
+  }
+ },
+ "over_threshold": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6
+ ],
+ "result": "BLOCKED",
+ "finished": "2026-10-06T22:20:42.494036+02:00"
+}

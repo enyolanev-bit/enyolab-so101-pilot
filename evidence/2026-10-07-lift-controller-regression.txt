@@ -1,0 +1,206 @@
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+TORQUE OFF NOT CONFIRMED -> CUT THE 12 V POWER NOW
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+WARNING: Robot has the following self collisions in neutral position:
+  -base_link_2 collides with shoulder_link_2
+  -shoulder_link_0 collides with upper_arm_link_1
+  -upper_arm_link_0 collides with lower_arm_link_0
+  -lower_arm_link_2 collides with wrist_link_1
+  -wrist_link_0 collides with gripper_link_1
+  -gripper_link_0 collides with moving_jaw_so101_v1_link_0
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+>>> SUPPORT THE ARM: torque is being switched OFF <<<
+PASS pan +10 reached
+PASS pan every goal step <= 11 counts
+PASS others no drift
+PASS budget: second +1 refused (travel)
+PASS lead table: shoulder_pan only
+PASS hold ok
+PASS gripper disabled
+PASS joint not enabled refused
+PASS NaN refused
+PASS bool refused
+PASS excursion > 10 refused
+PASS still ARMED after refusals
+PASS stop verified torque off
+PASS move after stop refused
+PASS wrist_flex: no lead, goal never beyond target  [[119, 125, 131, 131, 131, 131]]
+PASS wrist_flex: stall -> stopped, torque off  [wrist_flex: no measurable progress over 3 iterations (error ]
+PASS wrist_flex +2 reached with an exact servo, goal never beyond target  [0.088]
+PASS wrist_flex -2 below the low-limit margin refused
+PASS wrist neg lead reaches target  [(1360, 1360, [1361, 1352, 1347])]
+PASS wrist neg goal never beyond target - 13  [[1361, 1352, 1347]]
+PASS wrist return (+, no lead) reaches start  [1382]
+PASS contact gap: steps <= 22 counts
+PASS contact gap: ceiling 2 deg enforced
+PASS pan -3 reached  [-3.077]
+PASS startup fault: torque on at start  [torque not OFF at start {'shoulder_pan': 1, 'shoulder_lift': 1, 'elbow]
+PASS startup fault: bad model id  [servo ids/models {1: 777, 2: 777, 3: 778, 4: 777, 5: 777, 6: 777} (exp]
+PASS startup fault: calibration mismatch  [calibration registers != calibration file]
+PASS startup fault: partial torque enable  [partial torque enable {'shoulder_pan': 1, 'shoulder_lift': 1, 'elbow_f]
+PASS startup fault: forbidden write in configure  [write to forbidden address 5 (id 1)]
+PASS motion fault: drift on other joint  [drift on non-moving joints {'elbow_flex': 2.11} -> stopped; result: {"]
+PASS motion fault: reverse response  [shoulder_pan moved opposite to the command (-0.70 deg) -> stopped; res]
+PASS motion fault: stuck joint (no progress)  [shoulder_pan: no measurable progress over 3 iterations (error +5.01 de]
+PASS motion fault: missing axis in read  [Present_Position: missing axes {'wrist_roll'} -> stopped; result: {"jo]
+PASS comm failure -> stopped + ALERT  [TORQUE OFF NOT CONFIRMED -> CUT THE 12 V POWER NOW]
+PASS read-only pose
+PASS read-only refuses motion
+PASS read-only stop: no torque write
+PASS near-singular IK refused
+PASS FK returns a finite tool position  [(384.52, 10.556, 216.557)]
+PASS IK +5 mm y converges  [{'shoulder_pan': -0.8285, 'shoulder_lift': 0.0696, 'elbow_flex': -0.0506, 'wrist_flex': -0.0455, 'wrist_roll': 0.0}]
+PASS IK keeps wrist_roll locked
+PASS plan never executable yet
+PASS plan needing elbow reports it not enabled
+PASS IK > 10 mm refused
+PASS IK NaN refused
+PASS move_ee_delta disabled
+PASS no goal written by EE planning
+PASS FK(IK) round trip bent pose (5, 0, 0)  [[4.99, 0.0, 0.058]]
+PASS FK(IK) round trip bent pose (0, 5, 0)  [[-0.098, 4.999, 0.0]]
+PASS FK(IK) round trip bent pose (0, 0, 5)  [[0.0, 0.0, 5.0]]
+PASS FK(IK) round trip bent pose (0, 0, -5)  [[0.0, 0.0, -5.0]]
+PASS bridge plan has no problems
+PASS bridge excursion within 8 deg  [{'shoulder_pan': 6.545, 'wrist_flex': 6.153}]
+PASS bridge waypoints step <= 0.5 deg
+PASS templates start at their lowest point
+PASS wrist at its stop: up = wrist +, never below the start, no problem  [(1, [40.0, 18.0], [])]
+PASS no wrist room at all: plan refused  [['drawing would be shrunk to 0.08: not enough wrist_flex room (+0.5 / -0.0 deg); move the wrist away from its stop']]
+PASS lead shrunk at the wrist low stop (no fault, goal >= limit)  [[96, 96, 96, 96]]
+PASS command contract accepts valid
+PASS command contract rejects invalid
+PASS astra offline bridge
+PASS astra offline refuses unknown
+PASS astra api ok
+PASS astra request input mentions json (API rule)
+PASS astra api two answers rejected
+PASS astra api off-contract rejected
+PASS astra api secret echo suppressed
+PASS astra api NaN rejected
+PASS sim bridge drawn, every waypoint within 1.0 deg  [{'shoulder_pan': 0.26, 'wrist_flex': 0.393}]
+PASS sim bridge: other joints untouched
+PASS sim bridge with overshooting lead: no limit cycle, drawn  [{'shoulder_pan': 0.26, 'wrist_flex': 0.305}]
+PASS sim bridge: stays inside envelope
+PASS contact loop (side pen, mark at try 1): contact=True, correction 0.0  [(True, 0.0, 1, None)]
+PASS contact loop (side pen, mark at try 3): contact=True, correction 1.0  [(True, 1.0, 3, None)]
+PASS contact loop (side pen, mark at try 99): contact=False, correction 2.0  [(False, 2.0, 5, 'wrist correction cap 2.0 deg reached without a visible mark')]
+PASS contact loop (down pen, mark at try 99): contact=False, correction 0.0  [(False, 0.0, 1, 'no visible mark and the pen points down (wrist cannot press): press the pen by hand')]
+PASS low camera shift is informational only (no slide veto)  [{'try': 1, 'wrist_correction_deg': 0.0, 'pan_motion_deg': 3.165, 'before': 's1.png', 'after': 's2.png', 'new_ink_px': 720, 'mark': True, 'image_shift_px': [0, 20], 'ink_before_px': 5450, 'ink_after_px': 6170, 'image_shift_px_per_deg': 6.3, 'camera_inference_low_shift': True, 'mark_accepted': True}]
+PASS pan-line: +5 deg reached in contact simulation
+PASS pan-line: other five joints untouched
+PASS pan-line: no physical mark/length claim from encoders
+PASS pan-line: invalid amplitude refused
+PASS pan-line: stop torque off
+PASS pan-line: blocked pan aborts and cuts torque
+PASS watchdog idle stop  [watchdog: idle 1s / session 1s]
+
+84/84 checks passed

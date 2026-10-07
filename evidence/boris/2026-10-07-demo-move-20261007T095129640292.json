@@ -1,0 +1,51 @@
+{
+ "command": "move",
+ "joint": "elbow_flex",
+ "delta_deg": 2.0,
+ "return": true,
+ "started": "2026-10-07T09:51:23.159141+02:00",
+ "moves": [],
+ "pose_start": {
+  "t": "2026-10-07T09:51:27.869264+02:00",
+  "joints_deg": {
+   "shoulder_pan": -0.484,
+   "shoulder_lift": -2.33,
+   "elbow_flex": -0.044,
+   "wrist_flex": 10.33,
+   "wrist_roll": -97.538
+  },
+  "gripper_pct": 2.85,
+  "raw": {
+   "shoulder_pan": 2056,
+   "shoulder_lift": 2021,
+   "elbow_flex": 2047,
+   "wrist_flex": 1370,
+   "wrist_roll": 938,
+   "gripper": 2072
+  },
+  "state": "ARMED"
+ },
+ "result": "MOVE_STOPPED",
+ "error": "SafetyStop: elbow_flex: no measurable progress over 3 iterations (error +1.93 deg) -> stopped; result: {\"joint\": \"elbow_flex\", \"requested_delta_deg\": 2.0, \"target_deg\": 1.956, \"target_raw\": 2070, \"start_deg\": -0.044, \"start_raw\": 2047, \"iterations\": [{\"i\": 1, \"goal_raw\": 2058, \"measured_raw\": 2048, \"measured_deg\": 0.044, \"moved_counts\": 1, \"error_deg\": 1.934}, {\"i\": 2, \"goal_raw\": 2059, \"measured_raw\": 2048, \"measured_deg\": 0.044, \"moved_counts\": 0, \"error_deg\": 1.934}, {\"i\": 3, \"goal_raw\": 2059, \"measured_raw\": 2048, \"measured_deg\": 0.044, \"moved_counts\": 0, \"error_deg\": 1.934}, {\"i\": 4, \"goal_raw\": 2059, \"measured_raw\": 2048, \"measured_deg\": 0.044, \"moved_counts\": 0, \"error_deg\": 1.934}], \"other_joint_max_drift\": {}, \"fault\": \"elbow_flex: no measurable progress over 3 iterations (error +1.93 deg)\"}",
+ "stop": {
+  "reason": "elbow_flex: no measurable progress over 3 iterations (error +1.93 deg)",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

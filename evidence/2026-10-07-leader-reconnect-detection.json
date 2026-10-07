@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-07T15:04:56.805678+02:00",
+  "serial_ports": [
+    {
+      "device": "/dev/cu.usbmodem5B7B0152071",
+      "serial": "5B7B015207",
+      "vid": 6790,
+      "pid": 21971
+    }
+  ],
+  "usb_devices": [],
+  "expected_leader_serial": "5B7B015440",
+  "leader_detected": false
+}

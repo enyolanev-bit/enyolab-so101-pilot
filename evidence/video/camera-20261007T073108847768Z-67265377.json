@@ -1,0 +1,29 @@
+{
+  "status": "CAPTURED_BY_EXACT_DEVICE_ID",
+  "frame_id": "20261007T073108847768Z-67265377",
+  "device_name": "5MP USB Camera",
+  "device_unique_id": "0x114000032e40335",
+  "backend": "native AVFoundation exact uniqueID and localizedName match; video only",
+  "capture_started_utc": "2026-10-07T07:31:08.847768+00:00",
+  "capture_finished_utc": "2026-10-07T07:31:10.926885+00:00",
+  "host_elapsed_s": 2.079,
+  "sensor_exposure_timestamp": "UNKNOWN; native frame PTS and host receipt timestamps recorded separately",
+  "native_capture": {
+    "device_name": "5MP USB Camera",
+    "device_unique_id": "0x114000032e40335",
+    "first_receipt_uptime_s": 1609221.9781473752,
+    "frame_presentation_timestamp_s": 1609222.5008333332,
+    "frames_received_after_barrier": 16,
+    "last_receipt_unix_s": 1791358270.830764,
+    "last_receipt_uptime_s": 1609222.5508424167
+  },
+  "width": 1920,
+  "height": 1080,
+  "discarded_frames": 15,
+  "rotation_applied_degrees": 0,
+  "path": "evidence/video/camera-20261007T073108847768Z-67265377.png",
+  "sha256": "c59596968c2e420ed15b008b426ff123cb8b5655a77ea48f1d0126c874ac0ec5",
+  "bytes": 694157,
+  "robot_access": "NONE",
+  "warnings": ""
+}

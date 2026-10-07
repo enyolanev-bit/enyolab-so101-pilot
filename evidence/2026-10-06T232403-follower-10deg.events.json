@@ -1,0 +1,1408 @@
+{
+ "started": "2026-10-06T23:24:04.271755+02:00",
+ "abort": "ABORT[fixed_target]: 20 iterations without convergence (error +0.505 deg)",
+ "writes": [
+  {
+   "t": 1572796.08,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572796.081,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572796.081,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572796.081,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572796.081,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572796.082,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572796.082,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572796.082,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572796.083,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572796.083,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572796.083,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572796.083,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 55,
+   "value": 0
+  },
+  {
+   "t": 1572796.084,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572796.084,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572796.085,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572796.085,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572796.086,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572796.086,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572796.087,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572796.087,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572796.088,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572796.088,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572796.089,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572796.089,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572796.09,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572796.09,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572796.091,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572796.091,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 7,
+   "value": 0
+  },
+  {
+   "t": 1572796.092,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 85,
+   "value": 254
+  },
+  {
+   "t": 1572796.092,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 41,
+   "value": 254
+  },
+  {
+   "t": 1572796.093,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572796.093,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572796.094,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572796.094,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 1,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572796.094,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572796.095,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572796.095,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572796.096,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 2,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572796.096,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572796.097,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572796.097,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572796.098,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 3,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572796.098,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572796.099,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572796.099,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572796.1,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 4,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572796.1,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572796.1,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572796.101,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572796.101,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 5,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572796.102,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 33,
+   "value": 0
+  },
+  {
+   "t": 1572796.102,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 21,
+   "value": 16
+  },
+  {
+   "t": 1572796.103,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 23,
+   "value": 0
+  },
+  {
+   "t": 1572796.103,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 22,
+   "value": 32
+  },
+  {
+   "t": 1572796.104,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 16,
+   "value": 500
+  },
+  {
+   "t": 1572796.104,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 28,
+   "value": 250
+  },
+  {
+   "t": 1572796.105,
+   "who": "follower",
+   "phase": "follower_configure",
+   "kind": "write",
+   "id": 6,
+   "addr": 36,
+   "value": 25
+  },
+  {
+   "t": 1572796.106,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 1,
+   "addr": 42,
+   "value": 2123
+  },
+  {
+   "t": 1572796.106,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 2,
+   "addr": 42,
+   "value": 2024
+  },
+  {
+   "t": 1572796.107,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 3,
+   "addr": 42,
+   "value": 2047
+  },
+  {
+   "t": 1572796.107,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 4,
+   "addr": 42,
+   "value": 101
+  },
+  {
+   "t": 1572796.107,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 5,
+   "addr": 42,
+   "value": 951
+  },
+  {
+   "t": 1572796.108,
+   "who": "follower",
+   "phase": "follower_goal_alignment",
+   "kind": "write",
+   "id": 6,
+   "addr": 42,
+   "value": 2140
+  },
+  {
+   "t": 1572796.11,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572796.11,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 1,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572796.11,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572796.111,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 2,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572796.111,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572796.111,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 3,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572796.111,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572796.112,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 4,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572796.112,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572796.112,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 5,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572796.113,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 1
+  },
+  {
+   "t": 1572796.113,
+   "who": "follower",
+   "phase": "follower_torque_enable",
+   "kind": "write",
+   "id": 6,
+   "addr": 55,
+   "value": 1
+  },
+  {
+   "t": 1572800.164,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572800.615,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572801.062,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572801.506,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572801.948,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572802.389,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572802.834,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572803.281,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572803.721,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572804.168,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572804.615,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572805.062,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572805.505,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572805.946,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572806.38,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572806.815,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572807.268,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572807.703,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572808.146,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572808.587,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "sync_write",
+   "addr": 42,
+   "n": 6
+  },
+  {
+   "t": 1572809.027,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "write",
+   "id": 1,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572809.027,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "write",
+   "id": 2,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572809.027,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "write",
+   "id": 3,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572809.028,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "write",
+   "id": 4,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572809.028,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "write",
+   "id": 5,
+   "addr": 40,
+   "value": 0
+  },
+  {
+   "t": 1572809.028,
+   "who": "follower",
+   "phase": "fixed_target",
+   "kind": "write",
+   "id": 6,
+   "addr": 40,
+   "value": 0
+  }
+ ],
+ "phase": "fixed_target",
+ "result": "BLOCKED",
+ "follower_precheck": {
+  "ids": {
+   "1": 777,
+   "2": 777,
+   "3": 777,
+   "4": 777,
+   "5": 777,
+   "6": 777
+  },
+  "torque": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  }
+ },
+ "initial_raw": {
+  "shoulder_pan": 2123,
+  "shoulder_lift": 2024,
+  "elbow_flex": 2047,
+  "wrist_flex": 101,
+  "wrist_roll": 951,
+  "gripper": 2140
+ },
+ "follower_registers_before": {
+  "Goal_Position": {
+   "shoulder_pan": 2128,
+   "shoulder_lift": 2024,
+   "elbow_flex": 2047,
+   "wrist_flex": 101,
+   "wrist_roll": 951,
+   "gripper": 2140
+  },
+  "Goal_Time": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Goal_Velocity": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "Torque_Limit": {
+   "shoulder_pan": 1000,
+   "shoulder_lift": 1000,
+   "elbow_flex": 1000,
+   "wrist_flex": 1000,
+   "wrist_roll": 1000,
+   "gripper": 500
+  }
+ },
+ "follower_goal_alignment": {
+  "shoulder_pan": {
+   "written": 2123,
+   "goal_readback": 2123,
+   "present_now": 2123,
+   "moved_since_precheck": 0
+  },
+  "shoulder_lift": {
+   "written": 2024,
+   "goal_readback": 2024,
+   "present_now": 2024,
+   "moved_since_precheck": 0
+  },
+  "elbow_flex": {
+   "written": 2047,
+   "goal_readback": 2047,
+   "present_now": 2047,
+   "moved_since_precheck": 0
+  },
+  "wrist_flex": {
+   "written": 101,
+   "goal_readback": 101,
+   "present_now": 101,
+   "moved_since_precheck": 0
+  },
+  "wrist_roll": {
+   "written": 951,
+   "goal_readback": 951,
+   "present_now": 951,
+   "moved_since_precheck": 0
+  },
+  "gripper": {
+   "written": 2140,
+   "goal_readback": 2140,
+   "present_now": 2140,
+   "moved_since_precheck": 0
+  }
+ },
+ "torque_enabled_at": "2026-10-06T23:24:04.332216+02:00",
+ "follower_aligned_positions": {
+  "shoulder_pan": 2123,
+  "shoulder_lift": 2024,
+  "elbow_flex": 2047,
+  "wrist_flex": 101,
+  "wrist_roll": 951,
+  "gripper": 2140
+ },
+ "hold_max_drift_raw": {
+  "shoulder_pan": 0,
+  "shoulder_lift": 0,
+  "elbow_flex": 0,
+  "wrist_flex": 0,
+  "wrist_roll": 0,
+  "gripper": 0
+ },
+ "obs_start": {
+  "shoulder_pan.pos": 5.406593406593407,
+  "shoulder_lift.pos": -2.065934065934066,
+  "elbow_flex.pos": -0.04395604395604396,
+  "wrist_flex.pos": -101.23076923076923,
+  "wrist_roll.pos": -96.3956043956044,
+  "gripper.pos": 7.346128391793514
+ },
+ "start_shoulder_pan_deg": 5.407,
+ "start_raw": 2123,
+ "target_shoulder_pan_deg": 15.407,
+ "iterations": [
+  {
+   "iter": 1,
+   "measured_before_deg": 5.407,
+   "sent_deg": 6.407,
+   "measured_after_deg": 5.934,
+   "delta_deg": 0.527,
+   "raw_after": 2129,
+   "encoder_from_start": 6,
+   "error_to_target_deg": 9.473,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 2,
+   "measured_before_deg": 5.934,
+   "sent_deg": 6.934,
+   "measured_after_deg": 6.462,
+   "delta_deg": 0.527,
+   "raw_after": 2135,
+   "encoder_from_start": 12,
+   "error_to_target_deg": 8.945,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 3,
+   "measured_before_deg": 6.462,
+   "sent_deg": 7.462,
+   "measured_after_deg": 6.989,
+   "delta_deg": 0.527,
+   "raw_after": 2141,
+   "encoder_from_start": 18,
+   "error_to_target_deg": 8.418,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 4,
+   "measured_before_deg": 6.989,
+   "sent_deg": 7.989,
+   "measured_after_deg": 7.429,
+   "delta_deg": 0.44,
+   "raw_after": 2146,
+   "encoder_from_start": 23,
+   "error_to_target_deg": 7.978,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 5,
+   "measured_before_deg": 7.429,
+   "sent_deg": 8.429,
+   "measured_after_deg": 7.956,
+   "delta_deg": 0.527,
+   "raw_after": 2152,
+   "encoder_from_start": 29,
+   "error_to_target_deg": 7.451,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 6,
+   "measured_before_deg": 7.956,
+   "sent_deg": 8.956,
+   "measured_after_deg": 8.571,
+   "delta_deg": 0.615,
+   "raw_after": 2159,
+   "encoder_from_start": 36,
+   "error_to_target_deg": 6.835,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 7,
+   "measured_before_deg": 8.571,
+   "sent_deg": 9.571,
+   "measured_after_deg": 9.099,
+   "delta_deg": 0.527,
+   "raw_after": 2165,
+   "encoder_from_start": 42,
+   "error_to_target_deg": 6.308,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 8,
+   "measured_before_deg": 9.099,
+   "sent_deg": 10.099,
+   "measured_after_deg": 9.626,
+   "delta_deg": 0.527,
+   "raw_after": 2171,
+   "encoder_from_start": 48,
+   "error_to_target_deg": 5.78,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 9,
+   "measured_before_deg": 9.626,
+   "sent_deg": 10.626,
+   "measured_after_deg": 10.154,
+   "delta_deg": 0.527,
+   "raw_after": 2177,
+   "encoder_from_start": 54,
+   "error_to_target_deg": 5.253,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 10,
+   "measured_before_deg": 10.154,
+   "sent_deg": 11.154,
+   "measured_after_deg": 10.681,
+   "delta_deg": 0.527,
+   "raw_after": 2183,
+   "encoder_from_start": 60,
+   "error_to_target_deg": 4.725,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 11,
+   "measured_before_deg": 10.681,
+   "sent_deg": 11.681,
+   "measured_after_deg": 11.209,
+   "delta_deg": 0.527,
+   "raw_after": 2189,
+   "encoder_from_start": 66,
+   "error_to_target_deg": 4.198,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 12,
+   "measured_before_deg": 11.209,
+   "sent_deg": 12.209,
+   "measured_after_deg": 11.648,
+   "delta_deg": 0.44,
+   "raw_after": 2194,
+   "encoder_from_start": 71,
+   "error_to_target_deg": 3.758,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 13,
+   "measured_before_deg": 11.648,
+   "sent_deg": 12.648,
+   "measured_after_deg": 12.176,
+   "delta_deg": 0.527,
+   "raw_after": 2200,
+   "encoder_from_start": 77,
+   "error_to_target_deg": 3.231,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 14,
+   "measured_before_deg": 12.176,
+   "sent_deg": 13.176,
+   "measured_after_deg": 12.791,
+   "delta_deg": 0.615,
+   "raw_after": 2207,
+   "encoder_from_start": 84,
+   "error_to_target_deg": 2.615,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 15,
+   "measured_before_deg": 12.791,
+   "sent_deg": 13.791,
+   "measured_after_deg": 13.319,
+   "delta_deg": 0.527,
+   "raw_after": 2213,
+   "encoder_from_start": 90,
+   "error_to_target_deg": 2.088,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 16,
+   "measured_before_deg": 13.319,
+   "sent_deg": 14.319,
+   "measured_after_deg": 13.846,
+   "delta_deg": 0.527,
+   "raw_after": 2219,
+   "encoder_from_start": 96,
+   "error_to_target_deg": 1.56,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 17,
+   "measured_before_deg": 13.846,
+   "sent_deg": 14.846,
+   "measured_after_deg": 14.374,
+   "delta_deg": 0.527,
+   "raw_after": 2225,
+   "encoder_from_start": 102,
+   "error_to_target_deg": 1.033,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 18,
+   "measured_before_deg": 14.374,
+   "sent_deg": 15.374,
+   "measured_after_deg": 14.901,
+   "delta_deg": 0.527,
+   "raw_after": 2231,
+   "encoder_from_start": 108,
+   "error_to_target_deg": 0.505,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 19,
+   "measured_before_deg": 14.901,
+   "sent_deg": 15.407,
+   "measured_after_deg": 14.901,
+   "delta_deg": 0.0,
+   "raw_after": 2231,
+   "encoder_from_start": 108,
+   "error_to_target_deg": 0.505,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  },
+  {
+   "iter": 20,
+   "measured_before_deg": 14.901,
+   "sent_deg": 15.407,
+   "measured_after_deg": 14.901,
+   "delta_deg": 0.0,
+   "raw_after": 2231,
+   "encoder_from_start": 108,
+   "error_to_target_deg": 0.505,
+   "other_joint_drift_from_start": {
+    "shoulder_lift.pos": 0.0,
+    "elbow_flex.pos": 0.0,
+    "wrist_flex.pos": 0.0,
+    "wrist_roll.pos": 0.0,
+    "gripper.pos": 0.0
+   }
+  }
+ ],
+ "n_iterations": 20,
+ "final_shoulder_pan_deg": 14.901,
+ "final_error_to_target_deg": 0.505,
+ "total_encoder_counts": 108,
+ "total_shoulder_pan_deg": 9.494,
+ "other_joint_drift_final": {
+  "shoulder_lift.pos": 0.0,
+  "elbow_flex.pos": 0.0,
+  "wrist_flex.pos": 0.0,
+  "wrist_roll.pos": 0.0,
+  "gripper.pos": 0.0
+ },
+ "other_joint_max_abs_drift": {
+  "shoulder_lift.pos": 0.0,
+  "elbow_flex.pos": 0.0,
+  "wrist_flex.pos": 0.0,
+  "wrist_roll.pos": 0.0,
+  "gripper.pos": 0.0
+ },
+ "shutdown": {
+  "follower": {
+   "torque_zero_writes": {
+    "shoulder_pan": true,
+    "shoulder_lift": true,
+    "elbow_flex": true,
+    "wrist_flex": true,
+    "wrist_roll": true,
+    "gripper": true
+   },
+   "torque_readback": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  }
+ },
+ "ENCODER_RESULT": "BLOCKED",
+ "HUMAN_VISUAL_CONFIRMATION": "REQUIRED",
+ "finished": "2026-10-06T23:24:17.249058+02:00"
+}

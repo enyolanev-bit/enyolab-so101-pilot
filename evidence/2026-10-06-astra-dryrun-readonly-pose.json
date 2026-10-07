@@ -1,0 +1,198 @@
+{
+ "started": "2026-10-06T23:48:11.530846+02:00",
+ "port": "/dev/cu.usbmodem5B7B0152071",
+ "method": "FeetechMotorsBus direct; connect(handshake=False); broadcast_ping; ping; read(normalize=False); port_handler.closePort()",
+ "calibration_file": "follower_nevil.json",
+ "calibration_sha256": "f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d",
+ "tx_counts": {
+  "PING": 7,
+  "READ": 72
+ },
+ "write_calls": 0,
+ "blocked_calls": [],
+ "abort": null,
+ "broadcast_ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "ping": {
+  "1": 777,
+  "2": 777,
+  "3": 777,
+  "4": 777,
+  "5": 777,
+  "6": 777
+ },
+ "regs": {
+  "1": {
+   "Model_Number": 777,
+   "Torque_Enable": 0,
+   "Present_Position": 2036,
+   "Present_Voltage": 119,
+   "Present_Temperature": 34,
+   "Homing_Offset": -1634,
+   "Min_Position_Limit": 857,
+   "Max_Position_Limit": 3266,
+   "Phase": 12
+  },
+  "2": {
+   "Model_Number": 777,
+   "Torque_Enable": 0,
+   "Present_Position": 2028,
+   "Present_Voltage": 119,
+   "Present_Temperature": 35,
+   "Homing_Offset": 1693,
+   "Min_Position_Limit": 0,
+   "Max_Position_Limit": 4095,
+   "Phase": 12
+  },
+  "3": {
+   "Model_Number": 777,
+   "Torque_Enable": 0,
+   "Present_Position": 2048,
+   "Present_Voltage": 119,
+   "Present_Temperature": 33,
+   "Homing_Offset": -1340,
+   "Min_Position_Limit": 0,
+   "Max_Position_Limit": 4095,
+   "Phase": 12
+  },
+  "4": {
+   "Model_Number": 777,
+   "Torque_Enable": 0,
+   "Present_Position": 1559,
+   "Present_Voltage": 119,
+   "Present_Temperature": 34,
+   "Homing_Offset": -1147,
+   "Min_Position_Limit": 91,
+   "Max_Position_Limit": 2414,
+   "Phase": 12
+  },
+  "5": {
+   "Model_Number": 777,
+   "Torque_Enable": 0,
+   "Present_Position": 953,
+   "Present_Voltage": 118,
+   "Present_Temperature": 35,
+   "Homing_Offset": -1084,
+   "Min_Position_Limit": 0,
+   "Max_Position_Limit": 4095,
+   "Phase": 12
+  },
+  "6": {
+   "Model_Number": 777,
+   "Torque_Enable": 0,
+   "Present_Position": 2140,
+   "Present_Voltage": 118,
+   "Present_Temperature": 36,
+   "Homing_Offset": 900,
+   "Min_Position_Limit": 2029,
+   "Max_Position_Limit": 3540,
+   "Phase": 12
+  }
+ },
+ "torque_end": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 0
+ },
+ "port_closed": true,
+ "close_path": "bus.port_handler.closePort() (direct; disconnect() NOT called)",
+ "torque_changed": false,
+ "calibration_comparison": {
+  "shoulder_pan": {
+   "file_id": 1,
+   "file": [
+    -1634,
+    857,
+    3266
+   ],
+   "motor": [
+    -1634,
+    857,
+    3266
+   ],
+   "match": true
+  },
+  "shoulder_lift": {
+   "file_id": 2,
+   "file": [
+    1693,
+    0,
+    4095
+   ],
+   "motor": [
+    1693,
+    0,
+    4095
+   ],
+   "match": true
+  },
+  "elbow_flex": {
+   "file_id": 3,
+   "file": [
+    -1340,
+    0,
+    4095
+   ],
+   "motor": [
+    -1340,
+    0,
+    4095
+   ],
+   "match": true
+  },
+  "wrist_flex": {
+   "file_id": 4,
+   "file": [
+    -1147,
+    91,
+    2414
+   ],
+   "motor": [
+    -1147,
+    91,
+    2414
+   ],
+   "match": true
+  },
+  "wrist_roll": {
+   "file_id": 5,
+   "file": [
+    -1084,
+    0,
+    4095
+   ],
+   "motor": [
+    -1084,
+    0,
+    4095
+   ],
+   "match": true
+  },
+  "gripper": {
+   "file_id": 6,
+   "file": [
+    900,
+    2029,
+    3540
+   ],
+   "motor": [
+    900,
+    2029,
+    3540
+   ],
+   "match": true
+  }
+ },
+ "mismatches": [],
+ "result": "PASS",
+ "finished": "2026-10-06T23:48:12.343397+02:00"
+}

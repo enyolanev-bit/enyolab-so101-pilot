@@ -1,0 +1,96 @@
+{
+  "before": "evidence/2026-10-07-teleop-sanity-precheck-5.json",
+  "after": "evidence/2026-10-07-teleop-sanity-precheck-6.json",
+  "deltas": {
+    "leader": {
+      "shoulder_pan": {
+        "raw_before": 2009.0,
+        "raw_after": 2049.0,
+        "change_counts": 40.0,
+        "change_deg": 3.516,
+        "spread_counts": 0
+      },
+      "shoulder_lift": {
+        "raw_before": 2041.0,
+        "raw_after": 2045.0,
+        "change_counts": 4.0,
+        "change_deg": 0.352,
+        "spread_counts": 0
+      },
+      "elbow_flex": {
+        "raw_before": 2046.0,
+        "raw_after": 2046.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      },
+      "wrist_flex": {
+        "raw_before": 2041.0,
+        "raw_after": 2038.0,
+        "change_counts": -3.0,
+        "change_deg": -0.264,
+        "spread_counts": 0
+      },
+      "wrist_roll": {
+        "raw_before": 3893.0,
+        "raw_after": 3937.0,
+        "change_counts": 44.0,
+        "change_deg": 3.868,
+        "spread_counts": 0
+      },
+      "gripper": {
+        "raw_before": 2045.0,
+        "raw_after": 2046.0,
+        "change_counts": 1.0,
+        "change_deg": 0.088,
+        "spread_counts": 0
+      }
+    },
+    "follower": {
+      "shoulder_pan": {
+        "raw_before": 2023.0,
+        "raw_after": 2023.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      },
+      "shoulder_lift": {
+        "raw_before": 2015.0,
+        "raw_after": 2015.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      },
+      "elbow_flex": {
+        "raw_before": 2048.0,
+        "raw_after": 2048.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      },
+      "wrist_flex": {
+        "raw_before": 101.0,
+        "raw_after": 101.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      },
+      "wrist_roll": {
+        "raw_before": 936.0,
+        "raw_after": 936.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      },
+      "gripper": {
+        "raw_before": 2097.0,
+        "raw_after": 2097.0,
+        "change_counts": 0.0,
+        "change_deg": 0.0,
+        "spread_counts": 0
+      }
+    }
+  },
+  "pose_gate_pass": false,
+  "write_calls": 0
+}

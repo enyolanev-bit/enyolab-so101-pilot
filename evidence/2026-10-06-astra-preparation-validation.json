@@ -1,0 +1,118 @@
+{
+  "checked_at_utc": "2026-10-06T21:35:19.401627+00:00",
+  "result": "PASS_PREPARATION_CHECKS_ONLY",
+  "schema_validator": "jsonschema 4.25.1, isolated uv environment; project dependencies unchanged",
+  "cases": [
+    {
+      "case": "pan_positive",
+      "expected_valid": true,
+      "actual_valid": true,
+      "result": "PASS"
+    },
+    {
+      "case": "pan_negative_schema_only",
+      "expected_valid": true,
+      "actual_valid": true,
+      "result": "PASS"
+    },
+    {
+      "case": "oversized_step",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "other_joint",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "zero_step",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "boolean_degrees",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "extra_register",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "register_action",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "general_pose_disabled",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "gripper_disabled",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "hold",
+      "expected_valid": true,
+      "actual_valid": true,
+      "result": "PASS"
+    },
+    {
+      "case": "stop",
+      "expected_valid": true,
+      "actual_valid": true,
+      "result": "PASS"
+    },
+    {
+      "case": "action_list",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "missing_observation",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    },
+    {
+      "case": "top_level_override",
+      "expected_valid": false,
+      "actual_valid": false,
+      "result": "PASS"
+    }
+  ],
+  "camera_syntax": "PASS",
+  "camera_imports": [
+    "datetime",
+    "hashlib",
+    "json",
+    "pathlib",
+    "shutil",
+    "struct",
+    "subprocess",
+    "sys",
+    "time",
+    "uuid"
+  ],
+  "source_sha256": {
+    "scripts/capture_wrist_frame.py": "3f64a0a5c14fc09f6bac1aeb62808ccb733d5d77d6adc26a5fe849d2973f1214",
+    "config/astra-action.schema.json": "c026f374e866e451d3a8ee23796a2dee3322217d3d3ee44fa21edfb37a0a40f0",
+    "docs/astra-camera-control.md": "e96b6f48bc9bfdc1e0f3cef3db97f63f89cc31ca0b1896a8163dacc85f2711eb",
+    "evidence/video/2026-10-06-astra-camera-preparation.md": "4e9d5a26cbd30b8728e10a9a1d737417f3f03076e925fd6474b3a7356392306b"
+  },
+  "limitations": "Schema tests are not controller fault-injection or physical safety tests. No motor backend exists.",
+  "robot_commands_executed": false
+}

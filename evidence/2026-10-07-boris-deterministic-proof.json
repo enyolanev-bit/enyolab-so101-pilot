@@ -1,0 +1,154 @@
+{
+  "software": "PASS: 84/84 controller and primitive checks; three-view launcher mock passed",
+  "robot_motion": "PASS: three pan-only strokes with verified torque-off",
+  "physical_mark": "UNVERIFIED: blue paint visible in second close view after attempt 3; no matching before frame establishes a new stroke from execution",
+  "astra_end_to_end": "NOT_RUN: waiting for deterministic mark proof",
+  "length_mm": null,
+  "camera_roles": {
+    "5MP USB Camera": "wide workspace verification",
+    "Innomaker-U20CAM-1080p-S1": "close tool view",
+    "Innomaker-U20CAM-720P": "second close view"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "summary": "evidence/2026-10-07-deterministic-line-attempt-1.json",
+      "summary_sha256": "7926a3f0b60706fef01c9c73b4d875a18aa92687b64e8f6add6670b315d6c977",
+      "requested_delta_deg": 3.0,
+      "measured_delta_deg": 2.725,
+      "other_joint_max_drift": {
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.176,
+        "wrist_flex": 0.088,
+        "wrist_roll": 0.088,
+        "gripper": 0.066
+      },
+      "torque_off_verified": true,
+      "port_closed": true,
+      "frames": {
+        "frames_before": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T111514743524Z-c986e6da.png",
+            "sha256": "671cb75b3818c17a7c9cbd7db0a36bb2a645571d18071facfec8e7d6fd128716"
+          },
+          {
+            "camera": "tool_camera",
+            "path": "boris/frames/tool_camera-20261007T111516372184Z-6b4b0ef4.png",
+            "sha256": "18d7eaae25725a8370b3f148b358b78bc7a7c09d5f870046b43cb1af4fe91029"
+          }
+        ],
+        "frames_after": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T111524227682Z-ad78a9b2.png",
+            "sha256": "2fb97d718c59ac5fc0f4985d51dd3f77c9a4113f4cac696dfa23543ed7421af7"
+          },
+          {
+            "camera": "tool_camera",
+            "path": "boris/frames/tool_camera-20261007T111525455264Z-0e9d25b3.png",
+            "sha256": "0d33c5f17032930ce444a7027a556eaca581b28dddc19126fdbe88e5934694c0"
+          }
+        ]
+      }
+    },
+    {
+      "attempt": 2,
+      "summary": "evidence/2026-10-07-deterministic-line-attempt-2.json",
+      "summary_sha256": "6d8711025b4566df4ba523082ee0f6778d9b9a54d1ea35c422eadb13816c9e4d",
+      "requested_delta_deg": 3.0,
+      "measured_delta_deg": 3.077,
+      "other_joint_max_drift": {
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.0,
+        "wrist_flex": 0.0,
+        "wrist_roll": 0.0,
+        "gripper": 0.0
+      },
+      "torque_off_verified": true,
+      "port_closed": true,
+      "frames": {
+        "frames_before": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T115330766717Z-a41acd38.png",
+            "sha256": "3840544f9c92476bd4c0c4aa4a1a90db55c9d92a37567ac2e15f63f449b619a2"
+          },
+          {
+            "camera": "tool_camera",
+            "path": "boris/frames/tool_camera-20261007T115332028004Z-44162bfc.png",
+            "sha256": "acaf52afffac785f73e6a4ce69b3340ea304077115ce0afec53615c7c7e03b7e"
+          }
+        ],
+        "frames_after": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T115339882513Z-993a7ea8.png",
+            "sha256": "2cfabaa0ea22829f08da168be001c709006eeff22eac6d3d9490f5c80a171b30"
+          },
+          {
+            "camera": "tool_camera",
+            "path": "boris/frames/tool_camera-20261007T115341127424Z-bd0abb18.png",
+            "sha256": "48f96e0acb4554b98efe8420601db764ed5b5226f2bd60993240109fdfbf54a7"
+          }
+        ]
+      }
+    },
+    {
+      "attempt": 3,
+      "summary": "evidence/2026-10-07-deterministic-line-attempt-3.json",
+      "summary_sha256": "1b8b248df52ef802d3c31cb7d78a79c46acf03a9fe49fc5ec22af39939bfabe3",
+      "requested_delta_deg": 3.0,
+      "measured_delta_deg": 2.725,
+      "other_joint_max_drift": {
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.0,
+        "wrist_flex": 0.0,
+        "wrist_roll": 0.176,
+        "gripper": 0.0
+      },
+      "torque_off_verified": true,
+      "port_closed": true,
+      "frames": {
+        "frames_before": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T115958449287Z-7b7d5475.png",
+            "sha256": "74212e6de2c82fcceff64d9827eafca414f3caed8cb78554c6ad1ca26ef8a968"
+          },
+          {
+            "camera": "tool_camera",
+            "path": "boris/frames/tool_camera-20261007T115959844124Z-07c2a6b4.png",
+            "sha256": "c22f7ad9213075953dcd2e538763f4b8e3107216d7a82b554124d397066e5ad8"
+          }
+        ],
+        "frames_during": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T120006332942Z-4d57ac67.png",
+            "sha256": "661163c832db60bf12ae38413bb6f82e0ca4957d6997c19d4d4cb76b639644c7"
+          }
+        ],
+        "frames_after": [
+          {
+            "camera": "side_camera",
+            "path": "boris/frames/side_camera-20261007T120007593699Z-73bf2a11.png",
+            "sha256": "155c852c550f0dbc46ecd9e0423106b7ec6f6cca9642e52800b976797cb12ebe"
+          },
+          {
+            "camera": "tool_camera",
+            "path": "boris/frames/tool_camera-20261007T120008847982Z-9a669042.png",
+            "sha256": "60fe7c7d10af5e52cf0a1b5e19999879428c8eb173acb094242b4e2a28ebc26e"
+          }
+        ]
+      }
+    }
+  ],
+  "pending_physical_intervention": "Identify a new stroke from attempt 3, or aim one camera in profile at bristles/paper to reveal contact and trail without moving arm",
+  "operator_facts": {
+    "fresh_paint_applied": "HUMAN_CONFIRMED in latest reply; not independently measured",
+    "contact_prepared": "HUMAN_CONFIRMED before test"
+  },
+  "palette_route": "NOT_PROVEN: no verified lift, paintwell approach, dipping depth, or return trajectory",
+  "second_close_view_evidence": "evidence/2026-10-07-attempt-3-second-view.json"
+}

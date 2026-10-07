@@ -1,0 +1,48 @@
+{
+  "source": "evidence/2026-10-07-teleop-sanity-precheck-5.json",
+  "source_sha256": "f0c591675eb9f7e10a8bd0dd681b99ae13418cf42dfafc5eb3418ad93d4376d5",
+  "human_statement": "Both arms are at initial position",
+  "detected": {
+    "follower": true,
+    "leader": true
+  },
+  "pose_gate_pass": false,
+  "writes": 0,
+  "torque_off_both": true,
+  "joint_differences": {
+    "shoulder_pan": {
+      "leader_deg": 0.0,
+      "follower_deg": -3.385,
+      "difference_deg": 3.385
+    },
+    "shoulder_lift": {
+      "leader_deg": -0.308,
+      "follower_deg": -2.857,
+      "difference_deg": 2.549
+    },
+    "elbow_flex": {
+      "leader_deg": -0.132,
+      "follower_deg": 0.044,
+      "difference_deg": -0.176
+    },
+    "wrist_flex": {
+      "leader_deg": -0.396,
+      "follower_deg": -101.231,
+      "difference_deg": 100.835
+    },
+    "wrist_roll": {
+      "leader_deg": 162.242,
+      "follower_deg": -97.714,
+      "difference_deg": 259.956
+    },
+    "gripper": {
+      "leader_deg": -57.187,
+      "follower_deg": -60.44,
+      "difference_deg": 3.253
+    }
+  },
+  "finding": "Shoulder pan, shoulder lift and elbow flex now within 5 degrees; wrist flex and wrist roll remain outside. Saved calibration registers match files, which does not establish physical reference agreement.",
+  "cause": "UNKNOWN; do not infer calibration error solely from numeric disagreement",
+  "physical_teleop": "NOT_RUN: requested before-torque gate fails",
+  "next_step": "Read-only wrist identification after a small manual leader flexion; no calibration writes, no torque enable"
+}

@@ -1,0 +1,38 @@
+{
+ "started": "2026-10-07T15:19:07.407491+02:00",
+ "joint": "shoulder_pan",
+ "clamp_deg": 5.0,
+ "samples": [],
+ "moves": 0,
+ "leader_torque": {
+  "shoulder_pan": 0,
+  "shoulder_lift": 0,
+  "elbow_flex": 0,
+  "wrist_flex": 0,
+  "wrist_roll": 0,
+  "gripper": 0
+ },
+ "result": "STOPPED",
+ "error": "ConnectionError: Failed to write 'Goal_Position' on id_=4 with '101' after 1 tries. [TxRxResult] Incorrect status packet!",
+ "stop": {
+  "reason": "open failed: ConnectionError: Failed to write 'Goal_Position' on id_=4 with '101' after 1 tries. [TxRxResult] Incorrect status packet!",
+  "torque_zero_writes": {
+   "shoulder_pan": true,
+   "shoulder_lift": true,
+   "elbow_flex": true,
+   "wrist_flex": true,
+   "wrist_roll": true,
+   "gripper": true
+  },
+  "torque_readback": {
+   "shoulder_pan": 0,
+   "shoulder_lift": 0,
+   "elbow_flex": 0,
+   "wrist_flex": 0,
+   "wrist_roll": 0,
+   "gripper": 0
+  },
+  "port_closed": true,
+  "torque_off_verified": true
+ }
+}

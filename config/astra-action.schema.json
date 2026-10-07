@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SO-101 proposal only — no execution capability",
+  "description": "PLANNED contract. Schema acceptance is not authorization or physical safety validation. Controller-owned state and all checks in docs/astra-camera-control.md remain mandatory.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["session_id", "action_id", "observation_id", "action"],
+  "properties": {
+    "session_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "action_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "observation_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "action": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "joint", "degrees"],
+          "properties": {
+            "type": {"const": "move_joint_delta"},
+            "joint": {"const": "shoulder_pan"},
+            "degrees": {"type": "number", "minimum": -1, "maximum": 1, "not": {"const": 0}}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {"type": {"const": "hold"}}
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {"type": {"const": "stop"}}
+        }
+      ]
+    }
+  }
+}

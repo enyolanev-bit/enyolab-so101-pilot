@@ -1,0 +1,16 @@
+{
+  "frame_id": "20261007T122727071740Z-fcc0e924",
+  "camera": "side_camera",
+  "device_name": "5MP USB Camera",
+  "device_unique_id": "0x114000032e40335",
+  "path": "<repo>/boris/frames/side_camera-20261007T122727071740Z-fcc0e924.png",
+  "width": 1920,
+  "height": 1080,
+  "sha256": "5a78e9d9429b8e91d21cf1af5c529fb463e188994859436cb42b4b72670b02d7",
+  "bytes": 1332726,
+  "capture_started_utc": "2026-10-07T12:27:27.071740+00:00",
+  "frame_received_unix_s": 1791376048.145162,
+  "host_elapsed_s": 1.202,
+  "discarded_warmup_frames": 15,
+  "rotation_applied_degrees": 0
+}

@@ -1,0 +1,17 @@
+template=golden_gate_bridge scale=1.0 size=40x18 mm  gains={'u_mm_per_deg_pan': 6.036, 'v_mm_per_deg_wrist': 2.779, 'source': 'LeRobot RobotKinematics FK at start pose'}
+start: pan -0.484 deg, wrist_flex 11.473 deg  (brush at left end of deck)
+ # stroke                           x_mm   y_mm      pan    wrist   d_pan    d_wr  sub
+ 1 deck                             40.0    0.0    6.143   11.473    6.63    0.00   14
+ 2 right side cable                 30.0   13.5    4.486    6.615   -1.66   -4.86   10  wrist-
+ 3 right tower down                 30.0   -3.6    4.486   12.768    0.00    6.15   13
+ 4 right tower (retrace up)         30.0   13.5    4.486    6.615    0.00   -6.15   13  wrist-
+ 5 main cable sag                   25.0    5.4    3.658    9.530   -0.83    2.92    6
+ 6 main cable sag                   20.0    2.7    2.829   10.501   -0.83    0.97    2
+ 7 main cable sag                   15.0    5.4    2.001    9.530   -0.83   -0.97    2  wrist-
+ 8 main cable to left tower top     10.0   13.5    1.173    6.615   -0.83   -2.92    6  wrist-
+ 9 left tower down                  10.0   -3.6    1.173   12.768    0.00    6.15   13
+10 left tower (retrace up)          10.0   13.5    1.173    6.615    0.00   -6.15   13  wrist-
+11 left side cable                   0.0    0.0   -0.484   11.473   -1.66    4.86   10
+waypoints=103  max_excursion={'shoulder_pan': 6.627, 'wrist_flex': 4.858}  travel={'shoulder_pan': 13.254, 'wrist_flex': 42.101}
+strokes needing wrist_flex NEGATIVE (unproven direction): [2, 4, 7, 8, 10]
+problems: none

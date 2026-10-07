@@ -1,0 +1,111 @@
+{
+ "started": "2026-10-07T15:03:58.476009+02:00",
+ "arms": {
+  "follower": {
+   "port": "/dev/cu.usbmodem5B7B0152071",
+   "tx_counts": {
+    "PING": 6,
+    "READ": 156
+   },
+   "calibration_sha256": "f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d",
+   "ping": {
+    "1": 777,
+    "2": 777,
+    "3": 777,
+    "4": 777,
+    "5": 777,
+    "6": 777
+   },
+   "torque": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "registers": {
+    "shoulder_pan": {
+     "Homing_Offset": -1634,
+     "Min_Position_Limit": 857,
+     "Max_Position_Limit": 3266
+    },
+    "shoulder_lift": {
+     "Homing_Offset": 1693,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "elbow_flex": {
+     "Homing_Offset": -1340,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "wrist_flex": {
+     "Homing_Offset": -1147,
+     "Min_Position_Limit": 91,
+     "Max_Position_Limit": 2414
+    },
+    "wrist_roll": {
+     "Homing_Offset": -1084,
+     "Min_Position_Limit": 0,
+     "Max_Position_Limit": 4095
+    },
+    "gripper": {
+     "Homing_Offset": 900,
+     "Min_Position_Limit": 2029,
+     "Max_Position_Limit": 3540
+    }
+   },
+   "registers_match_file": true,
+   "raw_mean": {
+    "shoulder_pan": 2024.0,
+    "shoulder_lift": 3747.0,
+    "elbow_flex": 1610.0,
+    "wrist_flex": 149.0,
+    "wrist_roll": 936.0,
+    "gripper": 2098.0
+   },
+   "raw_spread": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "norm_mean": {
+    "shoulder_pan": -3.2967032967032965,
+    "shoulder_lift": 149.4065934065934,
+    "elbow_flex": -38.46153846153846,
+    "wrist_flex": -97.01098901098901,
+    "wrist_roll": -97.71428571428571,
+    "gripper": 4.5665122435473195
+   },
+   "mid": {
+    "shoulder_pan": 2061.5,
+    "shoulder_lift": 2047.5,
+    "elbow_flex": 2047.5,
+    "wrist_flex": 1252.5,
+    "wrist_roll": 2047.5,
+    "gripper": 2784.5
+   },
+   "torque_end": {
+    "shoulder_pan": 0,
+    "shoulder_lift": 0,
+    "elbow_flex": 0,
+    "wrist_flex": 0,
+    "wrist_roll": 0,
+    "gripper": 0
+   },
+   "port_closed": true
+  }
+ },
+ "write_calls": 0,
+ "abort": "RuntimeError: leader: expected one USB serial 5B7B015440, found []",
+ "detected": {
+  "follower": true,
+  "leader": false
+ },
+ "pose_gate_pass": false,
+ "finished": "2026-10-07T15:03:59.095456+02:00"
+}

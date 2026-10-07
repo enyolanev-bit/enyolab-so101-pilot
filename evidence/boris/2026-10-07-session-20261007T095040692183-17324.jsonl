@@ -1,0 +1,107 @@
+{"t": "2026-10-07T09:50:40.692490+02:00", "mono": 1610392.413, "kind": "open", "state": "DISCONNECTED", "arm": true, "enabled": ["shoulder_pan"]}
+{"t": "2026-10-07T09:50:41.611094+02:00", "mono": 1610393.332, "kind": "precheck_ok", "state": "PRECHECK", "port": "/dev/cu.usbmodem5B7B0152071", "ids": {"1": 777, "2": 777, "3": 777, "4": 777, "5": 777, "6": 777}, "torque": {"shoulder_pan": 0, "shoulder_lift": 0, "elbow_flex": 0, "wrist_flex": 0, "wrist_roll": 0, "gripper": 0}, "raw": {"shoulder_pan": 2056, "shoulder_lift": 2021, "elbow_flex": 2047, "wrist_flex": 1370, "wrist_roll": 938, "gripper": 2072}}
+{"t": "2026-10-07T09:50:41.611147+02:00", "mono": 1610393.332, "kind": "write", "state": "ARMING", "id": 1, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:41.611476+02:00", "mono": 1610393.332, "kind": "write", "state": "ARMING", "id": 1, "addr": 55, "value": 0}
+{"t": "2026-10-07T09:50:41.611803+02:00", "mono": 1610393.332, "kind": "write", "state": "ARMING", "id": 2, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:41.612129+02:00", "mono": 1610393.333, "kind": "write", "state": "ARMING", "id": 2, "addr": 55, "value": 0}
+{"t": "2026-10-07T09:50:41.612431+02:00", "mono": 1610393.333, "kind": "write", "state": "ARMING", "id": 3, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:41.612719+02:00", "mono": 1610393.333, "kind": "write", "state": "ARMING", "id": 3, "addr": 55, "value": 0}
+{"t": "2026-10-07T09:50:41.613007+02:00", "mono": 1610393.334, "kind": "write", "state": "ARMING", "id": 4, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:41.613349+02:00", "mono": 1610393.334, "kind": "write", "state": "ARMING", "id": 4, "addr": 55, "value": 0}
+{"t": "2026-10-07T09:50:41.613660+02:00", "mono": 1610393.334, "kind": "write", "state": "ARMING", "id": 5, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:41.613973+02:00", "mono": 1610393.334, "kind": "write", "state": "ARMING", "id": 5, "addr": 55, "value": 0}
+{"t": "2026-10-07T09:50:41.614285+02:00", "mono": 1610393.335, "kind": "write", "state": "ARMING", "id": 6, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:41.614599+02:00", "mono": 1610393.335, "kind": "write", "state": "ARMING", "id": 6, "addr": 55, "value": 0}
+{"t": "2026-10-07T09:50:41.614912+02:00", "mono": 1610393.335, "kind": "write", "state": "ARMING", "id": 1, "addr": 7, "value": 0}
+{"t": "2026-10-07T09:50:41.615369+02:00", "mono": 1610393.336, "kind": "write", "state": "ARMING", "id": 1, "addr": 85, "value": 254}
+{"t": "2026-10-07T09:50:41.615824+02:00", "mono": 1610393.336, "kind": "write", "state": "ARMING", "id": 1, "addr": 41, "value": 254}
+{"t": "2026-10-07T09:50:41.616440+02:00", "mono": 1610393.337, "kind": "write", "state": "ARMING", "id": 2, "addr": 7, "value": 0}
+{"t": "2026-10-07T09:50:41.616900+02:00", "mono": 1610393.337, "kind": "write", "state": "ARMING", "id": 2, "addr": 85, "value": 254}
+{"t": "2026-10-07T09:50:41.617366+02:00", "mono": 1610393.338, "kind": "write", "state": "ARMING", "id": 2, "addr": 41, "value": 254}
+{"t": "2026-10-07T09:50:41.617974+02:00", "mono": 1610393.338, "kind": "write", "state": "ARMING", "id": 3, "addr": 7, "value": 0}
+{"t": "2026-10-07T09:50:41.618460+02:00", "mono": 1610393.339, "kind": "write", "state": "ARMING", "id": 3, "addr": 85, "value": 254}
+{"t": "2026-10-07T09:50:41.618942+02:00", "mono": 1610393.339, "kind": "write", "state": "ARMING", "id": 3, "addr": 41, "value": 254}
+{"t": "2026-10-07T09:50:41.619556+02:00", "mono": 1610393.34, "kind": "write", "state": "ARMING", "id": 4, "addr": 7, "value": 0}
+{"t": "2026-10-07T09:50:41.620038+02:00", "mono": 1610393.341, "kind": "write", "state": "ARMING", "id": 4, "addr": 85, "value": 254}
+{"t": "2026-10-07T09:50:41.620528+02:00", "mono": 1610393.341, "kind": "write", "state": "ARMING", "id": 4, "addr": 41, "value": 254}
+{"t": "2026-10-07T09:50:41.621136+02:00", "mono": 1610393.342, "kind": "write", "state": "ARMING", "id": 5, "addr": 7, "value": 0}
+{"t": "2026-10-07T09:50:41.621618+02:00", "mono": 1610393.342, "kind": "write", "state": "ARMING", "id": 5, "addr": 85, "value": 254}
+{"t": "2026-10-07T09:50:41.622093+02:00", "mono": 1610393.343, "kind": "write", "state": "ARMING", "id": 5, "addr": 41, "value": 254}
+{"t": "2026-10-07T09:50:41.622693+02:00", "mono": 1610393.343, "kind": "write", "state": "ARMING", "id": 6, "addr": 7, "value": 0}
+{"t": "2026-10-07T09:50:41.623173+02:00", "mono": 1610393.344, "kind": "write", "state": "ARMING", "id": 6, "addr": 85, "value": 254}
+{"t": "2026-10-07T09:50:41.623656+02:00", "mono": 1610393.344, "kind": "write", "state": "ARMING", "id": 6, "addr": 41, "value": 254}
+{"t": "2026-10-07T09:50:41.624293+02:00", "mono": 1610393.345, "kind": "write", "state": "ARMING", "id": 1, "addr": 33, "value": 0}
+{"t": "2026-10-07T09:50:41.624787+02:00", "mono": 1610393.345, "kind": "write", "state": "ARMING", "id": 1, "addr": 21, "value": 16}
+{"t": "2026-10-07T09:50:41.625286+02:00", "mono": 1610393.346, "kind": "write", "state": "ARMING", "id": 1, "addr": 23, "value": 0}
+{"t": "2026-10-07T09:50:41.625774+02:00", "mono": 1610393.346, "kind": "write", "state": "ARMING", "id": 1, "addr": 22, "value": 32}
+{"t": "2026-10-07T09:50:41.626287+02:00", "mono": 1610393.347, "kind": "write", "state": "ARMING", "id": 2, "addr": 33, "value": 0}
+{"t": "2026-10-07T09:50:41.626787+02:00", "mono": 1610393.347, "kind": "write", "state": "ARMING", "id": 2, "addr": 21, "value": 16}
+{"t": "2026-10-07T09:50:41.627283+02:00", "mono": 1610393.348, "kind": "write", "state": "ARMING", "id": 2, "addr": 23, "value": 0}
+{"t": "2026-10-07T09:50:41.627753+02:00", "mono": 1610393.348, "kind": "write", "state": "ARMING", "id": 2, "addr": 22, "value": 32}
+{"t": "2026-10-07T09:50:41.628270+02:00", "mono": 1610393.349, "kind": "write", "state": "ARMING", "id": 3, "addr": 33, "value": 0}
+{"t": "2026-10-07T09:50:41.628768+02:00", "mono": 1610393.349, "kind": "write", "state": "ARMING", "id": 3, "addr": 21, "value": 16}
+{"t": "2026-10-07T09:50:41.629287+02:00", "mono": 1610393.35, "kind": "write", "state": "ARMING", "id": 3, "addr": 23, "value": 0}
+{"t": "2026-10-07T09:50:41.629770+02:00", "mono": 1610393.35, "kind": "write", "state": "ARMING", "id": 3, "addr": 22, "value": 32}
+{"t": "2026-10-07T09:50:41.630296+02:00", "mono": 1610393.351, "kind": "write", "state": "ARMING", "id": 4, "addr": 33, "value": 0}
+{"t": "2026-10-07T09:50:41.630787+02:00", "mono": 1610393.351, "kind": "write", "state": "ARMING", "id": 4, "addr": 21, "value": 16}
+{"t": "2026-10-07T09:50:41.631288+02:00", "mono": 1610393.352, "kind": "write", "state": "ARMING", "id": 4, "addr": 23, "value": 0}
+{"t": "2026-10-07T09:50:41.631771+02:00", "mono": 1610393.352, "kind": "write", "state": "ARMING", "id": 4, "addr": 22, "value": 32}
+{"t": "2026-10-07T09:50:41.632283+02:00", "mono": 1610393.353, "kind": "write", "state": "ARMING", "id": 5, "addr": 33, "value": 0}
+{"t": "2026-10-07T09:50:41.632779+02:00", "mono": 1610393.353, "kind": "write", "state": "ARMING", "id": 5, "addr": 21, "value": 16}
+{"t": "2026-10-07T09:50:41.633286+02:00", "mono": 1610393.354, "kind": "write", "state": "ARMING", "id": 5, "addr": 23, "value": 0}
+{"t": "2026-10-07T09:50:41.633767+02:00", "mono": 1610393.354, "kind": "write", "state": "ARMING", "id": 5, "addr": 22, "value": 32}
+{"t": "2026-10-07T09:50:41.634306+02:00", "mono": 1610393.355, "kind": "write", "state": "ARMING", "id": 6, "addr": 33, "value": 0}
+{"t": "2026-10-07T09:50:41.634794+02:00", "mono": 1610393.355, "kind": "write", "state": "ARMING", "id": 6, "addr": 21, "value": 16}
+{"t": "2026-10-07T09:50:41.635268+02:00", "mono": 1610393.356, "kind": "write", "state": "ARMING", "id": 6, "addr": 23, "value": 0}
+{"t": "2026-10-07T09:50:41.635734+02:00", "mono": 1610393.356, "kind": "write", "state": "ARMING", "id": 6, "addr": 22, "value": 32}
+{"t": "2026-10-07T09:50:41.636189+02:00", "mono": 1610393.357, "kind": "write", "state": "ARMING", "id": 6, "addr": 16, "value": 500}
+{"t": "2026-10-07T09:50:41.636666+02:00", "mono": 1610393.357, "kind": "write", "state": "ARMING", "id": 6, "addr": 28, "value": 250}
+{"t": "2026-10-07T09:50:41.637179+02:00", "mono": 1610393.358, "kind": "write", "state": "ARMING", "id": 6, "addr": 36, "value": 25}
+{"t": "2026-10-07T09:50:41.638634+02:00", "mono": 1610393.359, "kind": "write", "state": "ARMING", "id": 1, "addr": 42, "value": 2056}
+{"t": "2026-10-07T09:50:41.638969+02:00", "mono": 1610393.359, "kind": "write", "state": "ARMING", "id": 2, "addr": 42, "value": 2021}
+{"t": "2026-10-07T09:50:41.639264+02:00", "mono": 1610393.36, "kind": "write", "state": "ARMING", "id": 3, "addr": 42, "value": 2047}
+{"t": "2026-10-07T09:50:41.639580+02:00", "mono": 1610393.36, "kind": "write", "state": "ARMING", "id": 4, "addr": 42, "value": 1370}
+{"t": "2026-10-07T09:50:41.639909+02:00", "mono": 1610393.36, "kind": "write", "state": "ARMING", "id": 5, "addr": 42, "value": 938}
+{"t": "2026-10-07T09:50:41.640226+02:00", "mono": 1610393.361, "kind": "write", "state": "ARMING", "id": 6, "addr": 42, "value": 2072}
+{"t": "2026-10-07T09:50:41.642426+02:00", "mono": 1610393.363, "kind": "goal_alignment", "state": "ARMING", "written": {"shoulder_pan": 2056, "shoulder_lift": 2021, "elbow_flex": 2047, "wrist_flex": 1370, "wrist_roll": 938, "gripper": 2072}, "readback": {"shoulder_pan": 2056, "shoulder_lift": 2021, "elbow_flex": 2047, "wrist_flex": 1370, "wrist_roll": 938, "gripper": 2072}, "present": {"shoulder_pan": 2056, "shoulder_lift": 2021, "elbow_flex": 2047, "wrist_flex": 1370, "wrist_roll": 938, "gripper": 2072}}
+{"t": "2026-10-07T09:50:41.642444+02:00", "mono": 1610393.363, "kind": "write", "state": "ARMING", "id": 1, "addr": 40, "value": 1}
+{"t": "2026-10-07T09:50:41.642754+02:00", "mono": 1610393.363, "kind": "write", "state": "ARMING", "id": 1, "addr": 55, "value": 1}
+{"t": "2026-10-07T09:50:41.643111+02:00", "mono": 1610393.364, "kind": "write", "state": "ARMING", "id": 2, "addr": 40, "value": 1}
+{"t": "2026-10-07T09:50:41.643450+02:00", "mono": 1610393.364, "kind": "write", "state": "ARMING", "id": 2, "addr": 55, "value": 1}
+{"t": "2026-10-07T09:50:41.643742+02:00", "mono": 1610393.364, "kind": "write", "state": "ARMING", "id": 3, "addr": 40, "value": 1}
+{"t": "2026-10-07T09:50:41.644022+02:00", "mono": 1610393.365, "kind": "write", "state": "ARMING", "id": 3, "addr": 55, "value": 1}
+{"t": "2026-10-07T09:50:41.644307+02:00", "mono": 1610393.365, "kind": "write", "state": "ARMING", "id": 4, "addr": 40, "value": 1}
+{"t": "2026-10-07T09:50:41.644632+02:00", "mono": 1610393.365, "kind": "write", "state": "ARMING", "id": 4, "addr": 55, "value": 1}
+{"t": "2026-10-07T09:50:41.644944+02:00", "mono": 1610393.365, "kind": "write", "state": "ARMING", "id": 5, "addr": 40, "value": 1}
+{"t": "2026-10-07T09:50:41.645251+02:00", "mono": 1610393.366, "kind": "write", "state": "ARMING", "id": 5, "addr": 55, "value": 1}
+{"t": "2026-10-07T09:50:41.645565+02:00", "mono": 1610393.366, "kind": "write", "state": "ARMING", "id": 6, "addr": 40, "value": 1}
+{"t": "2026-10-07T09:50:41.645901+02:00", "mono": 1610393.366, "kind": "write", "state": "ARMING", "id": 6, "addr": 55, "value": 1}
+{"t": "2026-10-07T09:50:45.696809+02:00", "mono": 1610397.417, "kind": "armed", "state": "ARMED", "hold_max_drift_raw": {"shoulder_pan": 0, "shoulder_lift": 0, "elbow_flex": 0, "wrist_flex": 0, "wrist_roll": 0, "gripper": 0}, "start_raw": {"shoulder_pan": 2056, "shoulder_lift": 2021, "elbow_flex": 2047, "wrist_flex": 1370, "wrist_roll": 938, "gripper": 2072}}
+{"t": "2026-10-07T09:50:45.701459+02:00", "mono": 1610397.422, "kind": "move_begin", "state": "EXECUTING", "joint": "shoulder_pan", "requested_delta_deg": 10.0, "target_deg": 9.516, "target_raw": 2170, "start_deg": -0.484, "start_raw": 2056, "other_joint_max_drift": {}}
+{"t": "2026-10-07T09:50:45.701570+02:00", "mono": 1610397.422, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:46.146657+02:00", "mono": 1610397.867, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:46.585398+02:00", "mono": 1610398.306, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:47.018103+02:00", "mono": 1610398.739, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:47.460800+02:00", "mono": 1610399.181, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:47.901651+02:00", "mono": 1610399.622, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:48.315868+02:00", "mono": 1610400.036, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:48.752668+02:00", "mono": 1610400.473, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:49.191651+02:00", "mono": 1610400.912, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:49.631096+02:00", "mono": 1610401.352, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:50.068490+02:00", "mono": 1610401.789, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:50.508973+02:00", "mono": 1610402.23, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:50.957475+02:00", "mono": 1610402.678, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:51.388124+02:00", "mono": 1610403.109, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:51.823519+02:00", "mono": 1610403.544, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:52.264664+02:00", "mono": 1610403.985, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:52.704746+02:00", "mono": 1610404.425, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:53.150454+02:00", "mono": 1610404.871, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:53.597010+02:00", "mono": 1610405.318, "kind": "sync_write", "state": "EXECUTING", "addr": 42, "n": 1}
+{"t": "2026-10-07T09:50:54.039456+02:00", "mono": 1610405.76, "kind": "move_end", "state": "ARMED", "result": {"joint": "shoulder_pan", "requested_delta_deg": 10.0, "target_deg": 9.516, "target_raw": 2170, "start_deg": -0.484, "start_raw": 2056, "iterations": [{"i": 1, "goal_raw": 2067, "measured_raw": 2063, "measured_deg": 0.132, "moved_counts": 7, "error_deg": 9.407}, {"i": 2, "goal_raw": 2074, "measured_raw": 2070, "measured_deg": 0.747, "moved_counts": 7, "error_deg": 8.791}, {"i": 3, "goal_raw": 2081, "measured_raw": 2076, "measured_deg": 1.275, "moved_counts": 6, "error_deg": 8.264}, {"i": 4, "goal_raw": 2087, "measured_raw": 2082, "measured_deg": 1.802, "moved_counts": 6, "error_deg": 7.736}, {"i": 5, "goal_raw": 2093, "measured_raw": 2088, "measured_deg": 2.33, "moved_counts": 6, "error_deg": 7.209}, {"i": 6, "goal_raw": 2099, "measured_raw": 2094, "measured_deg": 2.857, "moved_counts": 6, "error_deg": 6.681}, {"i": 7, "goal_raw": 2105, "measured_raw": 2100, "measured_deg": 3.385, "moved_counts": 6, "error_deg": 6.154}, {"i": 8, "goal_raw": 2111, "measured_raw": 2106, "measured_deg": 3.912, "moved_counts": 6, "error_deg": 5.626}, {"i": 9, "goal_raw": 2117, "measured_raw": 2112, "measured_deg": 4.44, "moved_counts": 6, "error_deg": 5.099}, {"i": 10, "goal_raw": 2123, "measured_raw": 2118, "measured_deg": 4.967, "moved_counts": 6, "error_deg": 4.571}, {"i": 11, "goal_raw": 2129, "measured_raw": 2124, "measured_deg": 5.495, "moved_counts": 6, "error_deg": 4.044}, {"i": 12, "goal_raw": 2135, "measured_raw": 2130, "measured_deg": 6.022, "moved_counts": 6, "error_deg": 3.516}, {"i": 13, "goal_raw": 2141, "measured_raw": 2136, "measured_deg": 6.549, "moved_counts": 6, "error_deg": 2.989}, {"i": 14, "goal_raw": 2147, "measured_raw": 2142, "measured_deg": 7.077, "moved_counts": 6, "error_deg": 2.462}, {"i": 15, "goal_raw": 2153, "measured_raw": 2148, "measured_deg": 7.604, "moved_counts": 6, "error_deg": 1.934}, {"i": 16, "goal_raw": 2159, "measured_raw": 2154, "measured_deg": 8.132, "moved_counts": 6, "error_deg": 1.407}, {"i": 17, "goal_raw": 2165, "measured_raw": 2160, "measured_deg": 8.659, "moved_counts": 6, "error_deg": 0.879}, {"i": 18, "goal_raw": 2171, "measured_raw": 2166, "measured_deg": 9.187, "moved_counts": 6, "error_deg": 0.352}, {"i": 19, "goal_raw": 2176, "measured_raw": 2171, "measured_deg": 9.626, "moved_counts": 5, "error_deg": -0.088}], "other_joint_max_drift": {"shoulder_lift": 0.0, "elbow_flex": 0.0, "wrist_flex": 0.0, "wrist_roll": 0.0, "gripper": 0.0}, "final_deg": 9.626, "final_raw": 2171, "final_error_deg": -0.088, "encoder_counts": 115, "measured_motion_deg": 10.11, "reached": true, "tolerance_deg": 0.3, "travel_used_deg": 10.11}}
+{"t": "2026-10-07T09:50:55.047096+02:00", "mono": 1610406.768, "kind": "write", "state": "STOPPING", "id": 1, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:55.050374+02:00", "mono": 1610406.771, "kind": "write", "state": "STOPPING", "id": 2, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:55.050733+02:00", "mono": 1610406.771, "kind": "write", "state": "STOPPING", "id": 3, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:55.051059+02:00", "mono": 1610406.772, "kind": "write", "state": "STOPPING", "id": 4, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:55.051385+02:00", "mono": 1610406.772, "kind": "write", "state": "STOPPING", "id": 5, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:55.051697+02:00", "mono": 1610406.772, "kind": "write", "state": "STOPPING", "id": 6, "addr": 40, "value": 0}
+{"t": "2026-10-07T09:50:55.053779+02:00", "mono": 1610406.774, "kind": "stop", "state": "STOPPED", "reason": "demo done", "torque_zero_writes": {"shoulder_pan": true, "shoulder_lift": true, "elbow_flex": true, "wrist_flex": true, "wrist_roll": true, "gripper": true}, "torque_readback": {"shoulder_pan": 0, "shoulder_lift": 0, "elbow_flex": 0, "wrist_flex": 0, "wrist_roll": 0, "gripper": 0}, "port_closed": true, "torque_off_verified": true}
