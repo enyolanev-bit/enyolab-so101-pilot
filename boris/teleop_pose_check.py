@@ -24,10 +24,10 @@ CAL = pathlib.Path.home() / ".cache/huggingface/lerobot/calibration"
 ARMS = {
     "follower": {"port": "/dev/cu.usbmodem5B7B0152071", "serial": "5B7B015207",
                  "cal": CAL / "robots/so_follower/follower_nevil.json",
-                 "sha": "f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d"},
+                 "sha": "03b26c3328b557d69b5146d5f316b5f23b760dd13fe7341d7e0b3ebe6b6425c9"},
     "leader": {"port": "/dev/cu.usbmodem5B7B0154401", "serial": "5B7B015440",
                "cal": CAL / "teleoperators/so_leader/pilot001_leader.json",
-               "sha": "974f819f98567cb7c88fb746d389a9424f88a6fc531fb0587343e5285e4c0dae"},
+               "sha": "183455cd72f827f5084fed6127a2397bff45615f5897cda53276d97e663f5e41"},
 }
 NAMES = ["shoulder_pan", "shoulder_lift", "elbow_flex", "wrist_flex", "wrist_roll", "gripper"]
 ALLOWED_INST = {scs.INST_PING: "PING", scs.INST_READ: "READ"}

@@ -1,4 +1,12 @@
-# SO-101 follower: prompt → Astra → drawing (Pilot #001)
+# SO-101 follower: prompt → Astra → drawing (Pilot #001) — EXPERIMENTAL
+
+> **Status (2026-10-07): EXPERIMENTAL, not ready to run.** The proven, supported feature of this
+> repository is **leader → follower teleoperation** (root `README.md`, `scripts/teleop_official.py`).
+> Everything below was developed and tested with the **previous** follower calibration
+> (`f48d50d5…`). Both arms were recalibrated on 2026-10-07 (follower `03b26c33…`, leader `183455cd…`),
+> so `controller.py` still pins the previous follower hash and **refuses to start** (fail-closed).
+> The drawing parameters (leads, wrist direction, pose assumptions) must be re-commissioned under an
+> ENYOLAB GO before the pin is changed. Do **not** override `FOLLOWER_CALIBRATION_SHA256` to bypass it.
 
 Plug the follower arm and the cameras into your Mac, run **one command**, type what to draw.
 Astra (OpenAI Responses API) looks at the camera image and the robot state and answers with **one
@@ -28,19 +36,21 @@ Rehearse without motors or credits:
 python run_boris.py "draw a bridge" --offline-astra --dry-run
 ```
 
-## Proven on this arm (2026-10-07; evidence in the ENYOLAB repo)
+## What was shown on this arm (2026-10-06/07, previous follower calibration; evidence in `evidence/`)
 
 | Item | Status |
 |---|---|
-| Safe startup and torque-OFF verification, many sessions | **PROVEN** |
-| `shoulder_pan` ±10° in air, both directions, ±0.1° | **PROVEN** |
-| First autonomous pen mark on paper | **PROVEN** (operator-confirmed) |
-| `wrist_flex` −2° / +2° at the drawing pose, with a direction-specific lead | PROVEN, encoders |
-| **Full Golden Gate bridge on paper, recognizable** (78/78 waypoints, 84 s, torque OFF verified) | **PROVEN** (operator-confirmed, 11:30) |
-| Prompt → real Astra API → drawing | to be run as the demo (offline planner proven) |
-| `elbow_flex`, `shoulder_lift`, gripper | not used (the gripper holds the pen) |
+| `controller.py` safe startup + torque-OFF verification, many sessions | PROVEN with the previous calibration; **not re-run since the recalibration** |
+| `shoulder_pan` ±10° in air, both directions, ±0.1° | PROVEN (encoders), previous calibration |
+| First autonomous pen mark on paper | PROVEN once (operator-confirmed), previous calibration |
+| `wrist_flex` −2° / +2° with a direction-specific lead | PROVEN (encoders) at ONE folded pose only, previous calibration |
+| Recognizable bridge on paper (local planner, no Astra; 78/78 waypoints) | Operator-confirmed **once** (attempt #3); **not repeatable** so far |
+| Prompt → real Astra API → drawing | **NOT_PROVEN**: Astra returned a valid command and the arm executed it, but the paper stayed **blank** |
+| Two-stroke "L" mini drawing (later, different pose) | **NOT_PROVEN** (executed by encoders, no operator confirmation) |
+| Official URDF forward kinematics vs the real arm | **Disagrees by ~90°** with the operator's view of the brush (likely `wrist_flex`); not used to refuse plans |
+| `elbow_flex`, `shoulder_lift`, gripper | not used for drawing (the gripper holds the pen) |
 
-The drawing is crude and small (about 27 × 12 mm for the bridge). That is expected.
+The drawing is crude and small (about 27 × 12 mm for the bridge).
 
 ## 1. Connect the follower USB
 
@@ -84,10 +94,11 @@ cp .env.example .env
 mkdir -p ~/.cache/huggingface/lerobot/calibration/robots/so_follower
 cp follower_nevil.json ~/.cache/huggingface/lerobot/calibration/robots/so_follower/
 shasum -a 256 ~/.cache/huggingface/lerobot/calibration/robots/so_follower/follower_nevil.json
-# must print f48d50d5ba8c220f13575f13c1d6562d9431391fb1e726541abdaf2c4e714a9d
+# approved file (2026-10-07): 03b26c3328b557d69b5146d5f316b5f23b760dd13fe7341d7e0b3ebe6b6425c9
+# controller.py still expects the PREVIOUS file (f48d50d5…) and will refuse: drawing is not re-commissioned
 ```
 
-Offline self-test, no hardware: `python sim_test.py` must end with `69/69 checks passed`.
+Offline self-test, no hardware: `python sim_test.py` must end with `84/84 checks passed`.
 
 ## 5. Verify the cameras
 

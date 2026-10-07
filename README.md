@@ -17,7 +17,7 @@
 ### Logiciel
 
 - **Python 3.12** et **LeRobot 0.6.1** (extras `core_scripts`, `feetech`, `kinematics`), épinglés dans `uv.lock`.
-- Gestionnaire [`uv`](https://docs.astral.sh/uv/) ≥ 0.12.13.
+- Gestionnaire [`uv`](https://docs.astral.sh/uv/) ≥ 0.12.13 (`brew install uv`).
 
 ```sh
 git clone https://github.com/enyolanev-bit/enyolab-so101-pilot.git
@@ -71,7 +71,10 @@ TELEOP_MAX_REL=5 TELEOP_FPS=30 .venv/bin/python scripts/teleop_official.py 300  
 - **Avant le couple :** le script vérifie que le couple du follower est à 0, recale chaque consigne sur la position réelle (évite un départ brusque), puis lance `lerobot-teleoperate` (LeRobot officiel).
 - **Pendant la session :** chaque pas est limité à 5°, à 30 Hz.
 - **À la fin :** le couple est coupé, puis relu à 0 sur les 6 servos.
-- **Réglages plus lents :** `TELEOP_MAX_REL=2 TELEOP_FPS=15`.
+- **Réglages plus lents :** `TELEOP_MAX_REL=2 TELEOP_FPS=15`. Plafonds : 5° par pas, 30 Hz, 1800 s.
+- **Refus avant tout couple** si une calibration manque ou a la mauvaise empreinte, ou si un port USB ne correspond pas.
+- **Codes de sortie :** 0 = OK ; 1 = `lerobot-teleoperate` en échec (couple vérifié à 0) ; 2 = refus avant démarrage ; 3 = couple non confirmé à 0, **couper le 12 V**.
+- **Test hors ligne** du script, sans matériel : `.venv/bin/python scripts/test_teleop_official_offline.py`.
 
 ### Arrêt d'urgence
 
@@ -85,9 +88,9 @@ TELEOP_MAX_REL=5 TELEOP_FPS=30 .venv/bin/python scripts/teleop_official.py 300  
 
 `boris/` contient le pipeline prompt → Astra → commande de dessin validée → contrôleur borné : `boris/run_boris.py`, guide dans `boris/README_BORIS.md`. **Statut au 2026-10-07 :**
 
-- **PROVEN** (confirmé par l'opérateur) :
-  - un premier trait autonome ;
-  - un pont reconnaissable sur papier (planificateur local, sans Astra) ;
+- **Obtenu avec l'ancienne calibration du follower** (avant le 2026-10-07, donc à revalider) :
+  - un premier trait autonome (confirmé par l'opérateur) ;
+  - un pont reconnaissable, **une seule fois** (planificateur local, sans Astra, confirmé par l'opérateur) ;
   - une commande Astra valide, exécutée par le bras.
 - **NOT_PROVEN** :
   - le dessin de bout en bout avec Astra, dont le résultat physique était une **feuille vierge** ;
@@ -110,9 +113,13 @@ Ce dépôt est volontairement **propre, indépendant et partageable**. Il ne rem
 
 ---
 
-## État du système — au 2026-10-05
+## Historique — état au 2026-10-05 (PÉRIMÉ, conservé pour la traçabilité)
 
-Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé sans artefact.
+> **Cette section est dépassée.** L'état actuel est celui du « Démarrage rapide » en haut de cette page :
+> téléopération leader → follower **PROVEN** le 2026-10-07, les deux bras recalibrés le 2026-10-07.
+> Les mentions ci-dessous (« leader non calibré », « téléopération NOT_PROVEN », etc.) décrivent le 2026-10-05.
+
+Cet état provenait de l'audit en lecture seule **ENYO-14**. Rien n'y était affirmé sans artefact.
 
 ### PROVEN
 
@@ -153,7 +160,7 @@ Cet état provient de l'audit lecture seule **ENYO-14**. Rien n'y est affirmé s
 - architecture Raspberry Pi (productisation future, hors Pilote #001) — voir [`docs/architecture.md`](docs/architecture.md) ;
 - état physique réel du bras leader, dont la pièce `Trigger_SO101` est en cours de réimpression (ENYO-6).
 
-> Aucune ligne de ce dépôt n'affirme que le leader est calibré, ni que la téléopération fonctionne.
+> (2026-10-05) Aucune ligne n'affirmait alors que le leader était calibré ni que la téléopération fonctionnait. Remplacé par le Démarrage rapide.
 
 ---
 
@@ -177,16 +184,16 @@ uv sync --locked --python 3.12   # environnement .venv épinglé : LeRobot 0.6.1
 
 Les trois scripts n'ouvrent aucun port, n'envoient aucune commande et ne font bouger aucun moteur. **Attention** : `uv sync` rend aussi disponibles les commandes LeRobot (`lerobot-calibrate`, `lerobot-teleoperate`, `lerobot-record`…), qui, elles, **ne sont pas bloquées** et agissent sur le robot. Ne les lancer qu'avec un GO HQ explicite. Après installation, consigner dans `evidence/` la version de LeRobot et le hash de `uv.lock` (critère de sortie de [`setup/mac.md`](setup/mac.md)).
 
-> **Ports série et index caméra sont propres à chaque Mac.** Ceux relevés sur le Mac ENYOLAB ne valent pas pour le Mac de Boris : les redécouvrir sur place (débranchement contrôlé pour distinguer leader et follower), puis les écrire dans `config/robot.yaml` et `config/cameras.yaml` (non versionnés).
+> **Ports série :** sur macOS, le nom `/dev/cu.usbmodem<numéro de série>1` dérive du numéro de série de la carte ; avec les deux cartes de ce pilote il est le même sur tout Mac (ASSUMED, vérifié par `scripts/teleop_official.py`, qui refuse si le numéro ne correspond pas). **Index caméra** : propres à chaque Mac (voir `boris/README_BORIS.md`).
 
-### Bloqué aujourd'hui — à débloquer après validation
+### Scripts volontairement bloqués
 
 ```bash
-./scripts/teleop.sh                      # BLOCKED
-./scripts/record_demo.sh --task drawing  # BLOCKED
+./scripts/teleop.sh                      # BLOCKED (historique) — utiliser scripts/teleop_official.py
+./scripts/record_demo.sh --task drawing  # BLOCKED — enregistrement de dataset non validé
 ```
 
-Ces deux scripts **se terminent immédiatement avec un code de sortie non nul**. La commande d'enregistrement visée est rédigée, non exécutée, dans [`docs/recording.md`](docs/recording.md). C'est voulu : ils resteront bloqués tant que la téléopération et l'enregistrement n'auront pas été validés avec artefacts à l'appui.
+Ces deux scripts **se terminent immédiatement avec un code de sortie non nul**, par construction (`AGENTS.md`). La téléopération validée le 2026-10-07 passe par `scripts/teleop_official.py` (Démarrage rapide). L'enregistrement (`docs/recording.md`) reste **NOT_PROVEN**.
 
 ---
 
@@ -218,9 +225,12 @@ Lire [`docs/safety.md`](docs/safety.md). Sans exception.
 | [`config/cameras.example.yaml`](config/cameras.example.yaml) | gabarit, valeurs `CHANGEME` |
 | [`calibration/README.md`](calibration/README.md) | rôle des fichiers de calibration, état constaté, règles |
 | [`tasks/`](tasks/README.md) | dessin / pliage / libre — expérience visée, **NOT_PROVEN** |
+| [`scripts/teleop_official.py`](scripts/teleop_official.py) | **téléopération leader → follower validée** (+ `scripts/test_teleop_official_offline.py`, tests hors ligne) |
+| [`boris/`](boris/README_BORIS.md) | dessin / Astra — **EXPÉRIMENTAL** |
+| [`hardware/side-camera-mount/`](hardware/side-camera-mount/README.md) | support imprimable de la caméra latérale (OpenSCAD, STL, 3MF Bambu X2D) — dimensions ASSUMED |
 | `evidence/` | artefacts de preuve versionnés (métadonnées, logs) ; médias bruts conservés en local, ignorés par Git |
 
-Aucun fichier de calibration n'est versionné ici. `.gitignore` ignore `calibration/*.json` : c'est volontaire.
+Aucun fichier de calibration n'est versionné ici. `.gitignore` ignore `calibration/*.json` et `boris-handoff/` : c'est volontaire. Les deux fichiers de calibration approuvés sont remis à part (Démarrage rapide, étape 2).
 
 ---
 
