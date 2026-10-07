@@ -5,7 +5,8 @@
 | Fonction | Statut |
 |---|---|
 | **Téléopération leader → follower** (`scripts/teleop_official.py`) | **PROVEN** le 2026-10-07 : suivi fluide confirmé par l'opérateur ; couple du follower relu à 0 après chaque session |
-| Dessin / peinture autonome avec Astra (`boris/`) | **EXPÉRIMENTAL** : voir la dernière section |
+| **Dessin par rejeu** : enregistrer au leader, rejouer au follower (`scripts/drawing_library.py`) | **PROVEN** le 2026-10-07 ; choix par Astra testé hors ligne seulement |
+| Dessin autonome génératif avec Astra (`boris/`) | **EXPÉRIMENTAL** : voir la dernière section |
 
 ### Matériel requis
 
@@ -75,6 +76,28 @@ TELEOP_MAX_REL=5 TELEOP_FPS=30 .venv/bin/python scripts/teleop_official.py 300  
 - **Refus avant tout couple** si une calibration manque ou a la mauvaise empreinte, ou si un port USB ne correspond pas.
 - **Codes de sortie :** 0 = OK ; 1 = `lerobot-teleoperate` en échec (couple vérifié à 0) ; 2 = refus avant démarrage ; 3 = couple non confirmé à 0, **couper le 12 V**.
 - **Test hors ligne** du script, sans matériel : `.venv/bin/python scripts/test_teleop_official_offline.py`.
+
+### 4. Dessiner avec Astra : enregistrer au leader, rejouer au follower
+
+| Fonction | Statut (2026-10-07) |
+|---|---|
+| Enregistrer un dessin fait au leader (`record`) | **PROVEN** (dataset LeRobot de 2699 images, 90 s) |
+| Rejouer ce dessin au follower (`replay`) | **PROVEN** : même tracé confirmé par l'opérateur |
+| Prompt → Astra choisit le dessin → rejeu (`draw`) | Chemin **testé hors ligne** (API simulée) ; **appel réel NOT_PROVEN** (plus de crédit) |
+
+```sh
+.venv/bin/python scripts/drawing_library.py record bridge --description "simple Golden Gate bridge"
+.venv/bin/python scripts/drawing_library.py list
+.venv/bin/python scripts/drawing_library.py replay bridge
+.venv/bin/python scripts/drawing_library.py draw "dessine un pont du Golden Gate"    # 1 appel Astra
+.venv/bin/python scripts/drawing_library.py draw "..." --offline-astra --dry-run     # sans API ni moteur
+```
+
+- **Enregistrement :** il démarre au premier mouvement du leader et s'arrête après 5 s d'immobilité (90 s max par défaut). La pince du follower reste fermée, car la poignée du leader ne se lit pas.
+- **Rejeu :** le follower doit partir de la **pose « L »**, pointe en l'air, avec la feuille **au même endroit** que lors de l'enregistrement. Une approche (≤ 5° par pas) mène à la pose de départ, puis la trajectoire est rejouée à 5° par pas maximum, et le couple est vérifié à 0 à la fin.
+- **Astra** (`OPENAI_API_KEY` dans `boris/.env`) reçoit le prompt et la liste des dessins (nom et description). Il ne peut que **choisir un dessin enregistré ou refuser** : aucune valeur moteur ne vient du modèle.
+- **Données :** les dessins vont dans `data/drawings/`, ignoré par Git. Ils dépendent de la calibration et de la position de la feuille ; ceux de démonstration sont remis à part.
+- **Tests hors ligne :** `.venv/bin/python scripts/test_drawing_library_offline.py`.
 
 ### Arrêt d'urgence
 
