@@ -1,5 +1,104 @@
 # enyolab-so101-pilot
 
+## Démarrage rapide — téléopération leader → follower SO-101
+
+| Fonction | Statut |
+|---|---|
+| **Téléopération leader → follower** (`scripts/teleop_official.py`) | **PROVEN** le 2026-10-07 : suivi fluide confirmé par l'opérateur ; couple du follower relu à 0 après chaque session |
+| Dessin / peinture autonome avec Astra (`boris/`) | **EXPÉRIMENTAL** : voir la dernière section |
+
+### Matériel requis
+
+- Un bras **follower SO-101** (servos STS3215, alimentation **12 V**) et un bras **leader SO-101**, chacun avec sa carte contrôleur USB.
+- Un Mac (macOS, Apple Silicon testé) et deux câbles USB de données.
+- L'interrupteur de l'alimentation 12 V **à portée de main** : c'est l'arrêt d'urgence.
+- Optionnel, seulement pour le dessin : caméras InnoMaker U20CAM-1080p (outil) et U20CAM-720P (contexte).
+
+### Logiciel
+
+- **Python 3.12** et **LeRobot 0.6.1** (extras `core_scripts`, `feetech`, `kinematics`), épinglés dans `uv.lock`.
+- Gestionnaire [`uv`](https://docs.astral.sh/uv/) ≥ 0.12.13.
+
+```sh
+git clone https://github.com/enyolanev-bit/enyolab-so101-pilot.git
+cd enyolab-so101-pilot
+uv sync --locked --python 3.12        # crée .venv avec LeRobot 0.6.1
+```
+
+### 1. Identifier les ports USB
+
+Branche le **follower** et le **leader**, puis :
+
+```sh
+ls /dev/cu.usbmodem*
+.venv/bin/python -m serial.tools.list_ports -v
+```
+
+| Bras | Port attendu | Numéro de série USB |
+|---|---|---|
+| follower | `/dev/cu.usbmodem5B7B0152071` | `5B7B015207` |
+| leader | `/dev/cu.usbmodem5B7B0154401` | `5B7B015440` |
+
+Sur macOS, le nom du port dérive du numéro de série : avec ces deux cartes, il reste identique d'un Mac à l'autre. Si un numéro diffère, **ne lance rien** et vérifie le matériel.
+
+### 2. Installer les deux fichiers de calibration
+
+Les calibrations sont propres à ces deux bras. Elles ne sont **pas** dans Git et sont remises séparément par ENYOLAB.
+
+```sh
+mkdir -p ~/.cache/huggingface/lerobot/calibration/robots/so_follower \
+         ~/.cache/huggingface/lerobot/calibration/teleoperators/so_leader
+cp follower_nevil.json  ~/.cache/huggingface/lerobot/calibration/robots/so_follower/
+cp pilot001_leader.json ~/.cache/huggingface/lerobot/calibration/teleoperators/so_leader/
+shasum -a 256 ~/.cache/huggingface/lerobot/calibration/robots/so_follower/follower_nevil.json \
+              ~/.cache/huggingface/lerobot/calibration/teleoperators/so_leader/pilot001_leader.json
+# follower_nevil.json  03b26c3328b557d69b5146d5f316b5f23b760dd13fe7341d7e0b3ebe6b6425c9
+# pilot001_leader.json 183455cd72f827f5084fed6127a2397bff45615f5897cda53276d97e663f5e41
+```
+
+Le script de téléopération refuse de démarrer si l'empreinte du follower diffère. Ne lance jamais `lerobot-calibrate` sans l'accord d'ENYOLAB.
+
+### 3. Lancer la téléopération leader → follower
+
+1. Mets les deux bras dans une **pose proche**, par exemple en « L ». Au démarrage, le follower rattrape la pose du leader.
+2. Si la pince du follower tient un objet, mets la poignée du leader dans la même ouverture : la pince copie la poignée.
+3. Allume le 12 V du follower, garde la main près de l'interrupteur, et dégage la zone autour du follower.
+
+```sh
+TELEOP_MAX_REL=5 TELEOP_FPS=30 .venv/bin/python scripts/teleop_official.py 300    # 300 s
+```
+
+- **Avant le couple :** le script vérifie que le couple du follower est à 0, recale chaque consigne sur la position réelle (évite un départ brusque), puis lance `lerobot-teleoperate` (LeRobot officiel).
+- **Pendant la session :** chaque pas est limité à 5°, à 30 Hz.
+- **À la fin :** le couple est coupé, puis relu à 0 sur les 6 servos.
+- **Réglages plus lents :** `TELEOP_MAX_REL=2 TELEOP_FPS=15`.
+
+### Arrêt d'urgence
+
+1. **Couper l'alimentation 12 V** : ça marche toujours. Le bras retombe : prévois de l'espace dessous.
+2. `Ctrl+C` dans le terminal : LeRobot coupe le couple à la déconnexion.
+3. Si une articulation part dans un sens inattendu, coupe le 12 V d'abord.
+
+**Limite connue :** sur l'épaule, le coude et le poignet, la calibration des deux bras couvre toute la course. Un saut de lecture à ±180° de la pose « milieu » reste théoriquement possible. Ne replie pas le leader à fond.
+
+### Dessin / peinture autonome (EXPÉRIMENTAL)
+
+`boris/` contient le pipeline prompt → Astra → commande de dessin validée → contrôleur borné : `boris/run_boris.py`, guide dans `boris/README_BORIS.md`. **Statut au 2026-10-07 :**
+
+- **PROVEN** (confirmé par l'opérateur) :
+  - un premier trait autonome ;
+  - un pont reconnaissable sur papier (planificateur local, sans Astra) ;
+  - une commande Astra valide, exécutée par le bras.
+- **NOT_PROVEN** :
+  - le dessin de bout en bout avec Astra, dont le résultat physique était une **feuille vierge** ;
+  - un dessin répétable : contact pinceau/papier non maîtrisé, et cinématique URDF en désaccord d'environ 90° avec l'orientation observée.
+- `boris/controller.py` vérifie l'**ancienne** empreinte de calibration du follower. Il refuse de démarrer tant qu'elle n'est pas revalidée après la recalibration du 2026-10-07.
+
+Les preuves de chaque essai sont dans `evidence/` (rapports `2026-10-0*-*.md`).
+
+---
+
+
 Couche de livraison et d'expérimentation du système **SO-101 leader / follower** pour le pilote **Boris × Astra Paint**.
 
 Ce dépôt est volontairement **propre, indépendant et partageable**. Il ne remplace pas `lab-hardware`.

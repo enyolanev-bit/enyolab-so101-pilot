@@ -66,3 +66,6 @@ secrets/
 .vscode/
 .idea/
 *.swp
+
+# Remise privée Boris (calibrations) — jamais commitée
+boris-handoff/
