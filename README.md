@@ -227,6 +227,7 @@ Lire [`docs/safety.md`](docs/safety.md). Sans exception.
 | [`tasks/`](tasks/README.md) | dessin / pliage / libre — expérience visée, **NOT_PROVEN** |
 | [`scripts/teleop_official.py`](scripts/teleop_official.py) | **téléopération leader → follower validée** (+ `scripts/test_teleop_official_offline.py`, tests hors ligne) |
 | [`boris/`](boris/README_BORIS.md) | dessin / Astra — **EXPÉRIMENTAL** |
+| `scripts/so_paint_pilot.py` | **NON SUPPORTÉ** : dépend d'un dépôt `so-paint` séparé, absent d'ici ; refuse de tourner sans `SO_PAINT_REPO` |
 | [`hardware/side-camera-mount/`](hardware/side-camera-mount/README.md) | support imprimable de la caméra latérale (OpenSCAD, STL, 3MF Bambu X2D) — dimensions ASSUMED |
 | `evidence/` | artefacts de preuve versionnés (métadonnées, logs) ; médias bruts conservés en local, ignorés par Git |
 
